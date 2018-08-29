@@ -9,8 +9,8 @@
   <name>ZACH_TALEND Codes Master</name>
   <url>http://www.talend.org/</url>
   <modules>
-    <module>code/routines</module>
     <module>jobs/process/ci_cd_test_0.1</module>
+    <module>code/routines</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
@@ -64,6 +64,10 @@
     </pluginManagement>
   </build>
   <profiles>
+    <profile>
+      <id>docker</id>
+      <activation />
+    </profile>
     <profile>
       <id>ci-builder</id>
       <activation>
