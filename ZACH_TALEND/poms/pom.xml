@@ -12,6 +12,10 @@
     <module>jobs/process/ci_cd_test_0.1</module>
     <module>code/routines</module>
     <module>jobs/process/test_0.1</module>
+    <module>jobs/joblets/requestdeploy_0.1</module>
+    <module>jobs/joblets/createorupdatetask_0.1</module>
+    <module>jobs/joblets/gettaskbylabel_0.1</module>
+    <module>jobs/process/JHOLMAN/metaservletdeployer_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
