@@ -320,7 +320,6 @@
     <migrationTask xmi:id="_MM5NFKsrEeiT9d1pLjaLgg" id="org.talend.designer.xmlmap.migration.TXMLMapChangeAllInOneValueMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_MM5NFasrEeiT9d1pLjaLgg" id="org.talend.designer.mapper.migration.TMapSaveToEmfMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_MM5NFqsrEeiT9d1pLjaLgg" id="org.talend.designer.dbmap.migration.ELTMapSaveToEmfMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
-    <migrationTask xmi:id="_MM5NF6srEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.FixProjectResourceLink" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_MM5NGKsrEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.ResetValuetInfiniteLoop" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_MM5NGasrEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.UpgrateDatabaseTypeForSybaseConnection" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_MM5NGqsrEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.RenamePasswordParaForLdapMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
@@ -527,6 +526,7 @@
     <migrationTask xmi:id="_MM50VqsrEeiT9d1pLjaLgg" id="org.talend.core.migration.ItemSaveTriggerWholeDoc" breaks="7.0.0" version="7.0.0" status="noimpact"/>
     <migrationTask xmi:id="_MM50V6srEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.FileInputPositionalByteLengthMigrationTask" breaks="7.0.1" version="7.0.1" status="noimpact"/>
     <migrationTask xmi:id="_MM50WKsrEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
+    <migrationTask xmi:id="_HHf90ax_Eeib3cnpTIgaOg" id="org.talend.repository.hadoopcluster.model.migration.MoveHDFSAndHCatalogToHadoopFolderMigrationTask" breaks="5.3.0" version="5.3.0" status="ok"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_KjpXEqsrEeiT9d1pLjaLgg" login="zlorenzini@agilitegroup.com" firstName="Zach" lastName="Lorenzini" type="DI" additionnalData="{}"/>
 </xmi:XMI>
