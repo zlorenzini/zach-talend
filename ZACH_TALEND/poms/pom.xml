@@ -17,6 +17,7 @@
     <module>jobs/joblets/gettaskbylabel_0.1</module>
     <module>jobs/process/JHOLMAN/metaservletdeployer_0.1</module>
     <module>jobs/process/esb_test_0.1</module>
+    <module>code/beans</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
