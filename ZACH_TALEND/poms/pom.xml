@@ -15,11 +15,11 @@
     <module>jobs/joblets/createorupdatetask_0.1</module>
     <module>jobs/joblets/gettaskbylabel_0.1</module>
     <module>jobs/process/JHOLMAN/metaservletdeployer_0.1</module>
-    <module>jobs/process/esb_test_0.1</module>
     <module>code/beans</module>
     <module>jobs/process/hana_test_0.1</module>
     <module>jobs/process/TESTING/block_api_users_0.1</module>
     <module>jobs/process/TESTING/ci_cd_test_0.1</module>
+    <module>jobs/process/TESTING/esb_test_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
