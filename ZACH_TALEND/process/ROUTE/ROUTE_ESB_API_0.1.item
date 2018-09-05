@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="username" prompt="username?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="password" prompt="password?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="username_condition" prompt="username_condition?" promptNeeded="false" type="id_String" value=""/>
+  </context>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -104,13 +110,137 @@
     <routinesParameter id="_LptnQKsrEeiT9d1pLjaLgg" name="TalendStringUtil"/>
     <routinesParameter id="_LpdvoKsrEeiT9d1pLjaLgg" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_16a166c7-278d-41c0-b123-ab03422ec9b0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wO9XioZ4sKqLuZUzs1fqVk1Bgh9fe8refRQ5unezs11LWdFGaYva75itpOEVPAlTOgiRdl1tqI8I
-e0Nyt8fZxw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9899280a-c42c-463d-908f-7128e29fc829"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgYpyYhNz0a56aaZjiDHhZvFDivAwHxxFz53HkWMAcXZ2y+D5Pny5ljtV9ZHYEs1q594M7Fh2h+S
-7owADIYwcg==</DigestValue></Reference></SignedInfo><SignatureValue>tqcDVWNTGoVq8yY9dG2ZopVrPfUiXjzYhwI5bkWXJq/2bissQw5gKLgOI4RZUU1fauMeNHv+9EEU
-6DA7Zr/F+CL1H47CgI0prQt+5xSOLNePt7cieJIytWXwExZLKKZe3H1wqMn/6Wm1cmi1WlM2we7D
-zDFpaP+a09bUkBcvqIWLYQu7xpJ9R/h0krJ9Xw6dZdOkR2nvqBUsruPdyzt0qWod5GW7DDFovlRZ
-2MPCGxjGFbmSUm6bHFJ+12/owuCdfbS008vONb0xKsQmIz5itRLWPcethXWXcUz7w7s0UvaIQRUt
-dYvkVUCbE5whfACsvWXOQqTzMMkJvNQhjTeNEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tRESTRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
+    <elementParameter field="EXTERNAL" name="OAS_IMPORT" value=""/>
+    <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;http://localhost:8088/&quot;"/>
+    <elementParameter field="TABLE" name="SCHEMAS">
+      <elementValue elementRef="SCHEMA" value="login"/>
+      <elementValue elementRef="HTTP_VERB" value="POST"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/login&quot;"/>
+      <elementValue elementRef="CONSUMES" value="XML-JSON"/>
+      <elementValue elementRef="PRODUCES" value="JSON"/>
+      <elementValue elementRef="STREAMING" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;ROUTE_ESB_API&quot;"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="BASIC"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_REQUEST" value="false"/>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_JSON_VALUES_TO_STRING" value="false"/>
+    <elementParameter field="CHECK" name="EXPOSE_SWAGGER_SPEC" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDE_DOC_INTO_SWAGGER_SPEC" show="false" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="WRONG_CALLS" name="WRONG_CALLS">
+      <column defaultValue="" key="false" length="255" name="uri" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="method" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="status" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="error" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="login" name="login">
+      <column comment="" key="false" length="-1" name="username" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="password" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.username = input_row.username;&#10;context.password = input_row.password;&#10;context.username_condition = &quot;{\&quot;$eq\&quot;:\&quot;username\&quot;:\&quot;&quot; + context.username + &quot;\&quot;}&quot;;&#10;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_1"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://zmapr1:8243/api/v2/table/%2Fapps%2Froute_users&quot;"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="GET"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" show="false" value="application/xml"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/xml"/>
+    <elementParameter field="TABLE" name="QUERY">
+      <elementValue elementRef="NAME" value="&quot;condition&quot;"/>
+      <elementValue elementRef="VALUE" value="context.username_condition"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="PoLvNyVG2XWndNDdLn696A=="/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CHECK_SERVER_IDENTITY" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_WEBCLIENT_OPERATION_REPORTING" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="true"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" show="false" value="false"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CONVERT_TYPES_TO_STRINGS" show="false" value="false"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;61.163.92.4&quot;"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTClient_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="login" lineStyle="0" metaname="login" offsetLabelX="0" offsetLabelY="0" source="tRESTRequest_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="login"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tRESTClient_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b0419bd0-1cef-4b43-9b8d-00de31f71516"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lzNE4phkRkUAiP1t3SnBwO21EhTogO4ndohgyuNz2zV8mlDE2kjukbgUR/T7TzT3jbLxmKbGHfTu
+n1uRxit34Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8e9faef7-b1e1-45b7-921d-d3e1b18f7fe9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZmJBD7QlSBA6bX1F3JQPK4VXKGf1DCfXiZTReD5SOoCIbS8NOE6ILTjoqw54W7wabKzDJUa7MoQo
+au0mIjq8hQ==</DigestValue></Reference></SignedInfo><SignatureValue>2nR2wgfstaBUA6XnvCA/PsrtlzcBfxguQGkKliZxuA8n14qa7WFqvR9/mkGJl8FFb42+tufWsnwR
+3DA8j4AN9PMA67mrfyaFaZLjR3xhp8HJBgI02sZkc0/MGDixSikahET4PutYDOcPaBilN0y5mz9+
+2eP6DiEL0GrsWu1zNPbo92oLKSyKAVQRpadXjB2tgDMfaxebDxeaOw6OlrFShrt0UrqwGw/N9lNm
+HAS/HvRoYitMNbrNsftewp7bdNokzXUZFk/fvveBQBNi+/Vo4Gvqz/08PsLH5yefqm8cq2q7/i75
+feOOmLeEK5PHYmQU2tZ7eMXesQJbLncWb+ndEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -134,4 +264,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9899280a-c42c-463d-908f-7128e29fc829" Target="#_16a166c7-278d-41c0-b123-ab03422ec9b0"><Timestamp>2018-09-05 18:13:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8e9faef7-b1e1-45b7-921d-d3e1b18f7fe9" Target="#_b0419bd0-1cef-4b43-9b8d-00de31f71516"><Timestamp>2018-09-05 18:53:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
