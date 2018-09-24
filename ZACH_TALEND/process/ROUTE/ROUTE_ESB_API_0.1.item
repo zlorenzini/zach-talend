@@ -9,6 +9,8 @@
     <contextParameter comment="" name="truckid" prompt="truckid?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="destid" prompt="destid?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="getwh" prompt="getwh?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="maprdbuser" prompt="maprdbuser?" promptNeeded="false" type="id_String" value="mapr"/>
+    <contextParameter comment="" name="maprdbpass" prompt="maprdbpass?" promptNeeded="false" type="id_String" value="Efgh5678"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -229,8 +231,8 @@
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;mapr&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="XewSdrcvbHfneSUh6PDH0w=="/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.maprdbuser"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kucCkrDjtUIbRs7WyLqxBWVu"/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -443,8 +445,8 @@
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;mapr&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="XewSdrcvbHfneSUh6PDH0w=="/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.maprdbuser"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kucCkrDjtUIbRs7WyLqxBWVu"/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -538,10 +540,10 @@
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="PoLvNyVG2XWndNDdLn696A=="/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.maprdbuser"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kucCkrDjtUIbRs7WyLqxBWVu"/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -926,13 +928,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_46835c9e-f49b-4f5b-8aaf-2605965fdbe8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JYDeLAMHSKrmpz4d2gxx87zA9jXSlPcrwLdMDCb8w4GXWDfLM+3LWH+p9PypIXL6pV032TCMEoA0
-O3MBnKe9Qg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_73d1ea8e-0998-42de-8df9-ae9b8dc62956"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4/d6V5c7yMRnt0h4QzrsZl8z1LFW7Hcaft9SeUhLdNUDmV2b8zx1oavyAw8ANzJy9I4vM4drkBpd
-oLg70eGa1w==</DigestValue></Reference></SignedInfo><SignatureValue>p09D051ZzBYSdMs0H3JpgzO6Lg00v16+i6dcqd3qqgnig/rtbtnqs/u/614a6ejCre3UM8SOqSIK
-DIOKA4v+xjxxRKrkB6UXstA0dQ+Cp58YF8nEwTFNYF+tNaNA3d7MjpoE5zD/XDGDeBa5PNsyhIiK
-Tan/mGgBINDCAmAF42cRH4JaEohyW4hy3Fwhm6DpZxRH9rttXCj/8OnyRSaaz3yLYPioX0hYWzpg
-EVsXG3OOL2YYcj+DwPVxkyUtJFsZCoG2bQMZmRAyAIeSZHVnyxGCBoUTL4s63ngfGxTElGZ1X8FR
-Ls+AiypWFBXXimlglvOUtQWNIL5/mQhM9Hn+XA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_93a95261-732d-45b9-91ea-82c5baf58911"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F+6B2XNHQcAZVhi9TleUQh0UwV216wSJ6MQfJswxhJ3Vbk4/VI99DqhEl4L7JQN9K2s4jGPOWVeB
+Qsq72zhNUw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e72a336e-250d-4ea0-9c3e-6f5403133989"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y/4otebLE7Nms42depVS9TAoVujmK+UpmQObu4QOf3dedYsmV12ISewwaiKM1wkx3mueWxgkZeTV
+BL5hoNlIqA==</DigestValue></Reference></SignedInfo><SignatureValue>1Ljen6Hs+xsw60ue6FJzTpxedVHCfmMRPEsbU0lLIH01QIX0lrAP+I7vYaVf2QEuAAkV/FNSbm0v
+8oeopw1LuUglAaiPq7jBAW+C5cjoy1nxUeY5EgQocJmyK8gnEHfO56avYHnqLEkKu0X08SSeXufO
+4uAFnnexyGiuVcqYz7tNd3uQ/rZOk9uPtwfK3Adx12y0OslrUImopJovMfCtv3QpZUQFKi4TDk0N
+Y+8N6RIfyMSuOln5w8XpBWaaKKxykIm+GN7RPefE2RU2SB5z1VkeraOirZunPKVYEOXb21s+UEv8
+MWWhSg/O1gexV9LgKzfS/I0sgPEEncMD+O71eQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -956,4 +958,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_73d1ea8e-0998-42de-8df9-ae9b8dc62956" Target="#_46835c9e-f49b-4f5b-8aaf-2605965fdbe8"><Timestamp>2018-09-24 22:58:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e72a336e-250d-4ea0-9c3e-6f5403133989" Target="#_93a95261-732d-45b9-91ea-82c5baf58911"><Timestamp>2018-09-24 23:07:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
