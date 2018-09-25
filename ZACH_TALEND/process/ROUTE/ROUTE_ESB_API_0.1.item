@@ -422,6 +422,12 @@
             <children expression="send.destid" incomingConnections="//@node.9/@nodeData/@connections.4" name="destid" type="id_String" xpath="out6.body:/root/destid" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children expression="send.username + &quot;-&quot; + send.truckid+ &quot;-&quot; + send.destid + &quot;-&quot; + TalendDate.getDate(&quot;CCYY-MM-DD-hh-mm-ss&quot;) " incomingConnections="//@node.9/@nodeData/@connections.6 //@node.9/@nodeData/@connections.7 //@node.9/@nodeData/@connections.8" name="_id" type="id_String" xpath="out6.body:/root/_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children expression="send.username" incomingConnections="//@node.9/@nodeData/@connections.5" name="username" type="id_String" xpath="out6.body:/root/username" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="TalendDate.getDate(&quot;CCYY-MM-DD-hh-mm-ss&quot;) " name="swhst" type="id_String" xpath="out6.body:/root/swhst" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="&quot;&quot;" name="strct" type="id_String" xpath="out6.body:/root/strct" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="&quot;&quot;" name="dtrat" type="id_String" xpath="out6.body:/root/dtrat" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="&quot;&quot;" name="dwhct" type="id_String" xpath="out6.body:/root/dwhct" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="&quot;&quot;" name="dtrft" type="id_String" xpath="out6.body:/root/dtrft" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="&quot;0&quot;" name="stage" type="id_String" xpath="out6.body:/root/stage" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
         <nodes name="string" type="id_String" xpath="out6/string"/>
@@ -654,76 +660,6 @@
       <column comment="" key="false" length="-1" name="string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="if (input_row.string.contains(&quot;DocumentStream&quot;)) {&#10;&#9;JSONObject ds = new JSONObject(input_row.string);&#10;&#9;JSONArray dsa = ds.getJSONArray(&quot;DocumentStream&quot;);&#10;&#9;for (int i = 0; i &lt; dsa.length(); i++) {&#10;&#9;&#9;JSONObject u = dsa.getJSONObject(i);&#10;&#9;&#9;output_row._id = u.getString(&quot;_id&quot;);&#10;&#9;&#9;output_row.username = u.getString(&quot;username&quot;);&#10;&#9;&#9;output_row.utype = u.getString(&quot;utype&quot;);&#10;&#9;&#9;output_row.fullq = u.getString(&quot;fullq&quot;);&#10;&#9;&#9;output_row.emptyq = u.getString(&quot;emptyq&quot;);&#10;&#9;&#9;output_row.truckid = u.getString(&quot;truckid&quot;);&#10;&#9;&#9;output_row.destid = u.getString(&quot;destid&quot;);&#10;&#9;}&#10;}&#9;&#9;&#9;&#9;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_4">
-      <column comment="" key="false" length="-1" name="_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="username" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="utype" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="fullq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="emptyq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="truckid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="destid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_6"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out14">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row11">
-        <nodes name="_id" outgoingConnections="//@node.17/@nodeData/@connections.6" type="id_String" xpath="row11/_id"/>
-        <nodes name="username" outgoingConnections="//@node.17/@nodeData/@connections.0" type="id_String" xpath="row11/username"/>
-        <nodes name="utype" outgoingConnections="//@node.17/@nodeData/@connections.5" type="id_String" xpath="row11/utype"/>
-        <nodes name="fullq" outgoingConnections="//@node.17/@nodeData/@connections.1" type="id_String" xpath="row11/fullq"/>
-        <nodes name="emptyq" outgoingConnections="//@node.17/@nodeData/@connections.2" type="id_String" xpath="row11/emptyq"/>
-        <nodes name="truckid" outgoingConnections="//@node.17/@nodeData/@connections.3" type="id_String" xpath="row11/truckid"/>
-        <nodes name="destid" outgoingConnections="//@node.17/@nodeData/@connections.4" type="id_String" xpath="row11/destid"/>
-      </inputTrees>
-      <outputTrees name="out14">
-        <nodes expression="" name="body" type="id_Document" xpath="out14/body">
-          <children expression="" loop="true" main="true" name="root" type="id_String" xpath="out14.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children expression="row11.username" incomingConnections="//@node.17/@nodeData/@connections.0" name="username" type="id_String" xpath="out14.body:/root/username" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11.utype" incomingConnections="//@node.17/@nodeData/@connections.5" name="utype" type="id_String" xpath="out14.body:/root/utype" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11.fullq" incomingConnections="//@node.17/@nodeData/@connections.1" name="fullq" type="id_String" xpath="out14.body:/root/fullq" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11.emptyq" incomingConnections="//@node.17/@nodeData/@connections.2" name="emptyq" type="id_String" xpath="out14.body:/root/emptyq" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11.truckid" incomingConnections="//@node.17/@nodeData/@connections.3" name="truckid" type="id_String" xpath="out14.body:/root/truckid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11.destid" incomingConnections="//@node.17/@nodeData/@connections.4" name="destid" type="id_String" xpath="out14.body:/root/destid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row11._id" incomingConnections="//@node.17/@nodeData/@connections.6" name="_id" type="id_String" xpath="out14.body:/root/_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
-          </children>
-        </nodes>
-      </outputTrees>
-      <varTables minimized="true" name="Var"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.1" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.3" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.4" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.5" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.6" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.2" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
-    </nodeData>
-  </node>
-  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
-    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_Document"/>
-    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
-    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
-    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
-    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRESTResponse_3">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_7"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
@@ -735,13 +671,13 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="goingt">
-        <nodes name="tr" outgoingConnections="//@node.19/@nodeData/@connections.0" type="id_String" xpath="goingt/tr"/>
+        <nodes name="tr" outgoingConnections="//@node.16/@nodeData/@connections.0" type="id_String" xpath="goingt/tr"/>
       </inputTrees>
       <outputTrees name="out15">
-        <nodes expression="goingt.tr" incomingConnections="//@node.19/@nodeData/@connections.0" name="tr" pattern="" type="id_String" xpath="out15/tr"/>
+        <nodes expression="goingt.tr" incomingConnections="//@node.16/@nodeData/@connections.0" name="tr" pattern="" type="id_String" xpath="out15/tr"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.19/@nodeData/@inputTrees.0/@nodes.0" target="//@node.19/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.16/@nodeData/@inputTrees.0/@nodes.0" target="//@node.16/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
@@ -899,35 +835,35 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row12">
-        <nodes name="_id" outgoingConnections="//@node.25/@nodeData/@connections.6" type="id_String" xpath="row12/_id"/>
-        <nodes name="username" outgoingConnections="//@node.25/@nodeData/@connections.0" type="id_String" xpath="row12/username"/>
-        <nodes name="utype" outgoingConnections="//@node.25/@nodeData/@connections.5" type="id_String" xpath="row12/utype"/>
-        <nodes name="fullq" outgoingConnections="//@node.25/@nodeData/@connections.1" type="id_String" xpath="row12/fullq"/>
-        <nodes name="emptyq" outgoingConnections="//@node.25/@nodeData/@connections.2" type="id_String" xpath="row12/emptyq"/>
-        <nodes name="truckid" outgoingConnections="//@node.25/@nodeData/@connections.3" type="id_String" xpath="row12/truckid"/>
-        <nodes name="destid" outgoingConnections="//@node.25/@nodeData/@connections.4" type="id_String" xpath="row12/destid"/>
+        <nodes name="_id" outgoingConnections="//@node.22/@nodeData/@connections.6" type="id_String" xpath="row12/_id"/>
+        <nodes name="username" outgoingConnections="//@node.22/@nodeData/@connections.0" type="id_String" xpath="row12/username"/>
+        <nodes name="utype" outgoingConnections="//@node.22/@nodeData/@connections.5" type="id_String" xpath="row12/utype"/>
+        <nodes name="fullq" outgoingConnections="//@node.22/@nodeData/@connections.1" type="id_String" xpath="row12/fullq"/>
+        <nodes name="emptyq" outgoingConnections="//@node.22/@nodeData/@connections.2" type="id_String" xpath="row12/emptyq"/>
+        <nodes name="truckid" outgoingConnections="//@node.22/@nodeData/@connections.3" type="id_String" xpath="row12/truckid"/>
+        <nodes name="destid" outgoingConnections="//@node.22/@nodeData/@connections.4" type="id_String" xpath="row12/destid"/>
       </inputTrees>
       <outputTrees name="copyOfout14">
         <nodes expression="" name="body" type="id_Document" xpath="copyOfout14/body">
           <children expression="" loop="true" main="true" name="root" type="id_String" xpath="copyOfout14.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children expression="row12.username" incomingConnections="//@node.25/@nodeData/@connections.0" name="username" type="id_String" xpath="copyOfout14.body:/root/username" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12.utype" incomingConnections="//@node.25/@nodeData/@connections.5" name="utype" type="id_String" xpath="copyOfout14.body:/root/utype" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12.fullq" incomingConnections="//@node.25/@nodeData/@connections.1" name="fullq" type="id_String" xpath="copyOfout14.body:/root/fullq" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12.emptyq" incomingConnections="//@node.25/@nodeData/@connections.2" name="emptyq" type="id_String" xpath="copyOfout14.body:/root/emptyq" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12.truckid" incomingConnections="//@node.25/@nodeData/@connections.3" name="truckid" type="id_String" xpath="copyOfout14.body:/root/truckid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12.destid" incomingConnections="//@node.25/@nodeData/@connections.4" name="destid" type="id_String" xpath="copyOfout14.body:/root/destid" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row12._id" incomingConnections="//@node.25/@nodeData/@connections.6" name="_id" type="id_String" xpath="copyOfout14.body:/root/_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.username" incomingConnections="//@node.22/@nodeData/@connections.0" name="username" type="id_String" xpath="copyOfout14.body:/root/username" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.utype" incomingConnections="//@node.22/@nodeData/@connections.5" name="utype" type="id_String" xpath="copyOfout14.body:/root/utype" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.fullq" incomingConnections="//@node.22/@nodeData/@connections.1" name="fullq" type="id_String" xpath="copyOfout14.body:/root/fullq" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.emptyq" incomingConnections="//@node.22/@nodeData/@connections.2" name="emptyq" type="id_String" xpath="copyOfout14.body:/root/emptyq" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.truckid" incomingConnections="//@node.22/@nodeData/@connections.3" name="truckid" type="id_String" xpath="copyOfout14.body:/root/truckid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12.destid" incomingConnections="//@node.22/@nodeData/@connections.4" name="destid" type="id_String" xpath="copyOfout14.body:/root/destid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row12._id" incomingConnections="//@node.22/@nodeData/@connections.6" name="_id" type="id_String" xpath="copyOfout14.body:/root/_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.1" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.3" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.4" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.5" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.6" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.2" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.0" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.1" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.3" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.4" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.5" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.6" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.2" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.22/@nodeData/@inputTrees.0/@nodes.0" target="//@node.22/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="448">
@@ -940,6 +876,209 @@
     <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRESTResponse_2">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tExtractJSONFields_1"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
+    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" show="false" value="&quot;/bills/bill/line&quot;"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.DocumentStream[*]&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="_id"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="username"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="utype"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fullq"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="emptyq"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="truckid"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="destid"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="swhst"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="strct"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dtrat"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dwhct"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dtrft"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stage"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH">
+      <elementValue elementRef="SCHEMA_COLUMN" value="_id"/>
+      <elementValue elementRef="QUERY" value="_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="username"/>
+      <elementValue elementRef="QUERY" value="username"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="utype"/>
+      <elementValue elementRef="QUERY" value="utype"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fullq"/>
+      <elementValue elementRef="QUERY" value="fullq"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="emptyq"/>
+      <elementValue elementRef="QUERY" value="emptyq"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="truckid"/>
+      <elementValue elementRef="QUERY" value="truckid"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="destid"/>
+      <elementValue elementRef="QUERY" value="destid"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="swhst"/>
+      <elementValue elementRef="QUERY" value="swhst"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="strct"/>
+      <elementValue elementRef="QUERY" value="strct"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dtrat"/>
+      <elementValue elementRef="QUERY" value="dtrat"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dwhct"/>
+      <elementValue elementRef="QUERY" value="dwhct"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dtrft"/>
+      <elementValue elementRef="QUERY" value="dtrft"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="stage"/>
+      <elementValue elementRef="QUERY" value="stage"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value="tExtractJSONFields_1"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SPLIT_LIST" show="false" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_1">
+      <column comment="" key="false" length="-1" name="_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="username" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="utype" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fullq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="emptyq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="truckid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="destid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="swhst" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="strct" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dtrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dwhct" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dtrft" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="username" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="utype" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fullq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="emptyq" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="truckid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="destid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="swhst" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="strct" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dtrat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dwhct" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dtrft" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_6"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out14">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row11">
+        <nodes name="_id" outgoingConnections="//@node.25/@nodeData/@connections.0" type="id_String" xpath="row11/_id"/>
+        <nodes name="username" outgoingConnections="//@node.25/@nodeData/@connections.1" type="id_String" xpath="row11/username"/>
+        <nodes name="utype" outgoingConnections="//@node.25/@nodeData/@connections.2" type="id_String" xpath="row11/utype"/>
+        <nodes name="fullq" outgoingConnections="//@node.25/@nodeData/@connections.3" type="id_String" xpath="row11/fullq"/>
+        <nodes name="emptyq" outgoingConnections="//@node.25/@nodeData/@connections.4" type="id_String" xpath="row11/emptyq"/>
+        <nodes name="truckid" outgoingConnections="//@node.25/@nodeData/@connections.5" type="id_String" xpath="row11/truckid"/>
+        <nodes name="destid" outgoingConnections="//@node.25/@nodeData/@connections.6" type="id_String" xpath="row11/destid"/>
+        <nodes name="swhst" outgoingConnections="//@node.25/@nodeData/@connections.7" type="id_String" xpath="row11/swhst"/>
+        <nodes name="strct" outgoingConnections="//@node.25/@nodeData/@connections.8" type="id_String" xpath="row11/strct"/>
+        <nodes name="dtrat" outgoingConnections="//@node.25/@nodeData/@connections.9" type="id_String" xpath="row11/dtrat"/>
+        <nodes name="dwhct" outgoingConnections="//@node.25/@nodeData/@connections.12" type="id_String" xpath="row11/dwhct"/>
+        <nodes name="dtrft" outgoingConnections="//@node.25/@nodeData/@connections.10" type="id_String" xpath="row11/dtrft"/>
+        <nodes name="stage" outgoingConnections="//@node.25/@nodeData/@connections.11" type="id_String" xpath="row11/stage"/>
+      </inputTrees>
+      <outputTrees name="out14">
+        <nodes expression="" name="body" type="id_Document" xpath="out14/body">
+          <children expression="" loop="true" main="true" name="root" type="id_String" xpath="out14.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children expression="row11._id" incomingConnections="//@node.25/@nodeData/@connections.0" name="_id" type="id_String" xpath="out14.body:/root/_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.username" incomingConnections="//@node.25/@nodeData/@connections.1" name="username" type="id_String" xpath="out14.body:/root/username" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.utype" incomingConnections="//@node.25/@nodeData/@connections.2" name="utype" type="id_String" xpath="out14.body:/root/utype" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.fullq" incomingConnections="//@node.25/@nodeData/@connections.3" name="fullq" type="id_String" xpath="out14.body:/root/fullq" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.emptyq" incomingConnections="//@node.25/@nodeData/@connections.4" name="emptyq" type="id_String" xpath="out14.body:/root/emptyq" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.truckid" incomingConnections="//@node.25/@nodeData/@connections.5" name="truckid" type="id_String" xpath="out14.body:/root/truckid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.destid" incomingConnections="//@node.25/@nodeData/@connections.6" name="destid" type="id_String" xpath="out14.body:/root/destid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.swhst" incomingConnections="//@node.25/@nodeData/@connections.7" name="swhst" type="id_String" xpath="out14.body:/root/swhst" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.strct" incomingConnections="//@node.25/@nodeData/@connections.8" name="strct" type="id_String" xpath="out14.body:/root/strct" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.dtrat" incomingConnections="//@node.25/@nodeData/@connections.9" name="dtrat" type="id_String" xpath="out14.body:/root/dtrat" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.dwhct" incomingConnections="//@node.25/@nodeData/@connections.12" name="dwhct" type="id_String" xpath="out14.body:/root/dwhct" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.dtrft" incomingConnections="//@node.25/@nodeData/@connections.10" name="dtrft" type="id_String" xpath="out14.body:/root/dtrft" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row11.stage" incomingConnections="//@node.25/@nodeData/@connections.11" name="stage" type="id_String" xpath="out14.body:/root/stage" xsi:type="TalendXMLMap:OutputTreeNode"/>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.0" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.1" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.2" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.3" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.4" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.5" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.6" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.7" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.8" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.9" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.11" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.12" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.12" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.25/@nodeData/@inputTrees.0/@nodes.10" target="//@node.25/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.10" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
+    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_Document"/>
+    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
+    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
+    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTResponse_3">
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1031,22 +1170,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out13"/>
   </connection>
-  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tJavaRow_4">
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tExtractJSONFields_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
-  </connection>
-  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tXMLMap_6">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
-  </connection>
-  <connection connectorName="FLOW" label="out14" lineStyle="0" metaname="out14" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_6" target="tRESTResponse_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out14"/>
   </connection>
   <connection connectorName="FLOW" label="out15" lineStyle="0" metaname="out15" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_7" target="tJavaRow_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1081,18 +1207,67 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout14"/>
   </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tXMLMap_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="truckid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dtrat"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dtrft"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="utype"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="swhst"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="emptyq"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="strct"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="destid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="stage"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fullq"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dwhct"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="username"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+  </connection>
+  <connection connectorName="FLOW" label="out14" lineStyle="0" metaname="out14" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_6" target="tRESTResponse_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out14"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_224c5ca2-093b-47b2-aa88-9bf2488674fd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ke3GolZKGbqSwZRGlNVWM0SXOagqMckSo01RYrnACYRyWLHlviIod5g528EVu8436S6Ejg/T5MnN
-i5TaUcYWlA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c92791af-ad67-4d07-9d62-c8711dc461de"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5hU8R65JFZtvezkQvjWCidLsg3whgF2cVX1K6f3n4/BWSUqXEjHw4nI4yrhKzhl1ONt3D5aB2d0D
-sS/zxL+8kg==</DigestValue></Reference></SignedInfo><SignatureValue>UDNU1jAc8eFNvH/IEBtjgTWxmipVLgMKnyL01uEl/+N4CoFQgVkZegHkJakphL0wbf4z6UvDXIdM
-WjgSVvjO67xXKHSrIqtknWUg3pbwRc4t+itbjxOpO3iStjAJtBO45bbIwvxZ1QhBWTurSfXW3rh1
-9gPrRyCu0iL8tN2foRbwsSS9VR5KU1SPE7a80eIsb4awrr5uPWmxWyejrlPWWJnuF6ri4sSCQMHr
-c+zJc4vqZUvG1RYLYm8UbDyu3lLp/Y2VUOmVwRzp3UIKsiBhVYlsjJ5dB2dH4Ix9x96zjHTI/Owx
-NwZhHRF4YWnsX7ZViXFdLnOJvtC0knU0N6Eg0A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dea55501-b7c5-44ed-82bf-a9cab1fbb1c9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JQoEo3xHhT3IFf2pUA/XwVJPywtkk85x1nYwIcZsvBpmARPIAatMxSkYqQOuXnBA+PuBDl0ysYur
+qKvs3+wdVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7c763022-aa73-4703-a8e4-8faa46ccea6f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q8SuDc8nNV98adxmQbhnIrIFPrRvry/URquIlFneTxFHl1xF5234hyc6BqoQctgLIzaqy9cDYhtc
+dJACm3g0jw==</DigestValue></Reference></SignedInfo><SignatureValue>bRV+ivCgRGD+wI8MqFXJO4yYmEVf1VW4aHT3w6JkPww/ZATGhe9kfD6P6ApgqAhbb798k4HK2YEq
+NySV5c4gWu88l80SKiLIe9KzbsspPIL1XYtNbcSJV1yRQ8eF6Du40z5Z6uM3ZLUB8P5DHsZ9F2qw
+gcDsG9Uex0UcW6g5rVKKr+Gz3geQ469aOn5FkFO8T4ssqSjYXJ11mft/2vc3bra1hRn99GdmD56e
+af6FLFxmhem8NJiJxQ8Px4Mv3UoHg5Ud8y0GKepqiPCrV0GHSp7PTtm5wvEERBBQqbz51BZNjEmY
+YZveie+Uh5xBAj4+Y30QiiYGNXk7t+ELmMyONw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1116,4 +1291,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c92791af-ad67-4d07-9d62-c8711dc461de" Target="#_224c5ca2-093b-47b2-aa88-9bf2488674fd"><Timestamp>2018-09-25 17:32:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7c763022-aa73-4703-a8e4-8faa46ccea6f" Target="#_dea55501-b7c5-44ed-82bf-a9cab1fbb1c9"><Timestamp>2018-09-25 19:10:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
