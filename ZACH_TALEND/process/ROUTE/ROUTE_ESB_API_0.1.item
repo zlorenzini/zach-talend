@@ -139,13 +139,13 @@
       <elementValue elementRef="STREAMING" value="false"/>
       <elementValue elementRef="SCHEMA" value="goings"/>
       <elementValue elementRef="HTTP_VERB" value="GET"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/goings/{wh}&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/goings/{wh}/{st}&quot;"/>
       <elementValue elementRef="CONSUMES" value="NONE"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
       <elementValue elementRef="SCHEMA" value="goingt"/>
       <elementValue elementRef="HTTP_VERB" value="GET"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/goingt/{tr}&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/goingt/{tr}/{st}&quot;"/>
       <elementValue elementRef="CONSUMES" value="NONE"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
@@ -192,9 +192,11 @@
     </metadata>
     <metadata connector="FLOW" label="goings" name="goings">
       <column comment="" key="false" length="-1" name="wh" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="goingt" name="goingt">
       <column comment="" key="false" length="-1" name="tr" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="trsc" name="trsc">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -529,21 +531,25 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out12" name="out12">
       <column comment="" key="false" length="-1" name="wh" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="goings">
         <nodes name="wh" outgoingConnections="//@node.11/@nodeData/@connections.0" type="id_String" xpath="goings/wh"/>
+        <nodes name="st" outgoingConnections="//@node.11/@nodeData/@connections.1" type="id_String" xpath="goings/st"/>
       </inputTrees>
       <outputTrees name="out12">
         <nodes expression="goings.wh" incomingConnections="//@node.11/@nodeData/@connections.0" name="wh" pattern="" type="id_String" xpath="out12/wh"/>
+        <nodes expression="goings.st" incomingConnections="//@node.11/@nodeData/@connections.1" name="st" pattern="" type="id_String" xpath="out12/st"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.11/@nodeData/@inputTrees.0/@nodes.0" target="//@node.11/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.11/@nodeData/@inputTrees.0/@nodes.1" target="//@node.11/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.username_condition = &quot;{\&quot;$and\&quot;:[{\&quot;$eq\&quot;:{\&quot;username\&quot;:\&quot;&quot; + input_row.wh + &quot;\&quot;}},{\&quot;$eq\&quot;:{\&quot;stage\&quot;:0}}]}&quot;;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.username_condition = &quot;{\&quot;$and\&quot;:[{\&quot;$eq\&quot;:{\&quot;username\&quot;:\&quot;&quot; + input_row.wh + &quot;\&quot;}},{\&quot;$eq\&quot;:{\&quot;stage\&quot;:&quot; + input_row.st + &quot;}}]}&quot;;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_3">
@@ -678,21 +684,25 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out15" name="out15">
       <column comment="" key="false" length="-1" name="tr" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="goingt">
         <nodes name="tr" outgoingConnections="//@node.16/@nodeData/@connections.0" type="id_String" xpath="goingt/tr"/>
+        <nodes name="st" outgoingConnections="//@node.16/@nodeData/@connections.1" type="id_String" xpath="goingt/st"/>
       </inputTrees>
       <outputTrees name="out15">
         <nodes expression="goingt.tr" incomingConnections="//@node.16/@nodeData/@connections.0" name="tr" pattern="" type="id_String" xpath="out15/tr"/>
+        <nodes expression="goingt.st" incomingConnections="//@node.16/@nodeData/@connections.1" name="st" pattern="" type="id_String" xpath="out15/st"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.16/@nodeData/@inputTrees.0/@nodes.0" target="//@node.16/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.16/@nodeData/@inputTrees.0/@nodes.1" target="//@node.16/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_5"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.truck_condition = &quot;{\&quot;$and\&quot;:[{\&quot;$eq\&quot;:{\&quot;truckid\&quot;:\&quot;&quot; + input_row.tr + &quot;\&quot;}},{\&quot;$eq\&quot;:{\&quot;stage\&quot;:0}}]}&quot;;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.truck_condition = &quot;{\&quot;$and\&quot;:[{\&quot;$eq\&quot;:{\&quot;truckid\&quot;:\&quot;&quot; + input_row.tr + &quot;\&quot;}},{\&quot;$eq\&quot;:{\&quot;stage\&quot;:&quot; + input_row.st + &quot;}}]}&quot;;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_5">
@@ -1336,10 +1346,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="send"/>
   </connection>
   <connection connectorName="FLOW" label="goings" lineStyle="0" metaname="goings" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tRESTRequest_1" target="tXMLMap_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="st"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="goings"/>
   </connection>
   <connection connectorName="FLOW" label="goingt" lineStyle="0" metaname="goingt" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tRESTRequest_1" target="tXMLMap_7">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="st"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="goingt"/>
   </connection>
@@ -1549,13 +1569,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e8d26bce-52a9-4435-bd1f-ed7c591cbf36"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UH35FOIWK4UJZDsjD8uabs8DYtPHW/AMn+WCkf63o3lvmej4h+8kP1po1BjHIBrxO8j37zAD2CaE
-Ytvt2+8SNQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3396f9f-4ae4-4d01-84b6-cc44bcce88e2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XahMSzWU8BfCCrWkPu98lB7Keh9IBlOt6yiBnFxlcyuTH5z6whMOtjSfdDM+ZdZRvZH7DGferuG0
-J7TKdZ5jLA==</DigestValue></Reference></SignedInfo><SignatureValue>mdjuySLrJoAkZKroKgCykMFiSMUAJB+gbO4unPmP0vo7SUCbZb9ZeqHnZFnJJAVDQappmjKMdSqz
-uqf/4Ao2UPZTMFjl1j7yDMhXY3PKk7VLCJo5SlchUGND0IVTMflZLVpk/s0WSJttmWjtouStn6f2
-n5FcrSS3cM8q2g3YoV9aSZoOGPVzYwND+rthHEv1NzqYPbXvuuR5unffYuzi5TmrlkyZFv2dLjea
-dFNF2EpJDaC56wRoLBkaWa0p2w7y7AORRfqOLtXLs2GSmpIpYu8cZWzXpJiMrOERK3F6rX20KrTG
-VaGEIT4JPl6y6J2UO2B+5Bj52fCDn2mf4ebJYQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_904f8225-c9b3-4fc6-b060-1ada1fd561d9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y/+7XMJzy66TsRNa9S8E4df1PGjuTKlRD8LJCeYjV/j901zqh8j/OobJ9FhNhdYogOUDYxKtqhRQ
+MyZrBL832Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cdc1f8d4-e00e-49fb-8596-83a4433e7d67"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>34FGsQq34stPOt1rag6A+lfIVZX+pW2t0qMZX5xsUKD69m6CGDHjnJZhmMCT81412cSHhrmgFFSj
+R+6WkPVxAQ==</DigestValue></Reference></SignedInfo><SignatureValue>1LkcDfwcrxNk6CFJjrVyYWbVsoKdl9K6PEXQWBr0PDp/QqWa6MGGs49wNtlMNlbucMbWOKuGR0Ai
+VZftRVZkuB21p0DprR9FCKr/ooV96ke53wrawGGJQ048W8H6gNV9gCyWmc9XOgeF2lth5+VxjDix
+YQfp59l12AOiGF9a7pyL27gItWEk4bB8Rgn+FQqg0mxQFBxat4alTgFEjCKUJsMVsD35iX5/Ofa+
+DTCfucpF3cMv3DvuaHqV/2tYQjIvvS8XyFNO6/09tiwSz24Vlsa3ml8saxd97cyaC2/PhlTmUpcX
+h2ya6KkJ6DCuhpr/V2tjrsT/+mCSqL25PX8gXQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1579,4 +1599,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3396f9f-4ae4-4d01-84b6-cc44bcce88e2" Target="#_e8d26bce-52a9-4435-bd1f-ed7c591cbf36"><Timestamp>2018-09-27 22:19:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cdc1f8d4-e00e-49fb-8596-83a4433e7d67" Target="#_904f8225-c9b3-4fc6-b060-1ada1fd561d9"><Timestamp>2018-09-28 00:22:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
