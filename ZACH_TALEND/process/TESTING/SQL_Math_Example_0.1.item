@@ -181,19 +181,19 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="row2" name="row2">
-      <column comment="" key="false" length="-1" name="plus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="minus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="times" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="divide" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="plus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="minus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="times" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="divide" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row.a + row1.b" name="plus" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.a - row1.b" name="minus" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.a * row1.b" name="times" nullable="true" type="id_Float"/>
-        <mapperTableEntries expression="row1.a / row1.b" name="divide" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row.a + row1.b" name="plus" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.a - row1.b" name="minus" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.a * row1.b" name="times" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.a / row1.b" name="divide" nullable="true" type="id_Double"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="a" nullable="true" type="id_Double"/>
@@ -228,10 +228,10 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="row2" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="plus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="minus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="times" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="divide" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="plus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="minus" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="times" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="divide" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
@@ -252,13 +252,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a8673dac-6f49-4fc9-847c-682b33d9dd98"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gJU3Kmo6GnRODCLrUMWo3TGC23O8eoW2Zr2AOUjP8jDkTODVC/07OsVltG0e93fI2Lvdgz2zfwHV
-YHRbDA6MsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e69c710b-b231-46f8-8072-e62c1fd1c198"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HF97bB/BB2JUDqoFrUorxaCzGjRatEZWELKl6DTdZKpL16MJcshBATKPE1we24Gk9yPrnio7LcO0
-bM74XxfWVw==</DigestValue></Reference></SignedInfo><SignatureValue>QRxANoIF9q0XKf4MaGOvqU0pDNda8wY3bhRdF3o+Qn7jdUxg/JLFyypWw5dMmIrEqQRMGOL+bl40
-NbDqNOhOPoGXUWIL5O7yUuirg8jRIYmk33o6XHGizqa71Wn3qSVtZUQybmm2k7gWCJPpOQNyYaEo
-Y9BZVjmv8q58ApvkxtP8DpT00gQEKqiWCEz48+ff3s8kL75EmtGmj62kel09/ifebjVek/FtwFvu
-RACfMsFtyPruyf2oAxoer1Y1dRuar+mj4mIMz+i+Hn8tekfMozfQO91N1XDn1nEllqe6G5aFIjuQ
-BcK6r/grN4GU6IcdfwfOTals5Kt+CyVbC/sL2A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0e6a50bc-b053-4a83-9cd6-3a56ff5c04ce"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hDM9IhgqvzMDU/ddc0Fov3mvnPTsZfaCqZw30I9VJEmZGXZ8HiHtRsa/5rtJyUdTICEFheaC6mVl
+/bD4/aSFWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dfd460c4-5148-4399-bc5a-09da25734344"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yIU5qr5JjCzg8ElFgDlE9XYmo1nP8sjGmmwRQ3qO+/fTIyi8s/8cTwS+9E47xTWOXE3NbwA/bYtT
+BgDfferiNQ==</DigestValue></Reference></SignedInfo><SignatureValue>v8wM3NER4gWmHahf3hCpVWi1RxRkg9J3Ijo/12RwcAMI5HE8B9RDIxiwc3FSi0ZLQasxEuUZNO12
+nths6GCG5skxm0oyT4JoItya+LguBORsmwfROSpipaplxigmQV3zUmieQBIKKjDAi4SoiE439uzT
+/BO+OLAUtAsswF2YnYVEgOIdfZxO6t7YINbozdK2sgl3+LcNTjsQSNiE9GT4lKVHLHy05RoBDnPS
+FH0PjMCUXu8Dq0J92YFkLr50U/OaL1DZ8KnOr9RG6D9yHySxJaHzuNOpQtMCf7ITxxBW/tNn4NLy
+df8kqNn0DC83QXzoKIknHnZJeeL80w8Y5GEypA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -282,4 +282,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e69c710b-b231-46f8-8072-e62c1fd1c198" Target="#_a8673dac-6f49-4fc9-847c-682b33d9dd98"><Timestamp>2018-11-30 19:42:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dfd460c4-5148-4399-bc5a-09da25734344" Target="#_0e6a50bc-b053-4a83-9cd6-3a56ff5c04ce"><Timestamp>2018-11-30 19:43:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
