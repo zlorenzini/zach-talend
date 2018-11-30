@@ -112,7 +112,7 @@
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custid"/>
       <elementValue elementRef="VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastname"/>
       <elementValue elementRef="VALUE" value=""/>
@@ -121,22 +121,22 @@
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
-      <elementValue elementRef="id" value="&quot;100001&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100001&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Smith&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Robert&quot;"/>
-      <elementValue elementRef="id" value="&quot;100002&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100002&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Johnson&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Clyde&quot;"/>
-      <elementValue elementRef="id" value="&quot;100003&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100003&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Anderson&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Neo&quot;"/>
-      <elementValue elementRef="id" value="&quot;100004&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100004&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Robertson&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Sally&quot;"/>
-      <elementValue elementRef="id" value="&quot;100005&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100005&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Smith&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Betty&quot;"/>
-      <elementValue elementRef="id" value="&quot;100006&quot;"/>
+      <elementValue elementRef="custid" value="&quot;100006&quot;"/>
       <elementValue elementRef="lastname" value="&quot;Jefferson&quot;"/>
       <elementValue elementRef="firstname" value="&quot;Thomas&quot;"/>
     </elementParameter>
@@ -146,7 +146,7 @@
     <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="firstname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -165,7 +165,7 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="custid"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="lastname"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -176,7 +176,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="firstname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -212,7 +212,7 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="90"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="custid" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="lastname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="firstname" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -230,13 +230,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_093e1559-9840-4933-94bf-782208a7dd85"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NEtO3aQQGVySK05jVRxXXdqydubFe3xY75AfT2MOVBfpUXIG39U9MucasITHfwCbpLklRqpV0HiS
-RrdFOi74fA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_287efb0c-65e6-4d8e-b137-4f27db67ef32"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VL7WTm84gME3b8IRZ8MBqYQwLwlyGVPBviCXLl38VQObmAvXdRok0VNeIkidQQWrdTl9ZEbN6BTr
-7cDSR9x8GQ==</DigestValue></Reference></SignedInfo><SignatureValue>W+d4AQXNNWjoA2s0Q6oQYSiFQeRsyDuJC2EQwZFZty3TwrFjbr8efuFoHyZyH85Q+u71P0dRXmV8
-9IsYMK9/+nhFMIARj4VMKVX68enjivtzePk6eP2KIaVntOsw+rUkud5A6Pr7CfLQ/YH2UZLmhK2T
-eB/xJQAhmBoQkRbx/yNDyJVyhaZxD4Z1wZGZOzrdeN3hBxXTctFLeItvM45QxGP2AGi1FPkou+IH
-beIJtDonQeIiXjBN/B2XjM75zzhXy1e2MbCbUXx7WH3gghlXuwMxcbZON9klXdk3m5ybmnrKV7ld
-ZqDhe3uIZECY3HD+Uu2+RQ/KEUX/816PA9rCCQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_aaa61222-b9fe-4702-8807-b53c587aa91d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a8FoTlfZkI4z9CgzHUx9rBh4CZQ/Vk5cyDP0XfgOkcS+0Ixu3CXzurfnMaZ/pz6rcMcyfmAYYCni
+0wLvtzRN7g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_682de0f3-e77f-4eb8-8606-8c7868f51428"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>41MRCK97NKyE3/FU+qwmddIZS7X6Cmb6NRe5t7+4ZSdjHBWFj8WImSICHgpUFQW4Rl6G7b+Sx+Du
+zJl1q3IgoA==</DigestValue></Reference></SignedInfo><SignatureValue>2tXf8G+U+jBf/EpUsih18VFwETG8xEDuaDVCHdHTP4T5urCzla0GKnmsVJ4EqWY4tDyKMUDXeKvU
+jZF9YMoP7tWorK4pTvCBEuh9MqZgmp6ZoIOzwZWHrPstJpVVzcypAtl5TdWM+sjBal9Km/Ejh2Hk
+IOIAtAi8adYlppM3Tz0e4YZTWRAJp4PsynBclYghBqDcAS3Ld+IdtuFULTxFJhN9SAyNMA+/+9I5
+M5ZytFOrXBPFoIGguIdZjygidHU65wwMTx5ynRsxCvXN4rNyeggrK4i0vc7UI+wb/EacnEjkAj0E
+BtulHcgb08WHDReodMHtEwux5moAVAO4ORTbdQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -260,4 +260,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_287efb0c-65e6-4d8e-b137-4f27db67ef32" Target="#_093e1559-9840-4933-94bf-782208a7dd85"><Timestamp>2018-11-30 16:55:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_682de0f3-e77f-4eb8-8606-8c7868f51428" Target="#_aaa61222-b9fe-4702-8807-b53c587aa91d"><Timestamp>2018-11-30 17:06:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
