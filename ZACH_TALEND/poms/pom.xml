@@ -27,6 +27,7 @@
     <module>jobs/process/TESTING/to_hive_demo_0.1</module>
     <module>jobs/process/TESTING/to_hive_demo_cf_0.1</module>
     <module>jobs/process/TESTING/read_sql_0.1</module>
+    <module>jobs/process/TESTING/sql_math_example_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
