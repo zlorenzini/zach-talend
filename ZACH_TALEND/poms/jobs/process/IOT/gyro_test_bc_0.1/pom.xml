@@ -42,6 +42,11 @@
   <dependencies>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>accessors-smart-1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>aopalliance-1.0</artifactId>
       <version>6.4.0</version>
     </dependency>
@@ -197,6 +202,11 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>jaxen-1.1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>jersey-client-1.4</artifactId>
       <version>6.0.0</version>
     </dependency>
@@ -219,6 +229,16 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>joda-time-2.9</artifactId>
       <version>6.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-path-2.1.0</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-smart-2.2.1</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
