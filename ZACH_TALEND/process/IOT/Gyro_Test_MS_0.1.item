@@ -234,30 +234,6 @@
       <column comment="" key="false" length="-1" name="d" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="out2" name="out2">
-      <column comment="" key="false" length="-1" name="sensor" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dt" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
-        <nodes name="nv" outgoingConnections="//@node.4/@nodeData/@connections.0" type="id_Integer" xpath="row1/nv"/>
-        <nodes name="d" outgoingConnections="//@node.4/@nodeData/@connections.1" type="id_String" xpath="row1/d"/>
-      </inputTrees>
-      <outputTrees name="out2">
-        <nodes expression="row1.nv" incomingConnections="//@node.4/@nodeData/@connections.0" name="sensor" pattern="" type="id_Integer" xpath="out2/sensor"/>
-        <nodes expression="row1.d" incomingConnections="//@node.4/@nodeData/@connections.1" name="dt" pattern="" type="id_String" xpath="out2/dt"/>
-      </outputTrees>
-      <varTables minimized="true" name="Var"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.0" target="//@node.4/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.4/@nodeData/@inputTrees.0/@nodes.1" target="//@node.4/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-    </nodeData>
-  </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
@@ -276,7 +252,7 @@
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
     <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" show="false" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="sensor"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="nv"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -291,12 +267,12 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="sensor"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nv"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="dt"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="d"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -308,13 +284,13 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="out2" name="tDBOutput_1">
-      <column comment="" key="false" length="-1" name="sensor" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dt" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="-1" name="nv" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="d" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" label="out2" name="REJECT">
-      <column comment="" key="false" length="-1" name="sensor" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dt" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="nv" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="d" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -366,13 +342,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out3"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tXMLMap_3">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-  </connection>
-  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_3" target="tDBOutput_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out2"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tRESTResponse_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -388,13 +360,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e4591e28-781f-45b6-b55d-9dbef4be5125"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SOR6Mw3S5QQsZ/mAkraXFwhvzZv9PV1gdEBjtnDtWzXvoN0ecvfyg1C2D/UY2+1UlIOob4K6aFlg
-h94HGEY9OQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e7f10fe0-9e66-421b-9371-a9be8f8cc8ae"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>j1OOhJBH+1ru/g6VbO4anMOXeqcL1yCUyhqhYLyEGgZ+CHVkdq7g23SmW6RWISDp0KvjpiWKUkd0
-55+sd1o9qw==</DigestValue></Reference></SignedInfo><SignatureValue>UaOgDRJHdSMHP/Hdjfg2bq9/spiSZx23UfElNusN8fFMEgPzRaXDO3bf9EHLCnXNutCyMpORqLZA
-UVswGLPVV4fb/w84FUfdbtG4XcMEkpuyw4J0iK6I4yrh6JV4S5wkkZoO+TYoSd09jxjKW2NOhM9b
-Yhvj2kHMLEr1Z5VZbxkXGOzkXHJUGGy+pWSImC2ETKLJb0PcAUkB0TcR5fHnjOhKC3RT/ZZjx1HW
-4oJAXD8/0nvDo8POd3tPer5Var7seyPnQIxED7SmeYovYmo9drsAKrz8Q+p6JZ7WrDBGHhxfXWtz
-2FnhMXuJ2OwbnZYeKpdzzd/pgEvhMMz0orGw6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_51765b60-382f-45a8-b732-41dc28f39295"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xevMOd2u/Bi7SwugiFbB8xAbjd6bEtpiW4ooKxgD/tozpJgTfD931kVPUQKNJQCkuKkWwUSQ+jJl
+YcaxOtT2zw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d78db645-3892-4efc-9ab0-56a8de35f01e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DWkCP7xXvgfUVyoBjk6jSmA+boXqTRzAoEBczf7XJPOXX24JrztWn8X3PMeNKwJNrdF2nHPJB58z
+fkj21iQsXA==</DigestValue></Reference></SignedInfo><SignatureValue>3y8I3+uC2w44bODqDF9kbvjf7fLNHirHCognHrBWouvw7tYkBxOiTvJ0R9BV5o8e1ql6Q7PqXnC9
+wRCuBRLDgd9veg9E9k9nGMirpDSi+EcVwowPtpGpYrhOm/86N2kPxziYZF/2zLOEUIryP+uuBOcY
+OKsRDOKMm6kIQbnb6aDDCiFf+/KvB7fSMUxOtzoSwUBIcaI4okAQkUeLzSqyOPHOMbs7mblpufHr
+GSTmEBsn1TNqORdpQExrb9816eZDmVruVo3zvIppYJmuNC4/rxcThcrz/CjlNiqihPkYvlUcIGvE
+PuBY7KhZHpy4VwsNq5hd7E2n9M3JJNsU3SkDbQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -418,4 +390,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e7f10fe0-9e66-421b-9371-a9be8f8cc8ae" Target="#_e4591e28-781f-45b6-b55d-9dbef4be5125"><Timestamp>2018-12-04 16:14:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d78db645-3892-4efc-9ab0-56a8de35f01e" Target="#_51765b60-382f-45a8-b732-41dc28f39295"><Timestamp>2018-12-04 16:15:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
