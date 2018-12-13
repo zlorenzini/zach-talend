@@ -34,6 +34,7 @@
     <module>jobs/process/IOT/gyro_test_bc_0.1</module>
     <module>jobs/process/IOT/gyro_test_ms_0.1</module>
     <module>jobs/process/HEB/basic_0.1</module>
+    <module>jobs/process/HEB/data_import_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
