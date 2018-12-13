@@ -414,6 +414,7 @@
       <relatedItems xmi:id="__RqBfP5YEeiXWoUqwDxmxw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="__RqBff5YEeiXWoUqwDxmxw" id="_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio" version="Latest" type="schema"/>
       <relatedItems xmi:id="__RqBfv5YEeiXWoUqwDxmxw" id="_jpVh8P5VEeiKadzKJLmuVA - Td_Tiempo" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_qTsUkP5qEeiHFuKPT35uIg" id="_ToUqgP5XEeiXWoUqwDxmxw - TH_SOS_ServDomicilio" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_LWGuwKsrEeiT9d1pLjaLgg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_LWGuwasrEeiT9d1pLjaLgg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
