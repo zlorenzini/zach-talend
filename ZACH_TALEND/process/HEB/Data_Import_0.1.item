@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -705,7 +705,191 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="192" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_qJz8YP8FEeiey-BXzUKrog-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" defaultValue="" key="true" length="10" name="TPO_KFecha" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="TPO_TFecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_DFecha" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_CSemPeriodo" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_CSemFiscal" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_CPeriodo" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="TPO_CQuarter" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="TPO_CAnioFiscal" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_DFinSemana" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_DDiaSemana" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_DQuincena" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_CMes" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="TPO_CAnio" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="TPO_CFestivo" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="TPO_DFestivo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="TPO_DSemPeriodo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="TPO_DSemFiscal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="TPO_DPeriodo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="TPO_DQuarter" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="TPO_CDiaSemana" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_DSemanaNielsen" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_DPeriodoNielsen" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_DAnioNielsen" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_DCatorcena" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_CFecha" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_CMesNatural" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="18" name="TPO_DMesNatural" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_CDiaMes" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_CSemPorPeriodo" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="TPO_DSemPorPeriodo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="TPO_DSemFiscalLY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_CSemanaEvento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="TPO_DSemanaEvento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="TPO_CAnioEvento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="TPO_DAnioEvento" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_KFechaLY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="tpo_CPeriodo_LP" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="tpo_CPeriodo_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="tpo_CSemfiscal_LW" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="tpo_CSemfiscal_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="tpo_Csemfiscal_PLY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_KAnio" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_KAnioFiscal" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_KAnio_LY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_KAnioFiscal_LY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="TPO_CMes_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="TPO_CQuarter_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="TPO_CAnio_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="TPO_CAnioFiscal_LY" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="((-1))" key="false" length="10" name="TPO_KFecha_LW" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="((-1))" key="false" length="10" name="TPO_KFecha_LP" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="TPO_DQuarterInt" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="TPO_DQuarterShort" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.TPO_KFecha" name="TPO_KFecha" type="id_Integer"/>
+        <mapperTableEntries expression="TalendDate.getDate(&quot;DD-MM-CCYY&quot;) " name="TPO_TFecha" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.TPO_DFecha" name="TPO_DFecha" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CSemPeriodo" name="TPO_CSemPeriodo" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CSemFiscal" name="TPO_CSemFiscal" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CPeriodo" name="TPO_CPeriodo" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CQuarter" name="TPO_CQuarter" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CAnioFiscal" name="TPO_CAnioFiscal" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DFinSemana" name="TPO_DFinSemana" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DDiaSemana" name="TPO_DDiaSemana" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DQuincena" name="TPO_DQuincena" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CMes" name="TPO_CMes" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CAnio" name="TPO_CAnio" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CFestivo" name="TPO_CFestivo" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="row1.TPO_DFestivo" name="TPO_DFestivo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DSemPeriodo" name="TPO_DSemPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DSemFiscal" name="TPO_DSemFiscal" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DPeriodo" name="TPO_DPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DQuarter" name="TPO_DQuarter" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CDiaSemana" name="TPO_CDiaSemana" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="row1.TPO_DSemanaNielsen" name="TPO_DSemanaNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DPeriodoNielsen" name="TPO_DPeriodoNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DAnioNielsen" name="TPO_DAnioNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DCatorcena" name="TPO_DCatorcena" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CFecha" name="TPO_CFecha" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_CMesNatural" name="TPO_CMesNatural" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_DMesNatural" name="TPO_DMesNatural" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CDiaMes" name="TPO_CDiaMes" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_CSemPorPeriodo" name="TPO_CSemPorPeriodo" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_DSemPorPeriodo" name="TPO_DSemPorPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DSemFiscalLY" name="TPO_DSemFiscalLY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CSemanaEvento" name="TPO_CSemanaEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DSemanaEvento" name="TPO_DSemanaEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CAnioEvento" name="TPO_CAnioEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_DAnioEvento" name="TPO_DAnioEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_KFechaLY" name="TPO_KFechaLY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.tpo_CPeriodo_LP" name="tpo_CPeriodo_LP" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tpo_CPeriodo_LY" name="tpo_CPeriodo_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tpo_CSemfiscal_LW" name="tpo_CSemfiscal_LW" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tpo_CSemfiscal_LY" name="tpo_CSemfiscal_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.tpo_Csemfiscal_PLY" name="tpo_Csemfiscal_PLY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_KAnio" name="TPO_KAnio" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_KAnioFiscal" name="TPO_KAnioFiscal" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_KAnio_LY" name="TPO_KAnio_LY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_KAnioFiscal_LY" name="TPO_KAnioFiscal_LY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_CMes_LY" name="TPO_CMes_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CQuarter_LY" name="TPO_CQuarter_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CAnio_LY" name="TPO_CAnio_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_CAnioFiscal_LY" name="TPO_CAnioFiscal_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.TPO_KFecha_LW" name="TPO_KFecha_LW" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_KFecha_LP" name="TPO_KFecha_LP" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_DQuarterInt" name="TPO_DQuarterInt" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.TPO_DQuarterShort" name="TPO_DQuarterShort" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="TPO_KFecha" type="id_Integer"/>
+        <mapperTableEntries name="TPO_TFecha" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TPO_DFecha" type="id_String"/>
+        <mapperTableEntries name="TPO_CSemPeriodo" type="id_String"/>
+        <mapperTableEntries name="TPO_CSemFiscal" type="id_String"/>
+        <mapperTableEntries name="TPO_CPeriodo" type="id_String"/>
+        <mapperTableEntries name="TPO_CQuarter" type="id_String"/>
+        <mapperTableEntries name="TPO_CAnioFiscal" type="id_String"/>
+        <mapperTableEntries name="TPO_DFinSemana" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DDiaSemana" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DQuincena" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CMes" type="id_String"/>
+        <mapperTableEntries name="TPO_CAnio" type="id_String"/>
+        <mapperTableEntries name="TPO_CFestivo" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="TPO_DFestivo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DSemPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DSemFiscal" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DQuarter" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CDiaSemana" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="TPO_DSemanaNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DPeriodoNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DAnioNielsen" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DCatorcena" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CFecha" type="id_Integer"/>
+        <mapperTableEntries name="TPO_CMesNatural" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_DMesNatural" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CDiaMes" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_CSemPorPeriodo" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_DSemPorPeriodo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DSemFiscalLY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CSemanaEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DSemanaEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CAnioEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_DAnioEvento" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_KFechaLY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="tpo_CPeriodo_LP" nullable="true" type="id_String"/>
+        <mapperTableEntries name="tpo_CPeriodo_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="tpo_CSemfiscal_LW" nullable="true" type="id_String"/>
+        <mapperTableEntries name="tpo_CSemfiscal_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="tpo_Csemfiscal_PLY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_KAnio" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_KAnioFiscal" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_KAnio_LY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_KAnioFiscal_LY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_CMes_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CQuarter_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CAnio_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_CAnioFiscal_LY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TPO_KFecha_LW" type="id_Integer"/>
+        <mapperTableEntries name="TPO_KFecha_LP" type="id_Integer"/>
+        <mapperTableEntries name="TPO_DQuarterInt" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="TPO_DQuarterShort" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
@@ -1336,7 +1520,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMSSqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+  <node componentName="tMSSqlCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCommit_1"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
@@ -1503,9 +1687,13 @@
       </column>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBOutput_1" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_1" target="tDBCommit_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1521,13 +1709,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9cfd8209-0c59-4b0f-867b-5bf11f9486e2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7YZsCmbeWZZRUkSlEJoEHJNe12FxOug1Zi06T7JyuGvlmSVDdaLx34hsHhF3Xu5WxWwZxKVOTFAo
-lHSbWsdhFA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b214eb05-0300-4bcc-98f4-1a6ead262f18"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FeuZwnOXuwYS1c+PVrnQQFNwQR+8iTFrYudoEhC/nVYx8qo5YlBKsoAV7DQOc/v59UOTn3PERyTt
-GD+QvPE6Wg==</DigestValue></Reference></SignedInfo><SignatureValue>Rwn+84upcSH50swPhhmbKkj82ynJSBULPYmZNJM4EhHYPy4ynRRCFw3FDMUuExJSRWUmDwBn6X7G
-DLJjZmUlIKJji/P6HFs6j3rWZRvRhH0UGtjRv5fw2cVQ1kSiPXK6CWiqO+zVwmRfCP0vlFTCtJtW
-LDNVAo5UTWRJ//PY5GJ+92LJzCNjifhfczVN/VWHqmK1INxLf2EeSsgfZQeLK3nBy3jT5xipHT82
-qxLLYFULvwDjAkvRFEqJOiuqykNaQSyuyzQiLWoSgm+aH+e4wKMxTsnmZj6vK2KjqHzXW0fJ6mVt
-0ShkeYYowgvyWAw53R9iv7wKHnxfSv6IjUt3wg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9a0c454-4777-4214-aae3-d77b17e8ff79"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+k5f3v4m71hZtAIBYYmdRcFAcBQfSP2J+2kJ+IHdnYuOqghH0NilR9X21GmUWyN9VIu9OWn62AIk
+3gwZZi5uHg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8953045e-1d8a-4ae8-b1c0-aa290b4b5a4a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OHTpsJryIpvCqMb7/G404lFM0kgVIeyJrAQCevyPRnhkwVktJ3Nx2ZtozNRz5USD+0dhnx4z4fPg
+bsDpbndorQ==</DigestValue></Reference></SignedInfo><SignatureValue>x+HPjtRvfT+SETtpZSPKUshTIjRIDYSM4MMwtFkNL0CridWOhHaKG+T6exXArL5tFyu1SqBzwJWD
+WscCR+cDHMJ3xZj/HDeFGCcC36GlcqG1qgitcUEa10ZArHiqsykPZVJXd1r6C026dmUa0JoH+JPa
+XFsglU8bFDxGDKqGO3cYF3RRqAYRO92qQ03NSQ68MOxpp/gR7Qeqwndp8fUyth5lLTh/0afBLznb
+i1i9USCaikSMebYv9RuzenKACqfnEJPELVsiu2rmlEqik2TcQSTdUYXy45Gk1b1iUHxba/yj0Kr9
+8ngRsiD6VJyjtPp2ObmY54YLOjYo2PPvQyNNfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1551,4 +1739,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b214eb05-0300-4bcc-98f4-1a6ead262f18" Target="#_9cfd8209-0c59-4b0f-867b-5bf11f9486e2"><Timestamp>2018-12-13 18:40:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8953045e-1d8a-4ae8-b1c0-aa290b4b5a4a" Target="#_d9a0c454-4777-4214-aae3-d77b17e8ff79"><Timestamp>2018-12-13 18:49:50</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
