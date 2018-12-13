@@ -418,7 +418,6 @@
       <relatedItems xmi:id="__RqBfP5YEeiXWoUqwDxmxw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="__RqBff5YEeiXWoUqwDxmxw" id="_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio" version="Latest" type="schema"/>
       <relatedItems xmi:id="__RqBfv5YEeiXWoUqwDxmxw" id="_jpVh8P5VEeiKadzKJLmuVA - Td_Tiempo" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_qTsUkP5qEeiHFuKPT35uIg" id="_ToUqgP5XEeiXWoUqwDxmxw - TH_SOS_ServDomicilio" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_ldoEoP8GEeiey-BXzUKrog">
       <baseItem xmi:id="_ldoEof8GEeiey-BXzUKrog" id="_qJz8YP8FEeiey-BXzUKrog" version="0.1" type="job"/>
