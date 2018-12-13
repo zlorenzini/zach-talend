@@ -132,8 +132,6 @@
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - Td_Tiempo"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Users/zach/OneDrive/Documents/Work/Agilite/HEB/Fwd_ RE_ Información para POC Talend/Datos_Muestra_TD_Tiempo.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="true"/>
@@ -384,7 +382,7 @@
       <column comment="" key="true" length="10" name="TPO_KFecha" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="23" name="TPO_TFecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="23" name="TPO_TFecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="TPO_DFecha" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -545,7 +543,7 @@
       <column comment="" key="true" length="10" name="TPO_KFecha" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="23" name="TPO_TFecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="23" name="TPO_TFecha" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="TPO_DFecha" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -834,7 +832,7 @@
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="TPO_KFecha" type="id_Integer"/>
-        <mapperTableEntries name="TPO_TFecha" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="TPO_TFecha" nullable="true" type="id_String"/>
         <mapperTableEntries name="TPO_DFecha" type="id_String"/>
         <mapperTableEntries name="TPO_CSemPeriodo" type="id_String"/>
         <mapperTableEntries name="TPO_CSemFiscal" type="id_String"/>
@@ -1709,13 +1707,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1e928abc-7195-48cc-b54d-7d28660da03a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>98gsOQHBaQWpCuuc7Y78vX8YsZtZkH5gxELAjJC5g+XZwI+t4PON1/dA5UXRCl8YY2LtfaDXHhHX
-hoHtFpKrZw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cb299a46-50b7-4a5a-8025-223187cbec45"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KarWPkZM3mBVAEnlr7r8BpBtTJwc7tUlWJqtOzeckAQa+dVO7Bs1jq9fX76fUnUKPBtEZB7KuTGq
-cWLS7TWazA==</DigestValue></Reference></SignedInfo><SignatureValue>0xpjYIgaZmsb1/rM5/g0ugbUov/5vX7QfOPuyHMIgPZZRjuoDX2cxoMUglq+ZaSNWkPxswlos6Bt
-fE31pEGiIL0bcDLqi7dGeukHmD/zhbYZPLDnZ+OQYX/V7GXEizF93i0ZzSO7RlyHegcFD4coKf+Z
-RE/GfKtrKXQZLGbPP6AVJS8SMDELCgX8Re5mGowq3cdVkRhTROBb6tjpTslmHnWVdl/it7kY4fX1
-vrXrWH1St81GTPaW/dOzb2IDsF2e3oqJwn0zCcM/Ekmaa/1GOmfEWaUIi/hIJ70aA6EejwGWzbC0
-I/mKB8LT2O84rf0A8IZvlos3DOCIdzOfXfEicQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0375a80d-dbac-4645-ae8e-160b73ffca1f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B7rYwBX+lYvDLWdrX2ngq95kcd+Ab8rdCpI/CqOiRUWvAuWafirWADAlq7ngB0T6MiV3HovHCvS/
+mxV1QC0YMQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6f9f35ed-4652-446f-942a-30347c9fba88"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>31Ar+kXTQ5l+XutEw2YAXJ60WCZG5+Jlh3Du3I/91hZpdTzKyL06kuEvR/9f6rj6/P9cNPx/U5gn
+5Xlys2R6QA==</DigestValue></Reference></SignedInfo><SignatureValue>wlhm/T8mSFoohNZXjMqcK0UUrrW8fC1bzUizbJ/gM+bWMr9wf1N8hXmeZVk23SKRZNRfhzZDk0Ko
+X6AdzgpSBB2W35Wp1t4wvI5GdOjSgRsV26mCQvpzvEJGMiuQls+YVTfoqqirpf/U/0FkEFgVJ7Ff
+kL7Nyrw8r+3vEEYYq8mqJ/sfyk5e/ZkBBdTQ6ch2En5oiVTBUQR+92F6c0NiNvFS94eFVWs3veYa
+buXliU2qGOtNyAb9pUnooUz8fbMSATjV1L/mer0Jf5E27HSuS0GWWjarP2HOPfV55nn0i2V3ahB4
+58PxnKg54utGk5+eBekZo2wzRu8CDpDNwhvRQw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1739,4 +1737,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cb299a46-50b7-4a5a-8025-223187cbec45" Target="#_1e928abc-7195-48cc-b54d-7d28660da03a"><Timestamp>2018-12-13 18:56:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6f9f35ed-4652-446f-942a-30347c9fba88" Target="#_0375a80d-dbac-4645-ae8e-160b73ffca1f"><Timestamp>2018-12-13 18:56:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
