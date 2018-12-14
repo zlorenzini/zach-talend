@@ -315,10 +315,10 @@
       <column comment="" key="false" length="23" name="PRC_FROM_DATE1" nullable="true" originalDbColumnName="PRC_FROM_DATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="PRC_TO_DATE1" nullable="true" originalDbColumnName="PRC_TO_DATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="PRC_CURR_CODE1" nullable="true" originalDbColumnName="PRC_CURR_CODE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="11" name="PRC_PRICE1" nullable="true" originalDbColumnName="PRC_PRICE" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_PRICE1" nullable="true" originalDbColumnName="PRC_PRICE" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="11" name="PRC_PREVIOUS_PRICE1" nullable="true" originalDbColumnName="PRC_PREVIOUS_PRICE" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PRC_PRICE_MULT1" nullable="true" originalDbColumnName="PRC_PRICE_MULT" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2" name="PRC_TYPE1" nullable="true" originalDbColumnName="PRC_TYPE" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="2" name="PRC_TYPE1" nullable="true" originalDbColumnName="PRC_TYPE" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="PRC_PROMO_LEVEL1" nullable="true" originalDbColumnName="PRC_PROMO_LEVEL" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="12" name="PRC_HDR_NUMBER1" nullable="true" originalDbColumnName="PRC_HDR_NUMBER" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="PRC_LEVEL1" nullable="true" originalDbColumnName="PRC_LEVEL" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
@@ -339,7 +339,7 @@
       <column comment="" defaultValue="" key="false" length="12" name="PRC_MAX_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="12" name="PRC_FCST_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="23" name="LASTUPDATE1" nullable="true" originalDbColumnName="LASTUPDATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="PRE_ARTICULO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="10" name="PRE_ARTICULO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="PRE_SUCURSAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="7" name="PRE_PRECIO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
@@ -527,13 +527,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_79268750-8d41-4023-820a-68bd734d8542"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zP6zepJs5e4z5gLhYzoF2lHk5x6s1Sf8rZRF5I4RQGNSTICfx2lfF+R++2laWKyycmJXeFXXCuff
-08SfU/AvqQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_181fdae4-8947-49e0-ad95-70432e5c533b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZjnpPXRWS41cXIiBIBOl4Dbk0cUjFPbvgfkLtTdhfy7ZuQYBzlRQfX0NFff6gH+MU+HbWGpw00Z3
-u6qdAl6WWg==</DigestValue></Reference></SignedInfo><SignatureValue>DD2CNE39QPG0/rUO2w9+N6/nDlhBKlmrSYLlVIQKsm5gVI5vNgWjnpak57TcNwoWekcdMF7J7G/9
-lpIVEnNJz++EV2c0CoA2+fhrTkoDFPTRHlGdGzxLO7fU6qPpUtl2cZXbBIkKyTv4mT8Bl/dVbm0e
-gCgtg3VLi1D4VNtE7Wc6Is/Da0dYByZ1zztA/AzEv7SslYJcmh0U86/y5bExeeXKXz4IMHIzPVBB
-pjahqQRYZMAXZMJIdflZCMRcTsHEsOMvyt/C4A/CW11XFA1hr15+y5kkvPqXzTt4isnJrHi56v4q
-8xlk6zxWsF7+XeuFiB5Nax6KviFoodTVfCSkbg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1b96e116-c6a5-4e94-bfd9-3712799e39e0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b3o5YSwmTGG6dFSihaO2X4TjbvKaMdWp9tSULDT2MsKkgBrRqrryvBO3OAIx8URokgBV6lvjq3QB
+7aSCXqEq2w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_def005ef-7f38-47f7-8de2-d2cf094d42a7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QPF8XsvlNAqwjH4zc6ucenSXy/l6eDN/IuP31dUCcDhL5A1O8zV1Gk9AgxGAOCheVxDJP4fKQOGZ
+My/u84oqyQ==</DigestValue></Reference></SignedInfo><SignatureValue>CZK8XL0U+Hi3k0Wdtq2Z5gUnHRPgEwSHiOvTkShQBk1mYmH2VwKWTAetpvKYU5onI5VfHjX5hNu3
+qz9Gq3fMg7m8x9QJtZMGE/+yNScT+WaNTAIgHG9/kjC2eYpeoioowFqjBcoVnH53NOhjCTFOaJh+
+/TyXGAaeT8Na7v2qidWWNNJmkBvLoFhmxjdeEu3+AXhGzY5fOlvcznzyC8gg5Q/xuA69g+cz7Mgp
+duDxxqAy2xS8TWMdAJWnSClCIXazdpn5o0Fgm6c1QSuontwICbLzeg2CVV3/PgLmngN/ePUHfR9Z
+1ur/k/vzEWmz4/r55MxUY8ZvNg16z3v8tGe4ow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -557,4 +557,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_181fdae4-8947-49e0-ad95-70432e5c533b" Target="#_79268750-8d41-4023-820a-68bd734d8542"><Timestamp>2018-12-14 20:36:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_def005ef-7f38-47f7-8de2-d2cf094d42a7" Target="#_1b96e116-c6a5-4e94-bfd9-3712799e39e0"><Timestamp>2018-12-14 20:40:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
