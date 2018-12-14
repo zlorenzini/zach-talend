@@ -66,6 +66,11 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>thashfile-3.0-20170711</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.example.zach_talend.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.0.1</version>
