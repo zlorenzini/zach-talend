@@ -245,28 +245,28 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="CHLMPVE2" name="tFileInputDelimited_1">
-      <column comment="" key="true" length="12" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="18" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="15" name="PRODUCT_NUMBER" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="PRC_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="PRC_FROM_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -278,34 +278,34 @@
       <column comment="" key="false" length="3" name="PRC_CURR_CODE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LAST_EXE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -314,7 +314,7 @@
       <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LASTUPDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -322,28 +322,28 @@
       </column>
     </metadata>
     <metadata connector="REJECT" label="CHLMPVE2" name="REJECT">
-      <column comment="" key="true" length="12" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="18" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="15" name="PRODUCT_NUMBER" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="PRC_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="PRC_FROM_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -355,34 +355,34 @@
       <column comment="" key="false" length="3" name="PRC_CURR_CODE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LAST_EXE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -391,7 +391,7 @@
       <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LASTUPDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -568,28 +568,28 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <metadata connector="FLOW" label="CHLMPVE2" name="tDBOutput_1">
-      <column comment="" key="true" length="12" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="18" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="15" name="PRODUCT_NUMBER" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="PRC_KEY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="PRC_FROM_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -601,34 +601,34 @@
       <column comment="" key="false" length="3" name="PRC_CURR_CODE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LAST_EXE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -637,7 +637,7 @@
       <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LASTUPDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -645,28 +645,28 @@
       </column>
     </metadata>
     <metadata connector="REJECT" label="CHLMPVE2" name="REJECT">
-      <column comment="" key="true" length="12" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="ORG_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_LVL_CHILD" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="18" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRD_UPC" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="12" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="true" length="-1" name="PRC_BOOK_NUMBER" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="15" name="PRODUCT_NUMBER" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="-1" name="PRC_KEY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_KEY" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="PRC_FROM_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -678,34 +678,34 @@
       <column comment="" key="false" length="3" name="PRC_CURR_CODE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_FIRST_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="11" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PREVIOUS_PRICE" nullable="true" pattern="" precision="3" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PRICE_MULT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_PROMO_LEVEL" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_HDR_NUMBER" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_LEVEL" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LAST_EXE_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRD_LVL_ID" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -714,7 +714,7 @@
       <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="PRC_STATUS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="23" name="LASTUPDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
@@ -733,13 +733,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ae6b465-927b-458f-8c2c-4b8df71933cc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ldKsMWQ1YH8vAma3RfEL/OtlK4aQe0ZMmOuXLBnd7YSdQ/A4XU1PG3f+Vg8LrzJCJ1KN09KLdjYy
-NLaO+rbLkA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_01f868db-14f5-467d-99f2-8f38b7dedf3d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgHgbhw5JQDf1x1b7vLiUc68AH6DooVPdtJkDLiIXnwD1SVRHf3rhVGvU5ZBLGBBm+mNd3mQ5Dyt
-7sAsHEDXdA==</DigestValue></Reference></SignedInfo><SignatureValue>aEtjuify34T6D2oGvMg13mX5ey/jpbBcroajqkIaHa1PAPTmb11pq2B0Iu16Lx545fUjqGH9WzTJ
-1toPtZKbsk4OycvBeK7Ai40AWjdPbFOHZxoF03BLXPqgvXkVFD0oSUho9ujqESl5zg7OXWA068xq
-HfbPuR/Q5qE5sO6oKWz8FsnL/+toima2NNnyCtw4CF8yLua++xZaS2ayH+oUoqHNg2YRm9+WjNuS
-XvJFtZipgBeV+1MLgpoSvorOP8kVq0C9F4MTaNZllEDu5e0vsBIIsQuyB6cJITUCiJcoFId/goI5
-TAYTmh2jONufbVFbOV/YlA2cE+pdK+QA+ptxig==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_85557d03-8823-4550-801b-10aa130425c0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Fp6CY0lbBYRK3Vji3pNHasRzs1inAScVcZ8regnuCcJ88EWUeELDcKX33gOnwVi+RuqUhDE1Upep
+zpK9G1H9yg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6be33d35-a963-42b9-9015-aeb5156fb4c5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ncVIdQDTpk0W1OjIy3Ra/PaLHUnRTAfztbI8CsK7qIGqsMx2FdQbE7UaB+Uf6aXglvYm/LladUgx
+/nNF38iQGA==</DigestValue></Reference></SignedInfo><SignatureValue>mnKA0JQNDmJZSOygn2wRm1R36HEZvrLdaxqDjW9Du3NtLTa3K53aju0/aOedT1ZgzbcGcXJzgREG
+oFVtdpd0EL9hecBDkvTXfNGNxHCuqCyyypt8llfDI3NKgbIxIh1436qHwx+o6F2ChVdKpymmgZfT
+dGeOqcV9L0brVLJ6RcXy09/2eHkJOPGAJYpL2utzcBT2vSre6FKEoJOysmoe3exB0xWJb3lHANAF
+hEnkDJ5WRaibgtHbqXvCZ6GKii7t2JGo4y5nU2r3vIYQFBq9xPGVdupsa5GmOHTpnNizr+d+eDVp
+Df5Lp4OYFp1W48hvSNaKuRBg8BykauZP0nqRmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -763,4 +763,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_01f868db-14f5-467d-99f2-8f38b7dedf3d" Target="#_2ae6b465-927b-458f-8c2c-4b8df71933cc"><Timestamp>2018-12-14 18:29:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6be33d35-a963-42b9-9015-aeb5156fb4c5" Target="#_85557d03-8823-4550-801b-10aa130425c0"><Timestamp>2018-12-14 18:32:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
