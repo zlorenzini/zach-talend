@@ -36,6 +36,7 @@
     <module>jobs/process/HEB/basic_0.1</module>
     <module>jobs/process/HEB/data_import_0.1</module>
     <module>jobs/process/HEB/basic_ht_0.1</module>
+    <module>jobs/process/HEB/intermediate_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
