@@ -736,12 +736,12 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.query_string = &quot;SELECT [TPO_CPeriodo], [UNG_KUnidadNegocio_PS], [DEP_KDepto_PS],[TSM_KCtaContable], [TIE_KTipoEntrega], [TSM_Amt], [TSM_Pct] FROM TH_SOS_ServDomicilio WHERE UNG_KUnidadNegocio_PS IN (&quot; + context.store_list.substring(0, context.store_list.length() - 1) + &quot;) ORDER BY UNG_KUnidadNegocio_PS, TSM_KCtaContable&quot;;&#10;String[] stores = context.store_list.split(&quot;,&quot;);&#10;for (int i = 0; i &lt; stores.length; i++) {&#10;&#9;context.filter_condition += &quot;row8.UNG_KUnidadNegocio.equals(\&quot;&quot; + stores[i] + &quot;\&quot;) || &quot;;&#10;}&#10;context.filter_condition = context.filter_condition.substring(0, context.filter_condition.length() - 4);&#10;System.out.println(context.filter_condition);&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="context.query_string = &quot;SELECT [TPO_CPeriodo], [UNG_KUnidadNegocio_PS], [DEP_KDepto_PS],[TSM_KCtaContable], [TIE_KTipoEntrega], [TSM_Amt], [TSM_Pct] FROM TH_SOS_ServDomicilio WHERE UNG_KUnidadNegocio_PS IN (&quot; + context.store_list.substring(0, context.store_list.length() - 1) + &quot;) ORDER BY UNG_KUnidadNegocio_PS, TSM_KCtaContable&quot;;&#10;&#10;String[] stores = context.store_list.split(&quot;,&quot;);&#10;for (int i = 0; i &lt; stores.length; i++) {&#10;&#9;context.filter_condition += &quot;row8.UNG_KUnidadNegocio.equals(\&quot;&quot; + stores[i] + &quot;\&quot;) || &quot;;&#10;}&#10;context.filter_condition = context.filter_condition.substring(0, context.filter_condition.length() - 4);&#10;System.out.println(context.filter_condition);&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1"/>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="128">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio"/>
@@ -777,7 +777,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="128">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -824,7 +824,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="128">
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_ToUqgP5XEeiXWoUqwDxmxw"/>
@@ -1003,13 +1003,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b0e03c46-e391-4119-be9e-9b1b3c0798de"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vi6XXWSvyP2OyfYrWgkFX2D2j28adccl1NzzNZqVBvYVpgx/UasQRgSxfhgUY1gU7NaW//KtCqfE
-PDFTIMLIhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f4da349c-154d-43da-b601-7fdbbfe66380"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aJjZHJGaKM0H+VCVArIq/7UeRdpDo2u+FwX7ZfgjVwolw/MC2zPKZDDKXOk5qvd4i0IAn7+QQlIo
-jQF8+9KcXQ==</DigestValue></Reference></SignedInfo><SignatureValue>rvTonitww5gvEAl9DkBsUycKxremYYtaCdCD2Is0neZc4TXLH5gTzNpH5ZGhX80J8d1ECxYNox+M
-2gB02mR0tvne537o5PhRcHbeo4zpQ57F697hgk943iBOPy6bUhnA5gCHCz6LHRAabiFg/9Puw7lH
-Ob2ltbxusRHx9MC1bDNEJLsX2fvf5caW/hCrR31H+kdt5QbPsczb/vozl0ubm+GfA0NFzdchNe0X
-Ctku7m2m/I6cPfL+1a1j5hp9c1XD/65jXgu87lKJACSrq2VurgjScr8iISh8qMzm9fXHGbi++7JH
-Bf9zvkSChqZlKklrG4uVqPON+PWwtT5lkSqqxA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_aad8de33-579e-432b-9267-02d2ea002de8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DeW3tCMoKKXXvrGDtGgHZVVJANGQywJyVWtOxxpnW63Xo30KWMo0zXwAi9wHof6o1bBxVW9/aDEI
+kmWdurSmqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_edd638de-3129-4daa-af38-092f482d6e13"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RmLeQe52vAtXtnOr+Eh/WuuFQt8ubEDcziY7PM0Bxqd75TQ6N13HeIc9r4fXnsVzkA2Gc5KFvUGX
+x3HzaBl7XQ==</DigestValue></Reference></SignedInfo><SignatureValue>epNf7jXwKGlI+ZzQvu4Hhy4NgbRIVbLK9zN3MrrBflaweXaQTxOoYfpz2I+3cBWbtV3wqyJyOws8
+hVnuwd6ATMGuNInf+gjdO6cMYuwKzFd02l048n1Jy8LE7xbN4I8cvn19vZpRXpH1A66+58/mZXQV
+n6N04QsEIvaFI5x5uC9iZ/S+mmXUHrhFedY8t+gugSeRF9xjVsNSvtQuowMropugPX0JJx/UDprE
+nt6U0GVX65Myyj3UCpEtIAY9qtE8HXQ/kttO/ZDaHXzB+IpQqWNMTd2U7VxMeUQkkWggmpYTjQ6G
+LQ5SPRPweD/xuwKhvg7nYWyFKscCyMAeXNYTvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1033,4 +1033,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f4da349c-154d-43da-b601-7fdbbfe66380" Target="#_b0e03c46-e391-4119-be9e-9b1b3c0798de"><Timestamp>2018-12-14 16:57:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_edd638de-3129-4daa-af38-092f482d6e13" Target="#_aad8de33-579e-432b-9267-02d2ea002de8"><Timestamp>2018-12-15 00:56:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
