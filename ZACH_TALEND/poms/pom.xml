@@ -20,8 +20,6 @@
     <module>jobs/process/TESTING/esb_test_0.1</module>
     <module>jobs/process/TESTING/hana_test_0.1</module>
     <module>jobs/process/TESTING/test_0.1</module>
-    <module>jobs/process/ROUTE/route_esb_api_0.1</module>
-    <module>jobs/process/ROUTE/json_test_0.1</module>
     <module>jobs/process/TESTING/mysql_demo_0.1</module>
     <module>jobs/process/TESTING/to_azure_demo_0.1</module>
     <module>jobs/process/TESTING/to_hive_demo_0.1</module>
