@@ -35,6 +35,7 @@
     <module>jobs/process/CLIENT/HEB/informatica_1_basic_2_ht_0.1</module>
     <module>jobs/process/CLIENT/HEB/informatica_1_basic_1_0.1</module>
     <module>jobs/process/CLIENT/HEB/informatica_2_intermediate_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_2_int_ag_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>

@@ -465,6 +465,20 @@
       <relatedItems xmi:id="_S-rs-__eEeiey-BXzUKrog" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_S-rs_P_eEeiey-BXzUKrog" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_gZCZ0CAKEemXMuPUN97-Cg">
+      <baseItem xmi:id="_gZCZ0SAKEemXMuPUN97-Cg" id="_gW8vICAKEemXMuPUN97-Cg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_gZCZ0iAKEemXMuPUN97-Cg" id="_jpVh8P5VEeiKadzKJLmuVA" version="Latest" type="property"/>
+      <relatedItems xmi:id="_gZCZ0yAKEemXMuPUN97-Cg" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ1CAKEemXMuPUN97-Cg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ1SAKEemXMuPUN97-Cg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ1iAKEemXMuPUN97-Cg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ1yAKEemXMuPUN97-Cg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ2CAKEemXMuPUN97-Cg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ2SAKEemXMuPUN97-Cg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ2iAKEemXMuPUN97-Cg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ2yAKEemXMuPUN97-Cg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_gZCZ3CAKEemXMuPUN97-Cg" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_LWGuwKsrEeiT9d1pLjaLgg" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_LWGuwasrEeiT9d1pLjaLgg" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_LWGuwqsrEeiT9d1pLjaLgg" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
