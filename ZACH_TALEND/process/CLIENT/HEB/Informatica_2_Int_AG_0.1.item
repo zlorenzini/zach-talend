@@ -149,10 +149,10 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_1">
-      <column comment="" key="false" length="-1" name="current_date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="current_date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="current_date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="current_date" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -770,13 +770,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7a514b4-d322-424c-9d55-3f6e116aa46c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HS67OC6Gvqjk3PiMVSpDlDy5ywKVgdLu9ose4ZEya17qWW8WpAbuyfGHHS4h3oiMy9bnWa1Spvf2
-g1i/PYv9PQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0aaba693-9361-4594-90c6-cffb9c64d561"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P5uqxL/tqeibGuwS9tMwgibkih8ZaenNNydiQxm04CGzwOcDqtJnR4BC8WFy5U7hLhGL9rMSKgRi
-N1Fh0UT1hA==</DigestValue></Reference></SignedInfo><SignatureValue>MbR3JbIAUcdNw3/zZ+THdM0NAGMBRoJmnL9qBt3laF8Inm8mTDLRpeNsv+KXh5WGXJ4KReXeXKS1
-sQdwB+aXa0hyxvn1yCVYZ/wVW7NMhVlFcQMrYOWyZLuBaRv2gllFC8H8iCdPtAvKsqNbuFcr0Jj3
-2nHnepZLqksRNY5lzaTOPAXSS57jHxLg3meC/mRHqFFjnw1E1VfSq6gRIzrPU3MYJMdhryzVqO14
-8tIM5wrqbjUGhwt935dOvbk6R/giTybyQ446zAbJ2vBzneMXFj2VAZElN1Ox9LZjLX3kBtu9vjNQ
-OOPhaxFOR7lTrSJ72SImZWjxjtOE9DU8sMglUA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_874a0c8a-43bf-4cd7-b877-633ffbc91c52"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Kus8an8/gjKoRAl4HoyzVFI7FOFi1RobOLwghe9h9AtEpDEsYnTsAQ1byfNjd/RDiXYmTdY0hHAC
+4Y473IaFRg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c120b07d-ef75-4df8-bebd-dac7c7b2d89b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VxubK45f4KUYHiDRwxV6YogsLQiUV37aPN/OF6GcVkzkd107n3AWlNELqqcsbIUbHCiTaqV4BrmI
+094RWvyUcQ==</DigestValue></Reference></SignedInfo><SignatureValue>3flaGOnR6+5sUk3n8+BPIkikiHTDvC60kaK4THcUIu6yyTtMqkYESpVuUTOf9hP7BZwQaStR+sw0
+9wtf9ULdkfPB5qPtOJDU2fwXseVjEIUMJpTs0d4XPHByjo/MX2BqluIT2XESRqVkYaytce4XCDVm
+S+NSNDY540SGUzKLshcb5EvcjXZ+HEgwHtEeTXDBf7IA1GXI+7MxoRO3EgbiXxEbxvyjpnYRSfUE
+CELnL1s4+FlNtkg3+A49+GBuOdeD1cNfYnw+sD0Osw2nrgIVb41bi9HPBTOiPPOgF66Q3izfKYjP
+4ygUqEiIB7ujpy0fA/rLBDD59/VGwQ+IljLmOw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -800,4 +800,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0aaba693-9361-4594-90c6-cffb9c64d561" Target="#_e7a514b4-d322-424c-9d55-3f6e116aa46c"><Timestamp>2019-01-24 20:38:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c120b07d-ef75-4df8-bebd-dac7c7b2d89b" Target="#_874a0c8a-43bf-4cd7-b877-633ffbc91c52"><Timestamp>2019-01-24 20:38:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
