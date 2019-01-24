@@ -400,7 +400,7 @@
       <column comment="" key="true" length="10" name="PRE_ARTICULO" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="5" name="PRE_SUCURSAL" nullable="false" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="true" length="5" name="PRE_SUCURSAL" nullable="false" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -418,7 +418,7 @@
       <column comment="" key="false" length="1" name="PRE_VIGENTE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRE_TIPO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="false" length="5" name="PRE_TIPO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="53" name="PRE_PRECNORM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
@@ -427,7 +427,7 @@
       <column comment="" key="false" length="20" name="XXX_ORIGEN" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="XXX_REMOTO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="false" length="5" name="XXX_REMOTO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -436,16 +436,16 @@
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.PRODUCT_NUMBER " name="PRE_ARTICULO" type="id_Integer"/>
-        <mapperTableEntries expression="row3.ORG_LVL_NUMBER " name="PRE_SUCURSAL" type="id_Short"/>
+        <mapperTableEntries expression="row3.ORG_LVL_NUMBER " name="PRE_SUCURSAL" type="id_Integer"/>
         <mapperTableEntries expression="&quot;S&quot; " name="PRE_NIVEL" type="id_String"/>
         <mapperTableEntries expression="row3.PRC_PRICE" name="PRE_PRECIO" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row3.PRC_EFFECTIVE_DAY.getDay() + row3.PRC_EFFECTIVE_DAY.getMonth() * 100 + row3.PRC_EFFECTIVE_DAY.getYear() * 10000 " name="PRE_FECHA" type="id_Integer"/>
         <mapperTableEntries expression="" name="PRE_MARGEN" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="&quot;N&quot;" name="PRE_VIGENTE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.PRC_TYPE " name="PRE_TIPO" nullable="true" type="id_Short"/>
+        <mapperTableEntries expression="row3.PRC_TYPE " name="PRE_TIPO" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row3.PRC_PRICE" name="PRE_PRECNORM" type="id_Double"/>
         <mapperTableEntries expression="String.valueOf(row3.PRC_EFFECTIVE_DAY.getDay() + row3.PRC_EFFECTIVE_DAY.getMonth() * 100 + row3.PRC_EFFECTIVE_DAY.getYear() * 10000) " name="XXX_ORIGEN" nullable="true" type="id_String"/>
-        <mapperTableEntries name="XXX_REMOTO" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="XXX_REMOTO" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="PRD_LVL_CHILD" type="id_Integer"/>
@@ -530,7 +530,7 @@
       <column comment="" key="true" length="10" name="PRE_ARTICULO" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="true" length="5" name="PRE_SUCURSAL" nullable="false" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="true" length="5" name="PRE_SUCURSAL" nullable="false" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
@@ -548,7 +548,7 @@
       <column comment="" key="false" length="1" name="PRE_VIGENTE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="PRE_TIPO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="false" length="5" name="PRE_TIPO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="53" name="PRE_PRECNORM" nullable="false" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
@@ -557,7 +557,7 @@
       <column comment="" key="false" length="20" name="XXX_ORIGEN" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="XXX_REMOTO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
+      <column comment="" key="false" length="5" name="XXX_REMOTO" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -770,13 +770,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fb2e37b9-ff26-43bd-9132-9e7e149dfde4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l9LFvzXsvpUM+Vubz+qPCvoTJwRhXmgIb3rUZnHhDR/fPHR5xOeSiWWgqlqiaoOZ7tVwZF8t5Zuq
-umNjsUUFqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7393c261-8755-4bb5-8971-6f9c5499cd2f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yViENi4Y050rUhceAP9Yl0YGWRwMerkIFcpa0Nda9UjPm1at4TeXzH4kYYA2uiL1AhzdFLoHNJgZ
-cqQlzB0Ibw==</DigestValue></Reference></SignedInfo><SignatureValue>TV61OoTZv/hKD5lCJaj4k/XFZ+hktESx2p3Z/VHNaQg36U95m80asIphUUFn38dtEp5LGQ4zIw7s
-qrWgbmZ4iB2FzvwIpQNZS/wAURfmQwODLOCZWXI2bU+BjrnxR2flSr/Oh7sOhvXh39B6JGTecXfz
-R3yetI4OqKStHWvAV5nSosGIPSoLfNOofSDgFwOCg1Kq7MvVFr4ZfjswSroGOtoPJn/EFj7vXqa6
-UEFGcl+eO0Sr9KRzCstS0xGfdnLHAZ2+DxEAHwfsDa9jEh5301ilQ/LNZXbbOL9qHOSaRvYUa1s8
-o3+7qF7UD04/+Myge6mC4O6pZb7peWLheKQyvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_56166a17-b845-4a79-81c2-5c68e5966cb1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XnB58GbqC0jtCdjXUwRQdsXs83UkHN6VT97DAdeacvzUxvv6h3q2jh2DXMLG4MO4f4LluSlI73wQ
+7ZcU3HJpyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_94d0fd3c-09ac-4c0b-afdc-6da37d158431"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aaq385CbiHU9LnUi6s949ZNFedjVIOJpn4zrlTTtoil1qwVDkDxn8M5NC/GRtI52z8Isn1kZu1QU
+K93WGR8Hrg==</DigestValue></Reference></SignedInfo><SignatureValue>PXNlYyg4xo/UEixzqU6wuL84CoVIol6oVVMwAKS3HW4svXRD3LaG0s8+3FBNPjh/2rKzyXRa7wfT
+TmR13nf6sId8jgyoKX10RZTEHm1v5kIB1XOiEN4mRWmJWhxHVG63ZtkGLa7AwA/NmQ/SVZXrZzUA
+K7G+eHgpCAW9H3oMPh7t+hACrrG33sA89sEQlpwqtHhu9I4vHC8NWeUBVQWBNg3wzOHwUFyr9GQm
+ZwKIPnKS2synWrHY81LvcjAYCICTyEvpRPS8EDNDetPUw49elaJrhhtw/wKfK21LjMcZm9hhpXrd
+h0KP8BK7Jltx2nyWnPxy3wYBdW0eXlEwEYq/vA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -800,4 +800,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7393c261-8755-4bb5-8971-6f9c5499cd2f" Target="#_fb2e37b9-ff26-43bd-9132-9e7e149dfde4"><Timestamp>2019-01-24 20:19:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_94d0fd3c-09ac-4c0b-afdc-6da37d158431" Target="#_56166a17-b845-4a79-81c2-5c68e5966cb1"><Timestamp>2019-01-24 20:19:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
