@@ -34,6 +34,7 @@
     <module>jobs/process/CLIENT/HEB/basic_0.1</module>
     <module>jobs/process/CLIENT/HEB/basic_ht_0.1</module>
     <module>jobs/process/CLIENT/HEB/intermediate_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_3_complex_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
