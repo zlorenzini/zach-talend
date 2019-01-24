@@ -406,7 +406,7 @@
       <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="PRE_PRECIO" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="PRE_PRECIO" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="true" length="10" name="PRE_FECHA" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -438,12 +438,12 @@
         <mapperTableEntries expression="row3.PRODUCT_NUMBER " name="PRE_ARTICULO" type="id_Integer"/>
         <mapperTableEntries expression="row3.ORG_LVL_NUMBER " name="PRE_SUCURSAL" type="id_Short"/>
         <mapperTableEntries expression="&quot;S&quot; " name="PRE_NIVEL" type="id_String"/>
-        <mapperTableEntries expression="Float.valueOf(row3.PRC_PRICE) " name="PRE_PRECIO" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="row3.PRC_PRICE" name="PRE_PRECIO" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="row3.PRC_EFFECTIVE_DAY.getDay() + row3.PRC_EFFECTIVE_DAY.getMonth() * 100 + row3.PRC_EFFECTIVE_DAY.getYear() * 10000 " name="PRE_FECHA" type="id_Integer"/>
         <mapperTableEntries expression="" name="PRE_MARGEN" nullable="true" type="id_Double"/>
         <mapperTableEntries expression="&quot;N&quot;" name="PRE_VIGENTE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.PRC_TYPE " name="PRE_TIPO" nullable="true" type="id_Short"/>
-        <mapperTableEntries expression="Float.valueOf(row3.PRC_PRICE) " name="PRE_PRECNORM" type="id_Double"/>
+        <mapperTableEntries expression="row3.PRC_PRICE" name="PRE_PRECNORM" type="id_Double"/>
         <mapperTableEntries expression="String.valueOf(row3.PRC_EFFECTIVE_DAY.getDay() + row3.PRC_EFFECTIVE_DAY.getMonth() * 100 + row3.PRC_EFFECTIVE_DAY.getYear() * 10000) " name="XXX_ORIGEN" nullable="true" type="id_String"/>
         <mapperTableEntries name="XXX_REMOTO" nullable="true" type="id_Short"/>
       </outputTables>
@@ -536,7 +536,7 @@
       <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="24" name="PRE_PRECIO" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="24" name="PRE_PRECIO" nullable="true" pattern="" precision="0" sourceType="REAL" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="true" length="10" name="PRE_FECHA" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -770,13 +770,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_20f45171-d91f-494b-ab6a-c16a7b0d5130"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P0LdJCz5eVa+JM0j+zQsjvFTmbwM+GXEzeL9xsqfug2AdY8CXMP/SaqIaVMwbWWizb5u2raTng26
-eVZyyHFLxQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1d8e08f4-2e2c-4dc7-8f38-dd8f05f310c1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5VDPatVHwqL4w51jGRk1Phaaw1byYhvHCKzxQct2AfgWNU7L0f92djWf+oBdR+W0l8+JWhsSbeR3
-xqFqH2yMyg==</DigestValue></Reference></SignedInfo><SignatureValue>DuqEX8kcjMej3PA2APtSTylNk79ph6tNT+vpvOh1ATJJRP96ANsJUi9cousOBH3DwU9AxlRCL5Fn
-HFIAPTaQcSi1+iKaS9S/EXD7mi4c52wg9G++UO/DqPcrNq1kYuKVmV6xhxg3zl/c/P7jlRdjWfFC
-35wLgy30JjsU3YgI3RLg8PJSyX9IXFayJxmCb1cQSawxCU0FkG+2i3TCX8MMQUT3BL8gPSzX0RyN
-mMDnY9pHOtbYas99SvSmCjRXNUcyBsLqtssb+ritO4ogDHU3ZQJh4H0/P31+SsHH8aSRVvKpXe6R
-pCfiX+xb+d0T7D6zuC86AhX29wq3vLjj+/KuHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fb2e37b9-ff26-43bd-9132-9e7e149dfde4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l9LFvzXsvpUM+Vubz+qPCvoTJwRhXmgIb3rUZnHhDR/fPHR5xOeSiWWgqlqiaoOZ7tVwZF8t5Zuq
+umNjsUUFqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7393c261-8755-4bb5-8971-6f9c5499cd2f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yViENi4Y050rUhceAP9Yl0YGWRwMerkIFcpa0Nda9UjPm1at4TeXzH4kYYA2uiL1AhzdFLoHNJgZ
+cqQlzB0Ibw==</DigestValue></Reference></SignedInfo><SignatureValue>TV61OoTZv/hKD5lCJaj4k/XFZ+hktESx2p3Z/VHNaQg36U95m80asIphUUFn38dtEp5LGQ4zIw7s
+qrWgbmZ4iB2FzvwIpQNZS/wAURfmQwODLOCZWXI2bU+BjrnxR2flSr/Oh7sOhvXh39B6JGTecXfz
+R3yetI4OqKStHWvAV5nSosGIPSoLfNOofSDgFwOCg1Kq7MvVFr4ZfjswSroGOtoPJn/EFj7vXqa6
+UEFGcl+eO0Sr9KRzCstS0xGfdnLHAZ2+DxEAHwfsDa9jEh5301ilQ/LNZXbbOL9qHOSaRvYUa1s8
+o3+7qF7UD04/+Myge6mC4O6pZb7peWLheKQyvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -800,4 +800,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1d8e08f4-2e2c-4dc7-8f38-dd8f05f310c1" Target="#_20f45171-d91f-494b-ab6a-c16a7b0d5130"><Timestamp>2019-01-24 20:17:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7393c261-8755-4bb5-8971-6f9c5499cd2f" Target="#_fb2e37b9-ff26-43bd-9132-9e7e149dfde4"><Timestamp>2019-01-24 20:19:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
