@@ -31,10 +31,10 @@
     <module>jobs/process/IOT/gyro_test_db_0.1</module>
     <module>jobs/process/IOT/gyro_test_bc_0.1</module>
     <module>jobs/process/IOT/gyro_test_ms_0.1</module>
-    <module>jobs/process/CLIENT/HEB/intermediate_0.1</module>
     <module>jobs/process/CLIENT/HEB/informatica_3_complex_0.1</module>
     <module>jobs/process/CLIENT/HEB/informatica_1_basic_2_ht_0.1</module>
     <module>jobs/process/CLIENT/HEB/informatica_1_basic_1_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_2_intermediate_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
