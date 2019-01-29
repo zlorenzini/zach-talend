@@ -38,6 +38,7 @@
     <module>jobs/process/CLIENT/HEB/informatica_2_int_ag_0.1</module>
     <module>jobs/process/CLIENT/HEB/mockup_0.1</module>
     <module>jobs/process/CLIENT/HEB/data_export_0.1</module>
+    <module>jobs/process/CLIENT/HEB/data_import_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
