@@ -157,10 +157,12 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String[] field_names = {&quot;ORG_LVL_CHILD&quot;, &quot;PRD_LVL_CHILD&quot;, &quot;ISS_TECH_KEY&quot;, &quot;ALT_TECH_KEY&quot;, &quot;TRAN_TYPE&quot;, &quot;AUDIT_NUMBER&quot;, &quot;ISS_TYPE&quot;, &quot;ORG_LVL_NUMBER&quot;, &quot;PRD_LVL_NUMBER&quot;, &quot;PRD_LVL_PARENT&quot;, &quot;PRD_LVL_ID&quot;, &quot;PRD_LVL_PARENT_NUM&quot;, &quot;PRD_NAME_FULL&quot;, &quot;PRD_TARGETGM&quot;, &quot;PRD_LVL_ACTIVE&quot;, &quot;PRD_STYLE_IND&quot;, &quot;PRD_STATUS&quot;, &quot;GRP_AUDIT_NUMBER&quot;, &quot;PRD_PDH_KEY_1&quot;, &quot;PRD_PDH_NAME_1&quot;, &quot;PRD_PDD_KEY_1&quot;, &quot;PRD_PDD_CODE_1&quot;, &quot;PRD_PDH_KEY_2&quot;, &quot;PRD_PDH_NAME_2&quot;, &quot;PRD_PDD_KEY_2&quot;, &quot;PRD_PDD_CODE_2&quot;, &quot;PRD_PDH_KEY_3&quot;, &quot;PRD_PDH_NAME_3&quot;, &quot;PRD_PDD_KEY_3&quot;, &quot;PRD_PDD_CODE_3&quot;, &quot;DATE_CREATED&quot;, &quot;PRD_UOM_SIZE&quot;, &quot;PRD_SLL_UOM&quot;, &quot;PRD_COMP_UOM&quot;, &quot;PRD_COMP_NAME&quot;, &quot;PRD_CONV_QTY&quot;, &quot;PRD_CROSS_DOCK&quot;, &quot;PRD_LVL_NUMBER_OLD&quot;, &quot;PRD_LVL_PARENT_NUM_OLD&quot;, &quot;VENDOR_NUMBER&quot;, &quot;SPP_SET_PRD_CHILD&quot;, &quot;ALT_SLL_UOM_1&quot;, &quot;ALT_SLL_UOM_2&quot;, &quot;VAR_WEIGHT_ITEM&quot;, &quot;VAR_WEIGHT_TYPE&quot;, &quot;PRD_SKU_TYPE&quot;, &quot;PRD_SHRINK_RATE&quot;, &quot;PRD_WASTE_CODE&quot;, &quot;UOM_DESC&quot;, &quot;PRD_SIZE_UOM&quot;, &quot;PRD_SIZE_UOM_DESC&quot;, &quot;MANDATORY_PLU&quot;, &quot;ATR_COL_COD_TECH_KEY&quot;, &quot;ATR_COL_COD&quot;, &quot;ATR_COL_COD_DESC&quot;, &quot;LASTUPDATE&quot;};&#10;Boolean[] use_field = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};&#10;String[] field_values = input_row.composite_row.split(&quot;,&quot;);&#10;String sql_statement = &quot;INSERT INTO SDIPRDMST (&quot;;&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if(field_values[i] == &quot;NULL&quot;) {&#10;&#9;&#9;use_field[i] = false;&#10;&#9;} else {&#10;&#9;&#9;use_field[i] = true;&#10;&#9;}&#10;}&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if (use_field[i]) {&#10;&#9;&#9;sql_statement += field_names[i] + &quot;, &quot;;&#10;&#9;}&#10;}&#10;sql_statement = sql_statement.substring(0, sql_statement.length() - 2);&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if (use_field[i]) {&#10;&#9;&#9;sql_statement += &quot;'&quot; + field_values[i] + &quot;', &quot;;&#10;&#9;}&#10;}&#10;sql_statement = sql_statement.substring(0, sql_statement.length() - 2);&#10;sql_statement += &quot;)&quot;;&#10;output_row.composite_row = sql_statement;&#10;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String[] field_names = {&quot;ORG_LVL_CHILD&quot;, &quot;PRD_LVL_CHILD&quot;, &quot;ISS_TECH_KEY&quot;, &quot;ALT_TECH_KEY&quot;, &quot;TRAN_TYPE&quot;, &quot;AUDIT_NUMBER&quot;, &quot;ISS_TYPE&quot;, &quot;ORG_LVL_NUMBER&quot;, &quot;PRD_LVL_NUMBER&quot;, &quot;PRD_LVL_PARENT&quot;, &quot;PRD_LVL_ID&quot;, &quot;PRD_LVL_PARENT_NUM&quot;, &quot;PRD_NAME_FULL&quot;, &quot;PRD_TARGETGM&quot;, &quot;PRD_LVL_ACTIVE&quot;, &quot;PRD_STYLE_IND&quot;, &quot;PRD_STATUS&quot;, &quot;GRP_AUDIT_NUMBER&quot;, &quot;PRD_PDH_KEY_1&quot;, &quot;PRD_PDH_NAME_1&quot;, &quot;PRD_PDD_KEY_1&quot;, &quot;PRD_PDD_CODE_1&quot;, &quot;PRD_PDH_KEY_2&quot;, &quot;PRD_PDH_NAME_2&quot;, &quot;PRD_PDD_KEY_2&quot;, &quot;PRD_PDD_CODE_2&quot;, &quot;PRD_PDH_KEY_3&quot;, &quot;PRD_PDH_NAME_3&quot;, &quot;PRD_PDD_KEY_3&quot;, &quot;PRD_PDD_CODE_3&quot;, &quot;DATE_CREATED&quot;, &quot;PRD_UOM_SIZE&quot;, &quot;PRD_SLL_UOM&quot;, &quot;PRD_COMP_UOM&quot;, &quot;PRD_COMP_NAME&quot;, &quot;PRD_CONV_QTY&quot;, &quot;PRD_CROSS_DOCK&quot;, &quot;PRD_LVL_NUMBER_OLD&quot;, &quot;PRD_LVL_PARENT_NUM_OLD&quot;, &quot;VENDOR_NUMBER&quot;, &quot;SPP_SET_PRD_CHILD&quot;, &quot;ALT_SLL_UOM_1&quot;, &quot;ALT_SLL_UOM_2&quot;, &quot;VAR_WEIGHT_ITEM&quot;, &quot;VAR_WEIGHT_TYPE&quot;, &quot;PRD_SKU_TYPE&quot;, &quot;PRD_SHRINK_RATE&quot;, &quot;PRD_WASTE_CODE&quot;, &quot;UOM_DESC&quot;, &quot;PRD_SIZE_UOM&quot;, &quot;PRD_SIZE_UOM_DESC&quot;, &quot;MANDATORY_PLU&quot;, &quot;ATR_COL_COD_TECH_KEY&quot;, &quot;ATR_COL_COD&quot;, &quot;ATR_COL_COD_DESC&quot;, &quot;LASTUPDATE&quot;};&#10;Boolean[] use_field = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};&#10;String[] field_values = input_row.composite_row.split(&quot;,&quot;);&#10;String sql_statement = &quot;INSERT INTO SDIPRDMST (&quot;;&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if(field_values[i] == &quot;NULL&quot;) {&#10;&#9;&#9;use_field[i] = false;&#10;&#9;} else {&#10;&#9;&#9;use_field[i] = true;&#10;&#9;}&#10;}&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if (use_field[i]) {&#10;&#9;&#9;sql_statement += field_names[i] + &quot;, &quot;;&#10;&#9;}&#10;}&#10;sql_statement = sql_statement.substring(0, sql_statement.length() - 2);&#10;for (int i = 0; i &lt; 56; i++) {&#10;&#9;if (use_field[i]) {&#10;&#9;&#9;sql_statement += &quot;'&quot; + field_values[i] + &quot;', &quot;;&#10;&#9;}&#10;}&#10;sql_statement = sql_statement.substring(0, sql_statement.length() - 2);&#10;sql_statement += &quot;)&quot;;&#10;output_row.sql_statement = sql_statement;&#10;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_1"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="sql_statement" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
@@ -175,11 +177,16 @@
     <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="sql_statement"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="sql_statement" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tJavaRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -191,6 +198,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sql_statement"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -199,13 +211,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5d3ec174-5807-48e6-9719-90e8794244fd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>d93Th/GNJC1uQxxjtj5du2gWBoW1UtgDsGNkWdXeV8l2V8I9fDO5loFuh0zrEO3cJqNm9lEQ0yFW
-PbN6NXw2rA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5ae2c2b2-caaa-40c5-8f8d-ea58742a0a10"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gIdrQOVVfSmX+JKzFO3EqVlFMWgJay1ss5phwb2gvkzsrAg4TRJKiMRGbY+tT5qlgg7LeSMIlsG3
-6vCFHk9w0g==</DigestValue></Reference></SignedInfo><SignatureValue>Az8KbBIgh9ZbDQuPtEMriXdpEQdtGM1tzDZclHHiSsyRgU6rwPcu4QuosWujo35h5FoKmq0sB5WK
-C8osETXZE90s6++7LiiQVQcu6nQ9IUQZGmVTz+SRPeudwqgCj9VwcS6I9N6gSEB60v7rDqsOrBZz
-VI1NPuBttgcMMCD3ZrHFEeX5dmujXl3cBS/Gp/OtBQ3VO/BGDQV5fSxP2gAxrNQy7uIlX4X0m/D9
-5Nc3BmiD8g2dtj5BS4omxs3BqGg1gZLXQnEBLhaFmQexSbe8oRmql7yTT9fYtBelMEr7Mxr10ISo
-hVzUOhFq0wRFDVU8fDaK9R5yWQjngorMl+7qzw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a4a29e1a-c035-41db-ae95-afc6c18b9e02"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Pxh6VYgCNDDp7DVW9GoBpfsr7saSFHjaHlQD/WDBK9dT7r4u+bnhYyt53ApJwcFQX6zVIEi3QiwG
+eumxzUJy9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0d304fde-93d4-49fc-a912-b876f647da1b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9H0hmsnAe/dKKYXhEYIzfpPPLaMwyhCm22Oxo9PyR+/kaDtKM3RgUOOSUeniBZpUj9+R3DpWTCRv
+7encVRTj/w==</DigestValue></Reference></SignedInfo><SignatureValue>hQup6tdbCAv1+qQrnH1poXGB2cmWCEjtIHLCOBkHfFNWMoCk30r0yxo6pAOw+VcjhwgIly9u1z3M
+dqr+dULubgKxB0uAg+cEt2Rrk6vgnjmeUEnTzkTv/yWtMLmBa8yMt1hnc0er0ZfzMPYhFkTDP5CQ
+kCMU/K4kaGLaVYs9A4w7HNoOBOh0+WBZBPX9dWuOU9tsh2HLL2zGCxg3zVr8Q7qpl58OTevnNJqX
++6UDaqJByuidQOZL/IYiDgw2irghCDgGb/6mvdM3jcdJSTImpAQBU7SuPH3u68FDzQtAn+s1W0f2
+rtobEgAJ/rNaOHfxr96RpUAlEgNZa3TkNg17Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -229,4 +241,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5ae2c2b2-caaa-40c5-8f8d-ea58742a0a10" Target="#_5d3ec174-5807-48e6-9719-90e8794244fd"><Timestamp>2019-01-29 04:49:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0d304fde-93d4-49fc-a912-b876f647da1b" Target="#_a4a29e1a-c035-41db-ae95-afc6c18b9e02"><Timestamp>2019-01-29 04:50:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
