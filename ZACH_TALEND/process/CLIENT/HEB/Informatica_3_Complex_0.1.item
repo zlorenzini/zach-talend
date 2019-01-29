@@ -120,8 +120,6 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;HEB&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="XewSdrcvbHfneSUh6PDH0w=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - SDIPRDMST"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;SDIPRDMST&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -273,10 +271,10 @@
       <column comment="" key="false" length="1" name="ISS_TYPE" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="12" name="ORG_LVL_NUMBER" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="15" name="PRD_LVL_NUMBER" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="15" name="PRD_LVL_NUMBER" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="12" name="PRD_LVL_PARENT" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
@@ -300,7 +298,7 @@
       <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" pattern="" precision="0" sourceType="CHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="2" name="PRD_STATUS" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="2" name="PRD_STATUS" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="12" name="GRP_AUDIT_NUMBER" nullable="true" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
@@ -600,7 +598,7 @@
         <mapperTableEntries name="INS_CANTDESP" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="INS_COSTO" nullable="true" type="id_Double"/>
         <mapperTableEntries name="INS_TICOMPRA" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(Integer.parseInt(row1.PRD_STATUS.toBigInteger()) == 0) ? &quot;A&quot; : &quot;R&quot; " name="INS_ESTADO" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(row1.PRD_STATUS) == 0) ? &quot;A&quot; : &quot;R&quot; " name="INS_ESTADO" nullable="true" type="id_String"/>
         <mapperTableEntries name="INS_PRECIOVTA" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="INS_PREANT" nullable="true" type="id_Double"/>
         <mapperTableEntries name="INS_PROVSUG" nullable="true" type="id_Integer"/>
@@ -651,8 +649,8 @@
         <mapperTableEntries name="TRAN_TYPE" type="id_String"/>
         <mapperTableEntries name="AUDIT_NUMBER" type="id_BigDecimal"/>
         <mapperTableEntries name="ISS_TYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ORG_LVL_NUMBER" type="id_BigDecimal"/>
-        <mapperTableEntries name="PRD_LVL_NUMBER" type="id_String"/>
+        <mapperTableEntries name="ORG_LVL_NUMBER" type="id_Integer"/>
+        <mapperTableEntries name="PRD_LVL_NUMBER" type="id_Integer"/>
         <mapperTableEntries name="PRD_LVL_PARENT" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="PRD_LVL_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="PRD_LVL_PARENT_NUM" nullable="true" type="id_String"/>
@@ -660,7 +658,7 @@
         <mapperTableEntries name="PRD_TARGETGM" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="PRD_LVL_ACTIVE" nullable="true" type="id_String"/>
         <mapperTableEntries name="PRD_STYLE_IND" nullable="true" type="id_String"/>
-        <mapperTableEntries name="PRD_STATUS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="PRD_STATUS" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="GRP_AUDIT_NUMBER" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="PRD_PDH_KEY_1" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="PRD_PDH_NAME_1" nullable="true" type="id_String"/>
@@ -1316,13 +1314,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_68f34aff-5e09-4876-b074-34764d36ba76"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ALbmtfxcxEJm1EaX3X3f8a26YoL2NI5BXmXj1DyXr0wSZR9AdaFxnDoGSjXXyKPnsFoA8J3hulxx
-A2KmtgPRvw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8da3cf54-3a63-4a58-a639-73431bb71d4a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YY9M/xFIiSKxEWAXv0J3pN4SVWXyKFZqqJfdmZ86SmSil55PqOXpKl1/uy7YWeyWLaRX4HIIPTWu
-4rbjP/MSwg==</DigestValue></Reference></SignedInfo><SignatureValue>SFpCWD5pLy3+h47CMrvfWGq0J4YwfS72MckfgTxFaCPTl8YRukbDRfJQ3IyT3mmK/BbZR7TSh+Lw
-m2FLKw47AEwbgjw1G22MlxQ3VxA1h9eVxESDt2R+2UISUM5x2lgPYIX3He+TPwMZ/rMXnBUhq/lZ
-S2rpeDurpXPaZ0oCh0v02YwnZXCS4QFu9p1xk1EEx4cjF/ZVyRsqrIOej4lzA0UpCzTrE8Y/RJwt
-QQDV8k0Z8SRgOKYPhY8rcG7uCPGTAmYZpLOllJKDbXLwMuMfcHlBdR9rx5JBfOT7VfkTvIaDjqTq
-+8MhEVsMoxQ6XrCznDI4r0HmvNcFeCfbEW+L2g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d4748028-3271-40fb-84f2-30325e7dc01c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Xf8Szt/ccyQuwJFura9AS1DdiLXz0bP1VPUldmkrdFs65+mwMEEDwgvY/iE1b2BoaCc+F6MsG/VT
+VMUEFwvBfQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e1a4e66b-576f-40ff-b328-10beb87f2154"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OSUPbXvvLUdOiT8hgfI/h6FRnLaRb6I7AJQ3y9+9YwOfqvOJeUk6zHE09k9CgRMGS9tZDHS3ESDu
+TVukbU8M/Q==</DigestValue></Reference></SignedInfo><SignatureValue>O86BjXSW2DqPCQuKNL60qqnpAwyZN+ZSd6yjeW1+iXBvLVm+qK6ry3iKvssEbOqhmyNt2b64mv/Q
+INGgh2vyl6MBo5vjfpeKJcAET63kx7kq4vOiEs5yCTsqAONVVh3+8t7PqsYGc5IdXqZiMBo6pRhg
+IARoQND7mJ4BcR7uG0Mgpkr+mrvGCEOyDEqDgrhQdIAzpETRsYstbU2q4rGwmk3Ta3ezFbE2N0gS
+3Wf/VGSsTxTUJFDOmUkLbB1gc+udxgi1iOVvifScJe3VxCwaqeZFT1KkCCRzQ9Eqr9WVBkYGOs5E
+7VtC4PH00yu/UtU6MD9pmkg9yPNRO4k1pxhdhA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1346,4 +1344,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8da3cf54-3a63-4a58-a639-73431bb71d4a" Target="#_68f34aff-5e09-4876-b074-34764d36ba76"><Timestamp>2019-01-29 18:49:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e1a4e66b-576f-40ff-b328-10beb87f2154" Target="#_d4748028-3271-40fb-84f2-30325e7dc01c"><Timestamp>2019-01-29 18:51:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
