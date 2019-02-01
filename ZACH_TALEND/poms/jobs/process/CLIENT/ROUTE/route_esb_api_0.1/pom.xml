@@ -6,18 +6,18 @@
     <groupId>org.example.zach_talend</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.1.1</version>
-    <relativePath>../../../../</relativePath>
+    <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.zach_talend.service</groupId>
-  <artifactId>ESB_Test-bundle</artifactId>
+  <artifactId>ROUTE_ESB_API-bundle</artifactId>
   <version>0.1.0</version>
   <packaging>bundle</packaging>
-  <name>ZACH_TALEND ESB_Test-0.1.0 (0.1,Job Designs) Bundle</name>
+  <name>ZACH_TALEND ROUTE_ESB_API-0.1.0 (0.1,Job Designs) Bundle</name>
   <properties>
     <item.name>@ItemName@</item.name>
     <bundle.config.export.service>@BundleConfigExportService@</bundle.config.export.service>
     <bundle.config.bundle.classpath>@BundleConfigBundleClasspath@</bundle.config.bundle.classpath>
-    <talend.job.name>ESB_Test</talend.job.name>
+    <talend.job.name>ROUTE_ESB_API</talend.job.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.project.name>ZACH_TALEND</talend.project.name>
@@ -32,16 +32,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.routine.groupid>org.example.zach_talend.code</talend.routine.groupid>
-    <talend.job.folder>testing/</talend.job.folder>
+    <talend.job.folder>client/route/</talend.job.folder>
     <bundle.config.import.package>@BundleConfigImportPackage@</bundle.config.import.package>
-    <talend.job.id>_VgHtUK08EeiJerQ7vVGCPQ</talend.job.id>
+    <talend.job.id>_ZKA6ILE3EeiHII6vOxnb2g</talend.job.id>
     <talend.project.name.lowercase>zach_talend</talend.project.name.lowercase>
     <talend.job.finalName>${talend.job.name}-bundle-${project.version}</talend.job.finalName>
     <lib.path>${resources.path}/lib</lib.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.version>0.1</talend.job.version>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
-    <talend.job.path>zach_talend/esb_test_0_1</talend.job.path>
+    <talend.job.path>zach_talend/route_esb_api_0_1</talend.job.path>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
     <talend.pigudf.groupid>org.example.zach_talend.pigudf</talend.pigudf.groupid>
@@ -52,6 +52,11 @@
     <item.project.name>@ItemProjectName@</item.project.name>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>accessors-smart-1.1</artifactId>
+      <version>6.0.0</version>
+    </dependency>
     <dependency>
       <groupId>aopalliance</groupId>
       <artifactId>aopalliance</artifactId>
@@ -226,6 +231,16 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>joda-time-2.9</artifactId>
       <version>6.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-path-2.1.0</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>json-smart-2.2.1</artifactId>
+      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>

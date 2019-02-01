@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.example.zach_talend</groupId>
     <artifactId>code.Master</artifactId>
-    <version>7.0.1</version>
+    <version>7.1.1</version>
     <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.zach_talend.job</groupId>
@@ -20,36 +20,38 @@
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>zach_talend</talend.project.name.lowercase>
     <talend.job.path>zach_talend/ci_cd_test_0_1</talend.job.path>
+    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>ZACH_TALEND</talend.project.name>
-    <talend.product.version>7.0.1.20180411_1414</talend.product.version>
+    <talend.product.version>7.1.1.20181026_1147</talend.product.version>
     <talend.job.finalName>ci_cd_test_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.zach_talend.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.zach_talend.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms2048M -Xmx4096M -Dhadoop.home.dir=C:/opt/hadoop -Dfile.encoding=UTF-8</talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms2048M -Xmx4096M -Dhadoop.home.dir=C:/opt/hadoop -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.project.branch>@ProjectBranch@</talend.project.branch>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
-    <talend.project.branch>master</talend.project.branch>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.job.name>CI_CD_Test</talend.job.name>
     <talend.job.id>_jSDxkKsrEeiT9d1pLjaLgg</talend.job.id>
     <talend.project.id>0</talend.project.id>
-    <talend.job.folder>testing/</talend.job.folder>
+    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
+    <talend.job.folder>testing/</talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>dom4j-1.6.1</artifactId>
-      <version>6.0.0</version>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>log4j-1.2.16</artifactId>
-      <version>6.0.0</version>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -59,7 +61,7 @@
     <dependency>
       <groupId>org.example.zach_talend.code</groupId>
       <artifactId>routines</artifactId>
-      <version>7.0.1</version>
+      <version>7.1.1</version>
     </dependency>
   </dependencies>
   <build>
@@ -122,8 +124,8 @@
       </activation>
       <properties>
         <templates.dir>${basedir}/src/main/templates/</templates.dir>
-        <poms.dir>${basedir}</poms.dir>
         <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
+        <poms.dir>${basedir}</poms.dir>
       </properties>
     </profile>
     <profile>
@@ -143,8 +145,8 @@
       <properties>
         <talend.pigudf.excludes.set>org.talend.pigudf.${talend.project.name.lowercase}:*</talend.pigudf.excludes.set>
         <talend.libraries.excludes.set>${talend.libraries.includes.set}</talend.libraries.excludes.set>
-        <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
         <talend.jobs.excludes.set>${project.groupId}:*</talend.jobs.excludes.set>
+        <talend.code.excludes.set>org.talend.code.${talend.project.name.lowercase}:*</talend.code.excludes.set>
         <talend.libraries.includes.set>org.talend.libraries:*</talend.libraries.includes.set>
         <current.job.binaries.include>${project.groupId}:${project.artifactId}:${project.version}</current.job.binaries.include>
       </properties>
@@ -246,6 +248,72 @@
       <properties>
         <survivorship.rules.dir>${current.resources.dir}/metadata/survivorship/</survivorship.rules.dir>
       </properties>
+    </profile>
+    <profile>
+      <id>docker</id>
+      <activation />
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>fabric8-maven-plugin</artifactId>
+            <version>3.5.37</version>
+            <executions>
+              <execution>
+                <id>start</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+                <configuration>
+                  <autoPull>once</autoPull>
+                  <images>
+                    <image>
+                      <name>${talend.project.name.lowercase}/${talend.job.name}</name>
+                      <build>
+                        <from>openjdk:8-jre-slim</from>
+                        <labels>
+                          <talend.project.name>${talend.project.name}</talend.project.name>
+                          <talend.project.name.lowercase>${talend.project.name.lowercase}</talend.project.name.lowercase>
+                          <talend.routine.groupid>${talend.routine.groupid}</talend.routine.groupid>
+                          <talend.pigudf.groupid>${talend.pigudf.groupid}</talend.pigudf.groupid>
+                          <talend.project.id>${talend.project.id}</talend.project.id>
+                          <talend.project.branch>${talend.project.branch}</talend.project.branch>
+                          <talend.job.name>${talend.job.name}</talend.job.name>
+                          <talend.job.version>${talend.job.version}</talend.job.version>
+                          <talend.job.date>${talend.job.date}</talend.job.date>
+                          <talend.job.context>${talend.job.context}</talend.job.context>
+                          <talend.job.id>${talend.job.id}</talend.job.id>
+                          <talend.job.type>${talend.job.type}</talend.job.type>
+                          <talend.job.stat>${talend.job.stat}</talend.job.stat>
+                          <talend.job.applyContextToChildren>${talend.job.applyContextToChildren}</talend.job.applyContextToChildren>
+                          <talend.product.version>${talend.product.version}</talend.product.version>
+                          <talend.job.finalName>${talend.job.finalName}</talend.job.finalName>
+                        </labels>
+                        <tags>
+                          <tag>${talend.job.version}</tag>
+                        </tags>
+                        <runCmds>
+                          <run>chmod +x /maven/${talend.job.name}/${talend.job.name}_run.sh</run>
+                        </runCmds>
+                        <workdir>/maven/${talend.job.name}</workdir>
+                        <cmd>
+                          <exec>
+                            <arg>./${talend.job.name}_run.sh</arg>
+                          </exec>
+                        </cmd>
+                        <assembly>
+                          <descriptor>${basedir}/src/main/assemblies/assembly.xml</descriptor>
+                        </assembly>
+                      </build>
+                    </image>
+                  </images>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 </project>

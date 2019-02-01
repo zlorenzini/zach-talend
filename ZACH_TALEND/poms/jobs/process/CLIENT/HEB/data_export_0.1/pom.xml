@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.example.zach_talend</groupId>
     <artifactId>code.Master</artifactId>
-    <version>7.0.1</version>
+    <version>7.1.1</version>
     <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.zach_talend.job</groupId>
@@ -20,31 +20,33 @@
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>zach_talend</talend.project.name.lowercase>
     <talend.job.path>zach_talend/data_export_0_1</talend.job.path>
+    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>ZACH_TALEND</talend.project.name>
-    <talend.product.version>7.0.1.20180411_1414</talend.product.version>
+    <talend.product.version>7.1.1.20181026_1147</talend.product.version>
     <talend.job.finalName>data_export_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.zach_talend.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.zach_talend.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms2048M -Xmx4096M -Dhadoop.home.dir=C:/opt/hadoop -Dfile.encoding=UTF-8</talend.job.jvmargs>
-    <talend.job.stat>true</talend.job.stat>
-    <talend.project.branch>master</talend.project.branch>
+    <talend.job.jvmargs>-Xms2048M -Xmx4096M -Dhadoop.home.dir=C:/opt/hadoop -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.project.branch>@ProjectBranch@</talend.project.branch>
     <talend.job.context>Default</talend.job.context>
+    <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.job.name>Data_Export</talend.job.name>
     <talend.job.id>_ra_HoCNoEem5Jca5n58DAg</talend.job.id>
     <talend.project.id>0</talend.project.id>
-    <talend.job.folder>client/heb/</talend.job.folder>
+    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
+    <talend.job.folder>client/heb/</talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>dom4j-1.6.1</artifactId>
-      <version>6.0.0</version>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -52,9 +54,9 @@
       <version>6.1.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>log4j-1.2.16</artifactId>
-      <version>6.0.0</version>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -74,7 +76,7 @@
     <dependency>
       <groupId>org.example.zach_talend.code</groupId>
       <artifactId>routines</artifactId>
-      <version>7.0.1</version>
+      <version>7.1.1</version>
     </dependency>
   </dependencies>
   <build>

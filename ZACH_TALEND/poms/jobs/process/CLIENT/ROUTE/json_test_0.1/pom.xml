@@ -6,12 +6,12 @@
     <groupId>org.example.zach_talend</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.1.1</version>
-    <relativePath>../../../../</relativePath>
+    <relativePath>../../../../../</relativePath>
   </parent>
   <groupId>org.example.zach_talend.job</groupId>
-  <artifactId>Read_SQL</artifactId>
+  <artifactId>JSON_Test</artifactId>
   <version>0.1.0</version>
-  <name>ZACH_TALEND Read_SQL-0.1.0 (0.1,Job Designs)</name>
+  <name>ZACH_TALEND JSON_Test-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
@@ -19,12 +19,12 @@
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>zach_talend</talend.project.name.lowercase>
-    <talend.job.path>zach_talend/read_sql_0_1</talend.job.path>
+    <talend.job.path>zach_talend/json_test_0_1</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>ZACH_TALEND</talend.project.name>
     <talend.product.version>7.1.1.20181026_1147</talend.product.version>
-    <talend.job.finalName>read_sql_0_1</talend.job.finalName>
+    <talend.job.finalName>json_test_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.zach_talend.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.zach_talend.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -34,12 +34,12 @@
     <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>Read_SQL</talend.job.name>
-    <talend.job.id>_r0xhcPTVEeiKadzKJLmuVA</talend.job.id>
+    <talend.job.name>JSON_Test</talend.job.name>
+    <talend.job.id>_gc8bwLFkEeiHII6vOxnb2g</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
-    <talend.job.folder>testing/</talend.job.folder>
+    <talend.job.folder>client/route/</talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
@@ -49,28 +49,13 @@
       <version>1.6.1</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>jtds-1.3.1-patch</artifactId>
-      <version>6.1.1</version>
-    </dependency>
-    <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_DB_mssqlUtil-1.2-20171017</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
