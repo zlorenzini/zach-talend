@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example.zach_talend</groupId>
   <artifactId>code.Master</artifactId>
-  <version>7.0.1</version>
+  <version>7.1.1</version>
   <packaging>pom</packaging>
   <name>ZACH_TALEND Codes Master</name>
   <url>http://www.talend.org/</url>
@@ -45,6 +45,10 @@
   <properties>
     <talend.project.name>ZACH_TALEND</talend.project.name>
     <encoding>UTF-8</encoding>
+    <talend.version>7.1.1</talend.version>
+    <talend.docker.tag>${project.version}</talend.docker.tag>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
   </properties>
   <build>
     <pluginManagement>
@@ -92,6 +96,21 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.talend.ci</groupId>
+        <artifactId>builder-maven-plugin</artifactId>
+        <version>${talend.version}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
   <profiles>
     <profile>
@@ -99,27 +118,36 @@
       <activation />
     </profile>
     <profile>
-      <id>ci-builder</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <id>cloud-publisher</id>
       <build>
         <plugins>
           <plugin>
-            <groupId>org.talend</groupId>
-            <artifactId>ci.builder</artifactId>
-            <version>7.0.1</version>
+            <groupId>org.talend.ci</groupId>
+            <artifactId>cloudpublisher-maven-plugin</artifactId>
+            <version>${talend.version}</version>
             <executions>
               <execution>
-                <phase>generate-sources</phase>
+                <phase>deploy</phase>
                 <goals>
-                  <goal>generate</goal>
+                  <goal>publish</goal>
                 </goals>
               </execution>
             </executions>
+            <configuration>
+              <skip>${cloud.publisher.skip}</skip>
+            </configuration>
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+      <id>nexus</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <maven.deploy.skip>false</maven.deploy.skip>
+      </properties>
     </profile>
   </profiles>
 </project>
