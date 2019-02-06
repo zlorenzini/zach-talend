@@ -720,10 +720,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_jpVh8P5VEeiKadzKJLmuVA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -763,9 +759,5 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_jpVh8P5VEeiKadzKJLmuVA - ESTADO",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 } ]
