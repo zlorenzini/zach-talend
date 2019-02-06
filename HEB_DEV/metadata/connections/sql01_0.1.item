@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
   <TalendMetadata:DatabaseConnection AdditionalParams="" DatabaseType="Microsoft SQL Server" DatasourceName="" DbmsId="id_MSSQL" DriverClass="net.sourceforge.jtds.jdbc.Driver" FileFieldName="" NullChar="" Password="6ROSw/RVYNj/FvSf0qEsHA==" Port="1433" ProductId="SQL_SERVER" SID="HEB" SQLMode="false" ServerName="192.168.0.128" SqlSynthax="" StandardSQL="true" StringQuote="" URL="jdbc:jtds:sqlserver://192.168.0.128:1433/HEB;" UiSchema="dbo" Username="sa" dataPackage="_QmE3YCnOEemWbvRdyAjuaw" dbVersionString="JTDS" id="_KXz-UCnOEemWbvRdyAjuaw" label="sql01" name="sql01" xmi:id="_QiPgQCnOEemWbvRdyAjuaw">
     <taggedValue tag="Is Conn Need Reload" value="false" xmi:id="_QiQHUCnOEemWbvRdyAjuaw"/>
     <taggedValue tag="package filter" value="" xmi:id="_QjkV8CnOEemWbvRdyAjuaw"/>
@@ -14,15 +14,1237 @@
     <parameters key="CONN_PARA_KEY_USERNAME" value="sa" xmi:id="_QiQHUSnOEemWbvRdyAjuaw"/>
   </TalendMetadata:DatabaseConnection>
   <orgomg.cwm.resource.relational:Catalog dataManager="_QiPgQCnOEemWbvRdyAjuaw" name="HEB" xmi:id="_QmE3YCnOEemWbvRdyAjuaw">
-    <ownedElement name="dbo" xmi:id="_QmFecCnOEemWbvRdyAjuaw" xsi:type="orgomg.cwm.resource.relational:Schema"/>
+    <ownedElement name="dbo" xmi:id="_QmFecCnOEemWbvRdyAjuaw" xsi:type="orgomg.cwm.resource.relational:Schema">
+      <ownedElement id="_XsncQCnOEemWbvRdyAjuaw" label="CHLMPVE2" name="CHLMPVE2" tableType="TABLE" xmi:id="_XssUwCnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature key="true" label="ORG_LVL_CHILD" length="12" name="ORG_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssUwSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssUwinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssUwynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XssUxCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRD_LVL_CHILD" length="12" name="PRD_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssUxSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssUxinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssUxynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XssUyCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRD_UPC" length="18" name="PRD_UPC" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssUySnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssUyinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssUyynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XssUzCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRC_BOOK_NUMBER" length="12" name="PRC_BOOK_NUMBER" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssUzSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssUzinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssUzynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XssU0CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRODUCT_NUMBER" length="15" name="PRODUCT_NUMBER" sourceType="CHAR" talendType="id_String" xmi:id="_XssU0SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU0inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU0ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XssU1CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ORG_LVL_NUMBER" length="12" name="ORG_LVL_NUMBER" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU1SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU1inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU1ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssU2CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_KEY" length="12" name="PRC_KEY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU2SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU2inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU2ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssU3CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PREVIOUS_KEY" length="12" name="PRC_PREVIOUS_KEY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU3SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU3inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU3ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssU4CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_FROM_DATE" length="23" name="PRC_FROM_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XssU4SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU4inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU4ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XssU5CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_TO_DATE" length="23" name="PRC_TO_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XssU5SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU5inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU5ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XssU6CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_CURR_CODE" length="3" name="PRC_CURR_CODE" sourceType="CHAR" talendType="id_String" xmi:id="_XssU6SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU6inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU6ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XssU7CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PRICE" length="11" name="PRC_PRICE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU7SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU7inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU7ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XssU8CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_FIRST_PRICE" length="11" name="PRC_FIRST_PRICE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU8SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU8inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU8ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XssU9CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PREVIOUS_PRICE" length="11" name="PRC_PREVIOUS_PRICE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU9SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU9inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU9ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XssU-CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PRICE_MULT" length="7" name="PRC_PRICE_MULT" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU-SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU-inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU-ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssU_CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_TYPE" length="2" name="PRC_TYPE" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssU_SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssU_inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssU_ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVACnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PROMO_LEVEL" length="2" name="PRC_PROMO_LEVEL" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssVASnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVAinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVAynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVBCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_HDR_NUMBER" length="12" name="PRC_HDR_NUMBER" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssVBSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVBinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVBynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVCCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_LEVEL" length="1" name="PRC_LEVEL" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssVCSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVCinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVCynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVDCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LAST_EXE_DATE" length="23" name="LAST_EXE_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XssVDSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVDinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVDynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XssVECnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_ID" length="5" name="PRD_LVL_ID" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssVESnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVEinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVEynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVFCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_STYLE_IND" length="1" name="PRD_STYLE_IND" sourceType="CHAR" talendType="id_String" xmi:id="_XssVFSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVFinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVFynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XssVGCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_EFFECTIVE_DAY" length="23" name="PRC_EFFECTIVE_DAY" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XssVGSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVGinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVGynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XssVHCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_STATUS" length="5" name="PRC_STATUS" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XssVHSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVHinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVHynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XssVICnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LASTUPDATE" length="23" name="LASTUPDATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XssVISnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XssVIinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XssVIynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XssVJCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_Xs8zcCnOEemWbvRdyAjuaw" label="SDIPRDMST" name="SDIPRDMST" tableType="TABLE" xmi:id="_Xs_PsCnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature label="ORG_LVL_CHILD" length="12" name="ORG_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PsSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PsinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PsynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_PtCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_CHILD" length="12" name="PRD_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PtSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PtinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PtynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_PuCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ISS_TECH_KEY" length="12" name="ISS_TECH_KEY" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PuSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PuinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PuynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_PvCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ALT_TECH_KEY" length="12" name="ALT_TECH_KEY" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PvSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PvinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PvynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_PwCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TRAN_TYPE" length="1" name="TRAN_TYPE" nullable="false" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_PwSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PwinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PwynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" xmi:id="_Xs_PxCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="AUDIT_NUMBER" length="12" name="AUDIT_NUMBER" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PxSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PxinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PxynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_PyCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ISS_TYPE" length="1" name="ISS_TYPE" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_PySnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PyinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PyynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_PzCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ORG_LVL_NUMBER" length="12" name="ORG_LVL_NUMBER" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_PzSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_PzinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_PzynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_Xs_P0CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_NUMBER" length="15" name="PRD_LVL_NUMBER" nullable="false" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_P0SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P0inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P0ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" xmi:id="_Xs_P1CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_PARENT" length="12" name="PRD_LVL_PARENT" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P1SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P1inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P1ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_P2CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_ID" length="5" name="PRD_LVL_ID" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P2SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P2inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P2ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_P3CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_PARENT_NUM" length="15" name="PRD_LVL_PARENT_NUM" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_P3SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P3inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P3ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_P4CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_NAME_FULL" length="50" name="PRD_NAME_FULL" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_P4SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P4inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P4ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_P5CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_TARGETGM" length="7" name="PRD_TARGETGM" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P5SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P5inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P5ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_Xs_P6CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_ACTIVE" length="1" name="PRD_LVL_ACTIVE" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_P6SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P6inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P6ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_P7CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_STYLE_IND" length="1" name="PRD_STYLE_IND" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_P7SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P7inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P7ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_P8CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_STATUS" length="2" name="PRD_STATUS" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P8SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P8inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P8ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_P9CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="GRP_AUDIT_NUMBER" length="12" name="GRP_AUDIT_NUMBER" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P9SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P9inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P9ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_P-CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_KEY_1" length="12" name="PRD_PDH_KEY_1" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_P-SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P-inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P-ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_P_CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_NAME_1" length="30" name="PRD_PDH_NAME_1" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_P_SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_P_inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_P_ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QACnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_KEY_1" length="12" name="PRD_PDD_KEY_1" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QASnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QAinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QAynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QBCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_CODE_1" length="6" name="PRD_PDD_CODE_1" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QBSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QBinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QBynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QCCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_KEY_2" length="12" name="PRD_PDH_KEY_2" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QCSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QCinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QCynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QDCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_NAME_2" length="30" name="PRD_PDH_NAME_2" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QDSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QDinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QDynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QECnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_KEY_2" length="12" name="PRD_PDD_KEY_2" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QESnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QEinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QEynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QFCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_CODE_2" length="6" name="PRD_PDD_CODE_2" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QFSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QFinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QFynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QGCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_KEY_3" length="12" name="PRD_PDH_KEY_3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QGSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QGinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QGynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QHCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDH_NAME_3" length="30" name="PRD_PDH_NAME_3" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QHSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QHinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QHynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QICnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_KEY_3" length="12" name="PRD_PDD_KEY_3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QISnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QIinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QIynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QJCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_PDD_CODE_3" length="6" name="PRD_PDD_CODE_3" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QJSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QJinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QJynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QKCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="DATE_CREATED" length="23" name="DATE_CREATED" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_Xs_QKSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QKinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QKynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_Xs_QLCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_UOM_SIZE" length="13" name="PRD_UOM_SIZE" precision="7" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QLSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QLinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QLynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="7" numericPrecisionRadix="10" xmi:id="_Xs_QMCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_SLL_UOM" length="6" name="PRD_SLL_UOM" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QMSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QMinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QMynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QNCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_COMP_UOM" length="6" name="PRD_COMP_UOM" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QNSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QNinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QNynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QOCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_COMP_NAME" length="50" name="PRD_COMP_NAME" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QOSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QOinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QOynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QPCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_CONV_QTY" length="13" name="PRD_CONV_QTY" precision="7" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QPSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QPinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QPynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="7" numericPrecisionRadix="10" xmi:id="_Xs_QQCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_CROSS_DOCK" length="1" name="PRD_CROSS_DOCK" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QQSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QQinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QQynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QRCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_NUMBER_OLD" length="15" name="PRD_LVL_NUMBER_OLD" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QRSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QRinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QRynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QSCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_PARENT_NUM_OLD" length="15" name="PRD_LVL_PARENT_NUM_OLD" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QSSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QSinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QSynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QTCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="VENDOR_NUMBER" length="10" name="VENDOR_NUMBER" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QTSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QTinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QTynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QUCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="SPP_SET_PRD_CHILD" length="12" name="SPP_SET_PRD_CHILD" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QUSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QUinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QUynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xs_QVCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ALT_SLL_UOM_1" length="6" name="ALT_SLL_UOM_1" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QVSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QVinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QVynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QWCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ALT_SLL_UOM_2" length="6" name="ALT_SLL_UOM_2" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QWSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QWinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QWynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QXCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="VAR_WEIGHT_ITEM" length="1" name="VAR_WEIGHT_ITEM" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QXSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QXinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QXynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QYCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="VAR_WEIGHT_TYPE" length="1" name="VAR_WEIGHT_TYPE" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QYSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QYinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QYynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QZCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_SKU_TYPE" length="6" name="PRD_SKU_TYPE" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QZSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QZinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QZynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QaCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_SHRINK_RATE" length="4" name="PRD_SHRINK_RATE" precision="2" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_Xs_QaSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QainOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QaynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="2" numericPrecisionRadix="10" xmi:id="_Xs_QbCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_WASTE_CODE" length="6" name="PRD_WASTE_CODE" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QbSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QbinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QbynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QcCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="UOM_DESC" length="50" name="UOM_DESC" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QcSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QcinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QcynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QdCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_SIZE_UOM" length="6" name="PRD_SIZE_UOM" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QdSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QdinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QdynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QeCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_SIZE_UOM_DESC" length="50" name="PRD_SIZE_UOM_DESC" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QeSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QeinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QeynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QfCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="MANDATORY_PLU" length="1" name="MANDATORY_PLU" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QfSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QfinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QfynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QgCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ATR_COL_COD_TECH_KEY" length="25" name="ATR_COL_COD_TECH_KEY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QgSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QginOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QgynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QhCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ATR_COL_COD" length="10" name="ATR_COL_COD" sourceType="CHAR" talendType="id_String" xmi:id="_Xs_QhSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QhinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QhynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_Xs_QiCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ATR_COL_COD_DESC" length="40" name="ATR_COL_COD_DESC" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xs_QiSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QiinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QiynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xs_QjCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LASTUPDATE" length="23" name="LASTUPDATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_Xs_QjSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xs_QjinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xs_QjynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_Xs_QkCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_XtEvQCnOEemWbvRdyAjuaw" label="ESTADO" name="ESTADO" tableType="TABLE" xmi:id="_XtEvQSnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature label="CODIGOHEB" length="1" name="CODIGOHEB" sourceType="CHAR" talendType="id_String" xmi:id="_XtEvQinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtEvQynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtEvRCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtEvRSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="DESCRIPCIONHEB" length="50" name="DESCRIPCIONHEB" sourceType="NVARCHAR" talendType="id_String" xmi:id="_XtEvRinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtEvRynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtEvSCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="NVARCHAR" nullable="columnNullable" xmi:id="_XtEvSSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="ESTATUSPRODPMM" length="10" name="ESTATUSPRODPMM" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_XtEvSinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtEvSynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtEvTCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_XtEvTSnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_XtQVcCnOEemWbvRdyAjuaw" label="OINSU" name="OINSU" tableType="TABLE" xmi:id="_XtSxsCnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature label="INS_ARTICULO" length="19" name="INS_ARTICULO" sourceType="BIGINT" talendType="id_Long" xmi:id="_XtSxsSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxsinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxsynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="BIGINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSxtCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_SUCURSAL" length="19" name="INS_SUCURSAL" sourceType="BIGINT" talendType="id_Long" xmi:id="_XtSxtSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxtinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxtynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="-5" name="BIGINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSxuCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PAGINA" length="10" name="INS_PAGINA" sourceType="INT" talendType="id_Integer" xmi:id="_XtSxuSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxuinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxuynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSxvCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_EXISTENCIA" length="53" name="INS_EXISTENCIA" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSxvSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxvinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxvynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSxwCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_CANTPED" length="10" name="INS_CANTPED" sourceType="INT" talendType="id_Integer" xmi:id="_XtSxwSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxwinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxwynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSxxCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_CANTDESP" length="10" name="INS_CANTDESP" sourceType="INT" talendType="id_Integer" xmi:id="_XtSxxSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxxinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxxynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSxyCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_COSTO" length="53" name="INS_COSTO" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSxySnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxyinOEemWbvRdyAjuaw"/>
+          <initialValue body="((0))" language="COLUMN_DEF" xmi:id="_XtSxyynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSxzCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_TICOMPRA" length="2" name="INS_TICOMPRA" sourceType="CHAR" talendType="id_String" xmi:id="_XtSxzSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSxzinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSxzynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSx0CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_ESTADO" length="1" name="INS_ESTADO" sourceType="CHAR" talendType="id_String" xmi:id="_XtSx0SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx0inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx0ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSx1CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PRECIOVTA" length="10" name="INS_PRECIOVTA" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx1SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx1inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx1ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx2CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PREANT" length="53" name="INS_PREANT" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSx2SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx2inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx2ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSx3CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PROVSUG" length="10" name="INS_PROVSUG" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx3SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx3inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx3ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx4CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FEULTCONT" length="10" name="INS_FEULTCONT" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx4SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx4inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx4ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx5CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_CAMBIOACT" length="5" name="INS_CAMBIOACT" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSx5SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx5inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx5ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx6CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_OFERTA" length="5" name="INS_OFERTA" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSx6SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx6inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx6ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx7CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_CONTAB" length="5" name="INS_CONTAB" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSx7SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx7inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx7ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx8CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_CONTEO" length="10" name="INS_CONTEO" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx8SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx8inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx8ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx9CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FEPRECIO" length="10" name="INS_FEPRECIO" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx9SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx9inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx9ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx-CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FEING" length="10" name="INS_FEING" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx-SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx-inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx-ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSx_CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FEMOD" length="10" name="INS_FEMOD" sourceType="INT" talendType="id_Integer" xmi:id="_XtSx_SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSx_inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSx_ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyACnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_TECLA" length="5" name="INS_TECLA" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSyASnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyAinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyAynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyBCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_MINIMO" length="10" name="INS_MINIMO" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyBSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyBinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyBynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyCCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_MOD" length="1" name="INS_MOD" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyCSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyCinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyCynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyDCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_MARGEN" length="10" name="INS_MARGEN" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyDSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyDinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyDynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyECnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PRECONT" length="53" name="INS_PRECONT" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSyESnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyEinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyEynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSyFCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_ULCOSTO" length="53" name="INS_ULCOSTO" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSyFSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyFinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyFynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSyGCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_ESAUTO" length="1" name="INS_ESAUTO" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyGSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyGinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyGynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyHCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FECULTENT" length="10" name="INS_FECULTENT" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyHSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyHinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyHynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyICnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FOLULTENT" length="10" name="INS_FOLULTENT" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyISnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyIinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyIynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyJCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PRECNORM" length="53" name="INS_PRECNORM" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSyJSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyJinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyJynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSyKCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FECEXI" length="10" name="INS_FECEXI" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyKSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyKinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyKynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyLCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FECULTMOV" length="10" name="INS_FECULTMOV" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyLSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyLinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyLynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyMCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PRECIOESP" length="10" name="INS_PRECIOESP" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyMSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyMinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyMynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyNCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PRESINIVA" length="10" name="INS_PRESINIVA" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyNSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyNinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyNynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyOCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_TIPULTMOV" length="2" name="INS_TIPULTMOV" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyOSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyOinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyOynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyPCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FRENTES" length="5" name="INS_FRENTES" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSyPSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyPinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyPynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyQCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="XXX_ORIGEN" length="20" name="XXX_ORIGEN" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyQSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyQinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyQynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyRCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="XXX_REMOTO" length="5" name="XXX_REMOTO" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtSyRSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyRinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyRynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSySCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ADB_SOURCE" length="1" name="ADB_SOURCE" sourceType="CHAR" talendType="id_String" xmi:id="_XtSySSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSySinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSySynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyTCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="STATUS_SUR" length="1" name="STATUS_SUR" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyTSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyTinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyTynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyUCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="STATUS_PROD" length="1" name="STATUS_PROD" sourceType="CHAR" talendType="id_String" xmi:id="_XtSyUSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyUinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyUynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtSyVCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LASTUPDATE" length="23" name="LASTUPDATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtSyVSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyVinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyVynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtSyWCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="X_LASTUPDATE" length="23" name="X_LASTUPDATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtSyWSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyWinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyWynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtSyXCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_EXISTENCIA_PREPACK" length="53" name="INS_EXISTENCIA_PREPACK" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSyXSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyXinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyXynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSyYCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_EXISTENCIA_DETALLE" length="53" name="INS_EXISTENCIA_DETALLE" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtSyYSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyYinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyYynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtSyZCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_FEFINPRECIO" length="10" name="INS_FEFINPRECIO" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyZSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyZinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyZynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSyaCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_PROMOLEVEL" length="10" name="INS_PROMOLEVEL" sourceType="INT" talendType="id_Integer" xmi:id="_XtSyaSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSyainOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSyaynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSybCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_HDRNUMBER" length="10" name="INS_HDRNUMBER" sourceType="INT" talendType="id_Integer" xmi:id="_XtSybSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSybinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSybynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtSycCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="FechaMod" length="23" name="FechaMod" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtSycSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSycinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSycynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtSydCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="INS_IMPUESTOS" length="11" name="INS_IMPUESTOS" precision="5" sourceType="DECIMAL" talendType="id_BigDecimal" xmi:id="_XtSydSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtSydinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtSydynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="3" name="DECIMAL" nullable="columnNullable" numericPrecision="5" numericPrecisionRadix="10" xmi:id="_XtSyeCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_Xtb7oCnOEemWbvRdyAjuaw" label="CHLPRCE2" name="CHLPRCE2" tableType="TABLE" xmi:id="_XtdJwCnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature key="true" label="PRD_LVL_CHILD" length="12" name="PRD_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJwSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJwinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJwynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XtdJxCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="ORG_LVL_CHILD" length="12" name="ORG_LVL_CHILD" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJxSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJxinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJxynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XtdJyCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRD_UPC" length="18" name="PRD_UPC" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJySnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJyinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJyynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XtdJzCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRC_BOOK_NUMBER" length="12" name="PRC_BOOK_NUMBER" nullable="false" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJzSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJzinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJzynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" numericPrecisionRadix="10" xmi:id="_XtdJ0CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRODUCT_NUMBER" length="15" name="PRODUCT_NUMBER" sourceType="CHAR" talendType="id_String" xmi:id="_XtdJ0SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ0inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ0ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdJ1CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ORG_LVL_NUMBER" length="12" name="ORG_LVL_NUMBER" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ1SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ1inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ1ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdJ2CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_KEY" length="12" name="PRC_KEY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ2SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ2inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ2ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdJ3CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PREVIOUS_KEY" length="12" name="PRC_PREVIOUS_KEY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ3SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ3inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ3ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdJ4CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_FROM_DATE" length="23" name="PRC_FROM_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtdJ4SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ4inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ4ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtdJ5CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_TO_DATE" length="23" name="PRC_TO_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtdJ5SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ5inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ5ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtdJ6CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_CURR_CODE" length="3" name="PRC_CURR_CODE" sourceType="CHAR" talendType="id_String" xmi:id="_XtdJ6SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ6inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ6ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdJ7CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PRICE" length="11" name="PRC_PRICE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ7SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ7inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ7ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XtdJ8CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PREVIOUS_PRICE" length="11" name="PRC_PREVIOUS_PRICE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ8SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ8inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ8ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XtdJ9CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PRICE_MULT" length="7" name="PRC_PRICE_MULT" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ9SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ9inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ9ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdJ-CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_TYPE" length="2" name="PRC_TYPE" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ-SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ-inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ-ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdJ_CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_PROMO_LEVEL" length="2" name="PRC_PROMO_LEVEL" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdJ_SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdJ_inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdJ_ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKACnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_HDR_NUMBER" length="12" name="PRC_HDR_NUMBER" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKASnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKAinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKAynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKBCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_LEVEL" length="1" name="PRC_LEVEL" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKBSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKBinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKBynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKCCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_IS_DEAL_GROUP" length="1" name="PRD_IS_DEAL_GROUP" sourceType="CHAR" talendType="id_String" xmi:id="_XtdKCSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKCinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKCynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdKDCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LAST_EXE_DATE" length="23" name="LAST_EXE_DATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtdKDSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKDinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKDynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtdKECnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_LVL_ID" length="5" name="PRD_LVL_ID" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKESnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKEinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKEynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKFCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRD_STYLE_IND" length="1" name="PRD_STYLE_IND" sourceType="CHAR" talendType="id_String" xmi:id="_XtdKFSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKFinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKFynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdKGCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_EFFECTIVE_DAY" length="23" name="PRC_EFFECTIVE_DAY" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtdKGSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKGinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKGynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtdKHCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_STATUS" length="5" name="PRC_STATUS" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKHSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKHinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKHynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKICnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_BUY_QTY" length="7" name="PRC_BUY_QTY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKISnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKIinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKIynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKJCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_GET_QTY" length="7" name="PRC_GET_QTY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKJSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKJinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKJynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKKCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_GET_VALUE" length="11" name="PRC_GET_VALUE" precision="3" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKKSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKKinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKKynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecision="3" numericPrecisionRadix="10" xmi:id="_XtdKLCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_GET_TYPE" length="1" name="PRC_GET_TYPE" sourceType="CHAR" talendType="id_String" xmi:id="_XtdKLSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKLinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKLynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdKMCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_QTY_BRK_ID" length="12" name="PRC_QTY_BRK_ID" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKMSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKMinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKMynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKNCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_HDR_NAME" length="40" name="PRC_HDR_NAME" sourceType="VARCHAR" talendType="id_String" xmi:id="_XtdKNSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKNinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKNynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_XtdKOCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="ESTADO" length="1" name="ESTADO" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKOSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKOinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKOynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKPCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_UOM" length="12" name="PRC_UOM" sourceType="CHAR" talendType="id_String" xmi:id="_XtdKPSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKPinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKPynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtdKQCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_MAX_QTY" length="12" name="PRC_MAX_QTY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKQSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKQinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKQynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKRCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRC_FCST_QTY" length="12" name="PRC_FCST_QTY" sourceType="NUMERIC" talendType="id_BigDecimal" xmi:id="_XtdKRSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKRinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKRynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="2" name="NUMERIC" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtdKSCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="LASTUPDATE" length="23" name="LASTUPDATE" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_XtdKSSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtdKSinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtdKSynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_XtdKTCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_XtkegCnOEemWbvRdyAjuaw" label="VPREC" name="VPREC" tableType="TABLE" xmi:id="_XtlFkCnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature key="true" label="PRE_ARTICULO" length="10" name="PRE_ARTICULO" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_XtlFkSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFkinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFkynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_XtlFlCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRE_SUCURSAL" length="5" name="PRE_SUCURSAL" nullable="false" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtlFlSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFlinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFlynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" numericPrecisionRadix="10" xmi:id="_XtlFmCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_NIVEL" length="1" name="PRE_NIVEL" nullable="false" sourceType="CHAR" talendType="id_String" xmi:id="_XtlFmSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFminOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFmynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" xmi:id="_XtlFnCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_PRECIO" length="24" name="PRE_PRECIO" sourceType="REAL" talendType="id_Float" xmi:id="_XtlFnSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFninOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFnynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="7" name="REAL" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtlFoCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="PRE_FECHA" length="10" name="PRE_FECHA" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_XtlFoSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFoinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFoynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_XtlFpCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_MARGEN" length="53" name="PRE_MARGEN" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtlFpSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFpinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFpynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_XtlFqCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_VIGENTE" length="1" name="PRE_VIGENTE" sourceType="CHAR" talendType="id_String" xmi:id="_XtlFqSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFqinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFqynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtlFrCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_TIPO" length="5" name="PRE_TIPO" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtlFrSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFrinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFrynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtlFsCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="PRE_PRECNORM" length="53" name="PRE_PRECNORM" nullable="false" sourceType="FLOAT" talendType="id_Double" xmi:id="_XtlFsSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFsinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFsynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" numericPrecisionRadix="2" xmi:id="_XtlFtCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="XXX_ORIGEN" length="20" name="XXX_ORIGEN" sourceType="CHAR" talendType="id_String" xmi:id="_XtlFtSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFtinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFtynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="1" name="CHAR" nullable="columnNullable" xmi:id="_XtlFuCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="XXX_REMOTO" length="5" name="XXX_REMOTO" sourceType="SMALLINT" talendType="id_Short" xmi:id="_XtlFuSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_XtlFuinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_XtlFuynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_XtlFvCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_Xtu2kCnOEemWbvRdyAjuaw" label="TH_SOS_ServDomicilio" name="TH_SOS_ServDomicilio" tableType="TABLE" xmi:id="_Xtu2kSnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature key="true" label="TPO_CPeriodo" length="7" name="TPO_CPeriodo" nullable="false" sourceType="NVARCHAR" talendType="id_String" xmi:id="_Xtu2kinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2kynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2lCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="NVARCHAR" xmi:id="_Xtu2lSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="UNG_KUnidadNegocio_PS" length="5" name="UNG_KUnidadNegocio_PS" nullable="false" sourceType="NVARCHAR" talendType="id_String" xmi:id="_Xtu2linOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2lynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2mCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="NVARCHAR" xmi:id="_Xtu2mSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="DEP_KDepto_PS" length="10" name="DEP_KDepto_PS" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xtu2minOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2mynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2nCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xtu2nSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="TSM_KCtaContable" length="10" name="TSM_KCtaContable" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_Xtu2ninOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2nynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2oCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_Xtu2oSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature key="true" label="TIE_KTipoEntrega" length="5" name="TIE_KTipoEntrega" nullable="false" sourceType="SMALLINT" talendType="id_Short" xmi:id="_Xtu2oinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2oynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2pCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" numericPrecisionRadix="10" xmi:id="_Xtu2pSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TSM_Amt" length="53" name="TSM_Amt" sourceType="FLOAT" talendType="id_Double" xmi:id="_Xtu2pinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2pynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2qCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_Xtu2qSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TSM_Pct" length="53" name="TSM_Pct" sourceType="FLOAT" talendType="id_Double" xmi:id="_Xtu2qinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2qynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2rCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_Xtu2rSnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TSM_Ajustes" length="53" name="TSM_Ajustes" sourceType="FLOAT" talendType="id_Double" xmi:id="_Xtu2rinOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xtu2rynOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xtu2sCnOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="8" name="FLOAT" nullable="columnNullable" numericPrecisionRadix="2" xmi:id="_Xtu2sSnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+      <ownedElement id="_Xt6cwCnOEemWbvRdyAjuaw" label="Td_Tiempo" name="Td_Tiempo" tableType="TABLE" xmi:id="_Xt8R8CnOEemWbvRdyAjuaw" xsi:type="relational:TdTable">
+        <feature key="true" label="TPO_KFecha" length="10" name="TPO_KFecha" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8R8SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8R8inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8R8ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_Xt8R9CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_TFecha" length="23" name="TPO_TFecha" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" talendType="id_Date" xmi:id="_Xt8R9SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8R9inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8R9ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="93" name="DATETIME" nullable="columnNullable" numericPrecision="3" xmi:id="_Xt8R-CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DFecha" length="10" name="TPO_DFecha" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8R-SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8R-inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8R-ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8R_CnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CSemPeriodo" length="10" name="TPO_CSemPeriodo" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8R_SnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8R_inOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8R_ynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SACnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CSemFiscal" length="7" name="TPO_CSemFiscal" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SASnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SAinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SAynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SBCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CPeriodo" length="7" name="TPO_CPeriodo" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SBSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SBinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SBynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SCCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CQuarter" length="6" name="TPO_CQuarter" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SCSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SCinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SCynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SDCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CAnioFiscal" length="4" name="TPO_CAnioFiscal" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SDSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SDinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SDynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SECnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DFinSemana" length="10" name="TPO_DFinSemana" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SESnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SEinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SEynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SFCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DDiaSemana" length="10" name="TPO_DDiaSemana" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SFSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SFinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SFynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SGCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DQuincena" length="10" name="TPO_DQuincena" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SGSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SGinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SGynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SHCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CMes" length="7" name="TPO_CMes" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SHSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SHinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SHynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SICnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CAnio" length="4" name="TPO_CAnio" nullable="false" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SISnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SIinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SIynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" xmi:id="_Xt8SJCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CFestivo" length="5" name="TPO_CFestivo" sourceType="SMALLINT" talendType="id_Short" xmi:id="_Xt8SJSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SJinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SJynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SKCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DFestivo" length="50" name="TPO_DFestivo" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SKSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SKinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SKynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SLCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemPeriodo" length="20" name="TPO_DSemPeriodo" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SLSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SLinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SLynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SMCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemFiscal" length="20" name="TPO_DSemFiscal" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SMSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SMinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SMynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SNCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DPeriodo" length="20" name="TPO_DPeriodo" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SNSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SNinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SNynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SOCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DQuarter" length="20" name="TPO_DQuarter" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SOSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SOinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SOynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SPCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CDiaSemana" length="5" name="TPO_CDiaSemana" sourceType="SMALLINT" talendType="id_Short" xmi:id="_Xt8SPSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SPinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SPynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="5" name="SMALLINT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SQCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemanaNielsen" length="7" name="TPO_DSemanaNielsen" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SQSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SQinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SQynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SRCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DPeriodoNielsen" length="7" name="TPO_DPeriodoNielsen" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SRSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SRinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SRynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SSCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DAnioNielsen" length="7" name="TPO_DAnioNielsen" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SSSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SSinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SSynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8STCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DCatorcena" length="10" name="TPO_DCatorcena" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8STSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8STinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8STynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SUCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CFecha" length="10" name="TPO_CFecha" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SUSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SUinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SUynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_Xt8SVCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CMesNatural" length="10" name="TPO_CMesNatural" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SVSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SVinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SVynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SWCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DMesNatural" length="18" name="TPO_DMesNatural" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SWSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SWinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SWynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SXCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CDiaMes" length="10" name="TPO_CDiaMes" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SXSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SXinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SXynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SYCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CSemPorPeriodo" length="10" name="TPO_CSemPorPeriodo" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SYSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SYinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SYynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SZCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemPorPeriodo" length="6" name="TPO_DSemPorPeriodo" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SZSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SZinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SZynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SaCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemFiscalLY" length="20" name="TPO_DSemFiscalLY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SaSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SainOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SaynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SbCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CSemanaEvento" length="10" name="TPO_CSemanaEvento" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SbSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SbinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SbynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8ScCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DSemanaEvento" length="50" name="TPO_DSemanaEvento" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8ScSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8ScinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8ScynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SdCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CAnioEvento" length="10" name="TPO_CAnioEvento" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SdSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SdinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SdynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SeCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DAnioEvento" length="50" name="TPO_DAnioEvento" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SeSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SeinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SeynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SfCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KFechaLY" length="10" name="TPO_KFechaLY" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SfSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SfinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SfynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SgCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="tpo_CPeriodo_LP" length="7" name="tpo_CPeriodo_LP" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SgSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SginOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SgynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8ShCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="tpo_CPeriodo_LY" length="7" name="tpo_CPeriodo_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8ShSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8ShinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8ShynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SiCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="tpo_CSemfiscal_LW" length="7" name="tpo_CSemfiscal_LW" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SiSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SiinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SiynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SjCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="tpo_CSemfiscal_LY" length="7" name="tpo_CSemfiscal_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SjSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SjinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SjynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SkCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="tpo_Csemfiscal_PLY" length="7" name="tpo_Csemfiscal_PLY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SkSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SkinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SkynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SlCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KAnio" length="10" name="TPO_KAnio" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SlSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SlinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SlynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SmCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KAnioFiscal" length="10" name="TPO_KAnioFiscal" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SmSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SminOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SmynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SnCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KAnio_LY" length="10" name="TPO_KAnio_LY" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SnSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SninOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SnynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SoCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KAnioFiscal_LY" length="10" name="TPO_KAnioFiscal_LY" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SoSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SoinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SoynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SpCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CMes_LY" length="7" name="TPO_CMes_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SpSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SpinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SpynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SqCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CQuarter_LY" length="6" name="TPO_CQuarter_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SqSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SqinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SqynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SrCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CAnio_LY" length="4" name="TPO_CAnio_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SrSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SrinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SrynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SsCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_CAnioFiscal_LY" length="4" name="TPO_CAnioFiscal_LY" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SsSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SsinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SsynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8StCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KFecha_LW" length="10" name="TPO_KFecha_LW" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8StSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8StinOEemWbvRdyAjuaw"/>
+          <initialValue body="((-1))" language="COLUMN_DEF" xmi:id="_Xt8StynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_Xt8SuCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_KFecha_LP" length="10" name="TPO_KFecha_LP" nullable="false" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SuSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SuinOEemWbvRdyAjuaw"/>
+          <initialValue body="((-1))" language="COLUMN_DEF" xmi:id="_Xt8SuynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" numericPrecisionRadix="10" xmi:id="_Xt8SvCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DQuarterInt" length="10" name="TPO_DQuarterInt" sourceType="INT" talendType="id_Integer" xmi:id="_Xt8SvSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SvinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SvynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="4" name="INT" nullable="columnNullable" numericPrecisionRadix="10" xmi:id="_Xt8SwCnOEemWbvRdyAjuaw"/>
+        </feature>
+        <feature label="TPO_DQuarterShort" length="3" name="TPO_DQuarterShort" sourceType="VARCHAR" talendType="id_String" xmi:id="_Xt8SwSnOEemWbvRdyAjuaw" xsi:type="relational:TdColumn">
+          <taggedValue tag="Comment" value="" xmi:id="_Xt8SwinOEemWbvRdyAjuaw"/>
+          <initialValue language="COLUMN_DEF" xmi:id="_Xt8SwynOEemWbvRdyAjuaw" xsi:type="relational:TdExpression"/>
+          <sqlDataType javaDataType="12" name="VARCHAR" nullable="columnNullable" xmi:id="_Xt8SxCnOEemWbvRdyAjuaw"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_92a65493-6a5a-491f-8f0a-7a0328d4dd8a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VFKC8mVBhtnDK6osBz+FYt5K//KHWFAlLAi0wSASf1cuqnCtAZ//Nr+enSzS4k6v9qzLmh6u+wLc
-6lTJe5b+Yg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_565a76cb-4c94-4d6e-9b96-c467a119c5a8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X/cWij5XaDfuO+krIzdnZk6pt6EKQkjJEVjCncQGto0rJjD8GJrVm4C75jqzwtI89TeqK7T/sdRy
-GFE7+g/Bgg==</DigestValue></Reference></SignedInfo><SignatureValue>xVL0Wt5kz3eo2U4wmq5F1sgG5ISWbgooRue7L4crviSusPkIc3PJv131btKhbe1NWKcl+Xdg1Rcq
-/MeTLLtSiZGzpjLo6OmdQGcrkfbg/SfM/5ZygQ2wJGz3EU62LS3wlvTH+ZUGKd3g3QKFGbS8Nb5Q
-uMFWDWs0Q10R/cuQfL/3e8cc2Ezocucf0Y0+PRtol9LdP+JhaI2SB9Y8qrOYzIwkHYhyxn8RAP41
-TfaDeNnefwN8OXBJoEmf39OOmKWfCRJfI4PO6Hg14yyPsOU/pp3Q6vTmJ5fWoE+4sUsIvReIIIPn
-Z/LBG6DmZdncHTV5rGzx3z6pB/YmcXnOskC6Dw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3d64ec7a-133b-4713-bccd-d13b26223fd6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WjFFVGBZrpdgLdVij/WEr3+vSpkaei1NB2NOelH9EiownQcIJq7TO0pp3BTvrqQgVLqYtUpSBNbQ
+8qdYFSxZ9A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a21a53a3-69d1-416a-8d7f-1aded9889167"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ry0EVSkOXdwNIPvchoY4PZqBSTSH6Jf9OKYv/WaWxaIkT0hI2lAyYq9UMlFTzBerbF/Y/y6nysP9
+zmUQZ3u8kQ==</DigestValue></Reference></SignedInfo><SignatureValue>vv8/0d/sZYUWnRcinBvd5Mw6qYjcFUnZiQC5g3humSy1dKlpXCjLjZjZmwpxhckxQ4/bWd4WnM42
+AxX2ahqZaS4KE4G11Ji+cLJI1CNB0tIK1sOTHeFTG8EUUNs5EHy58VewjHCsuj/q6l02ewcL2IQw
+c5IKHvPVMP0uRMPS1Xp/QG5N5yWosngwx2Lryl6kakbsHaAF50LTrp00eLjm89t1Uc1HticCjT/z
+FOurkdwjHuOw9Q9WO8VgcQO3pJOVwmuI7dPhVU6jMEuV1Cw4rK9vG1dS7GjscQPtlL1kfDZbrYja
+LXK7BZ7xYss9U73eL13D0oXrXRSabd651IzMDA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -46,4 +1268,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_565a76cb-4c94-4d6e-9b96-c467a119c5a8" Target="#_92a65493-6a5a-491f-8f0a-7a0328d4dd8a"><Timestamp>2019-02-06 05:15:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a21a53a3-69d1-416a-8d7f-1aded9889167" Target="#_3d64ec7a-133b-4713-bccd-d13b26223fd6"><Timestamp>2019-02-06 05:16:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
