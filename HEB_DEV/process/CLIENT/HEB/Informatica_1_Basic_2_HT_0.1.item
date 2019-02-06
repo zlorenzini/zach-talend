@@ -31,8 +31,6 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -68,7 +66,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
     <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
     <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
     <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
@@ -114,8 +112,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;192.168.50.2&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -124,8 +120,6 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;HEB&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="XewSdrcvbHfneSUh6PDH0w=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TH_SOS_ServDomicilio&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -262,8 +256,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;192.168.50.2&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -272,8 +264,6 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;HEB&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="XewSdrcvbHfneSUh6PDH0w=="/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - Td_Tiempo"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Td_Tiempo&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -743,8 +733,6 @@
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Users/zach/workspace/in.hash&quot;"/>
@@ -803,7 +791,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="row8.UNG_KUnidadNegocio_PS.equals(&quot;926&quot;)" name="out1" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="context.filter_condition" name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row8.TPO_CPeriodo" name="TPO_CPeriodo" type="id_String"/>
         <mapperTableEntries expression="row8.UNG_KUnidadNegocio_PS" name="UNG_KUnidadNegocio_PS" type="id_String"/>
         <mapperTableEntries expression="row8.DEP_KDepto_PS" name="DEP_KDepto_PS" type="id_String"/>
@@ -826,8 +814,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_ToUqgP5XEeiXWoUqwDxmxw"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
@@ -1003,13 +989,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4f42407b-fb7d-44df-b902-dc76afe25822"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DeW3tCMoKKXXvrGDtGgHZVVJANGQywJyVWtOxxpnW63Xo30KWMo0zXwAi9wHof6o1bBxVW9/aDEI
-kmWdurSmqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4e6a9dc8-e198-4ac2-8611-27c6f3cf65fe"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2NA2oW4asqXjQbGlq5opfQIWDvouy0XgM9ApGt9hxVIHCf7BvKhS6UZLhAU2ap2VL18GAGUFY3AE
-QAWOPmy6Ow==</DigestValue></Reference></SignedInfo><SignatureValue>vcyBfyxtUXpdEHZAAybK0xy+dUS+tDYh6uKX9bOgmhy/oSuiKGM/mG6E4+TzvyqaF9cvM4ZQvgP3
-P4Eh636dZZeZ9fgjp59dbv7FME01xkIkzrRg7eD0rrYduYWINh7JLEl9EvIqXFjPRw1HZhaMi8lA
-m9J0otBZZ26pOAEvMVa6gcDM+tU5dn+5P9L0Whe9kZDf1j7zcBZ2UTMpROh2TXEBSeN8/CC9RiLs
-zjgrzhH023ncTlVu0nQdVpsyn1CkqLkFMs7EAfMUjPxVGXH8Tov0MZpKb4HRwu4RKUB0fQ5Ez2Tx
-JoS/A55ilaq0fyx5bPjfiWjDV89NQEGIaKVrqg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_22eff285-a790-4885-900c-ba2c5458cffc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SsMjTEheMW0MwcmGpuk+x25/HU+F4SZrzVnzcrlDC+IUq6GjmGTpV01PTKBcAR1fH68DOsQ36Yro
+1PpaChEK7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d94df71-3990-4014-8d25-2813d1286d55"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YVdh55wul+3EcjpYr1IUeGBw2I9+sJKoXJMGX3UcUH1mzl9p6gXYxtmdf75fwu1me0iBzcggXZXq
+uRMw5T1G6Q==</DigestValue></Reference></SignedInfo><SignatureValue>bmgDXBvBPgnUT72Ej3U+os49OPVseVmk0hIHhZuOUu99YeyNgPfNK2e6veNCykCsHmYrEbDVCOrL
+O4nYhf8OsmqgBktagjBl48R8EE8z8EGCrwMN2HlGwPn6Inh17JgE8CZa5BO1ylvXuTpvgT1aXQuC
+XVQM2ygulxfxvxPQuAVgM5CuW/+xovtTBYfkrZxSJAwZNysALC0HZoitMwl5VH8SgLleBSv3UbKd
+B+3iq+gldFFEyf5/M5PWwsGve836eas4XGEULPRo2ouOEMCnl62AGiRkFpww6SrpExKHyZpZMzOn
+HNYft0gIclMM+clkkc7CoX/9a0r+PeS1boFFqA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -1033,4 +1019,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4e6a9dc8-e198-4ac2-8611-27c6f3cf65fe" Target="#_4f42407b-fb7d-44df-b902-dc76afe25822"><Timestamp>2019-02-06 03:03:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d94df71-3990-4014-8d25-2813d1286d55" Target="#_22eff285-a790-4885-900c-ba2c5458cffc"><Timestamp>2019-02-06 03:49:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

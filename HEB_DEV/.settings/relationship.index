@@ -5,14 +5,6 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_ToUqgP5XEeiXWoUqwDxmxw",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_jpVh8P5VEeiKadzKJLmuVA",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -52,14 +44,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_jpVh8P5VEeiKadzKJLmuVA - TH_SOS_ServDomicilio",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_jpVh8P5VEeiKadzKJLmuVA - Td_Tiempo",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
