@@ -52,6 +52,14 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_KXz-UCnOEemWbvRdyAjuaw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_ROQRsCnOEemWbvRdyAjuaw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -91,6 +99,18 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_KXz-UCnOEemWbvRdyAjuaw - TH_SOS_ServDomicilio",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_KXz-UCnOEemWbvRdyAjuaw - Td_Tiempo",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_ROQRsCnOEemWbvRdyAjuaw - TH_SOS_ServDomicilio",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
