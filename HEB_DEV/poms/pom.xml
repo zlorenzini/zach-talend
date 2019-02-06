@@ -10,6 +10,16 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
+    <module>jobs/process/CLIENT/HEB/informatica_3_complex_0.1</module>
+    <module>jobs/process/CLIENT/HEB/data_import_0.1</module>
+    <module>jobs/process/CLIENT/HEB/data_import_sdiprdmst_0.1</module>
+    <module>jobs/process/CLIENT/HEB/mockup_0.1</module>
+    <module>jobs/process/CLIENT/HEB/data_import_oinsu_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_1_basic_1_0.1</module>
+    <module>jobs/process/CLIENT/HEB/data_export_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_2_int_ag_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_1_basic_2_ht_0.1</module>
+    <module>jobs/process/CLIENT/HEB/informatica_2_intermediate_0.1</module>
   </modules>
   <properties>
     <talend.project.name>HEB_DEV</talend.project.name>

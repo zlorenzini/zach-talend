@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/zach/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="0RMsyjmybrE="/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_LdMOMKsrEeiT9d1pLjaLgg" name="DataOperation"/>
+    <routinesParameter id="_Ln_I8KsrEeiT9d1pLjaLgg" name="Mathematical"/>
+    <routinesParameter id="_LoZYoKsrEeiT9d1pLjaLgg" name="Numeric"/>
+    <routinesParameter id="_LomM8KsrEeiT9d1pLjaLgg" name="Relational"/>
+    <routinesParameter id="_Lp3YQKsrEeiT9d1pLjaLgg" name="SQLike"/>
+    <routinesParameter id="_LoxzIKsrEeiT9d1pLjaLgg" name="StringHandling"/>
+    <routinesParameter id="_LpCR0KsrEeiT9d1pLjaLgg" name="TalendDataGenerator"/>
+    <routinesParameter id="_LpPGIKsrEeiT9d1pLjaLgg" name="TalendDate"/>
+    <routinesParameter id="_LptnQKsrEeiT9d1pLjaLgg" name="TalendStringUtil"/>
+    <routinesParameter id="_LpdvoKsrEeiT9d1pLjaLgg" name="TalendString"/>
+  </parameters>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_jpVh8P5VEeiKadzKJLmuVA"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.50.2&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;HEB&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;sa&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="XewSdrcvbHfneSUh6PDH0w=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM CHLMPVE2  LEFT OUTER JOIN CHLPRCE2 ON CHLMPVE2.PRODUCT_NUMBER = CHLPRCE2.PRODUCT_NUMBER AND CHLMPVE2.ORG_LVL_NUMBER = CHLPRCE2.ORG_LVL_NUMBER LEFT OUTER JOIN VPREC  ON CONVERT(int, CHLMPVE2.PRODUCT_NUMBER) = VPREC.PRE_ARTICULO AND CHLMPVE2.ORG_LVL_NUMBER = VPREC.PRE_SUCURSAL AND CONVERT(int, CONVERT(varchar, CHLMPVE2.PRC_EFFECTIVE_DAY, 112)) = VPREC.PRE_FECHA&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_LVL_CHILD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_LVL_CHILD"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_UPC"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_BOOK_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_LVL_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_KEY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PREVIOUS_KEY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_FROM_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TO_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_CURR_CODE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_FIRST_PRICE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PREVIOUS_PRICE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE_MULT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TYPE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PROMO_LEVEL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_HDR_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_LEVEL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_EXE_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_LVL_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_STYLE_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_EFFECTIVE_DAY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_STATUS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LASTUPDATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_LVL_CHILD1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_LVL_CHILD1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_UPC1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_BOOK_NUMBER1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_NUMBER1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_LVL_NUMBER1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_KEY1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PREVIOUS_KEY1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_FROM_DATE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TO_DATE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_CURR_CODE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PREVIOUS_PRICE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE_MULT1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TYPE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PROMO_LEVEL1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_HDR_NUMBER1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_LEVEL1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_IS_DEAL_GROUP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_EXE_DATE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_LVL_ID1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRD_STYLE_IND1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_EFFECTIVE_DAY1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_STATUS1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_BUY_QTY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_GET_QTY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_GET_VALUE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_GET_TYPE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_QTY_BRK_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_HDR_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ESTADO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_UOM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_MAX_QTY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_FCST_QTY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LASTUPDATE1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_ARTICULO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_SUCURSAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_NIVEL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_PRECIO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_FECHA"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_MARGEN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_VIGENTE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_TIPO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_PRECNORM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XXX_ORIGEN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XXX_REMOTO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" defaultValue="0" key="false" length="12" name="ORG_LVL_CHILD" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRD_LVL_CHILD" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="18" name="PRD_UPC" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_BOOK_NUMBER" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="PRODUCT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="ORG_LVL_NUMBER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_KEY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_PREVIOUS_KEY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_FROM_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_TO_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PRC_CURR_CODE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_FIRST_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_PREVIOUS_PRICE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="PRC_PRICE_MULT" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="2" name="PRC_TYPE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="2" name="PRC_PROMO_LEVEL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_HDR_NUMBER" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="1" name="PRC_LEVEL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="LAST_EXE_DATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="PRD_LVL_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRD_STYLE_IND" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="PRC_STATUS" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="LASTUPDATE" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRD_LVL_CHILD1" nullable="true" originalDbColumnName="PRD_LVL_CHILD" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="ORG_LVL_CHILD1" nullable="true" originalDbColumnName="ORG_LVL_CHILD" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="18" name="PRD_UPC1" nullable="true" originalDbColumnName="PRD_UPC" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_BOOK_NUMBER1" nullable="true" originalDbColumnName="PRC_BOOK_NUMBER" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="PRODUCT_NUMBER1" nullable="true" originalDbColumnName="PRODUCT_NUMBER" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="ORG_LVL_NUMBER1" nullable="true" originalDbColumnName="ORG_LVL_NUMBER" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_KEY1" nullable="true" originalDbColumnName="PRC_KEY" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_PREVIOUS_KEY1" nullable="true" originalDbColumnName="PRC_PREVIOUS_KEY" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_FROM_DATE1" nullable="true" originalDbColumnName="PRC_FROM_DATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_TO_DATE1" nullable="true" originalDbColumnName="PRC_TO_DATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="PRC_CURR_CODE1" nullable="true" originalDbColumnName="PRC_CURR_CODE" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_PRICE1" nullable="true" originalDbColumnName="PRC_PRICE" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_PREVIOUS_PRICE1" nullable="true" originalDbColumnName="PRC_PREVIOUS_PRICE" originalLength="-1" pattern="" precision="3" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="PRC_PRICE_MULT1" nullable="true" originalDbColumnName="PRC_PRICE_MULT" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="2" name="PRC_TYPE1" nullable="true" originalDbColumnName="PRC_TYPE" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="2" name="PRC_PROMO_LEVEL1" nullable="true" originalDbColumnName="PRC_PROMO_LEVEL" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_HDR_NUMBER1" nullable="true" originalDbColumnName="PRC_HDR_NUMBER" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="1" name="PRC_LEVEL1" nullable="true" originalDbColumnName="PRC_LEVEL" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRD_IS_DEAL_GROUP" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="LAST_EXE_DATE1" nullable="true" originalDbColumnName="LAST_EXE_DATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="PRD_LVL_ID1" nullable="true" originalDbColumnName="PRD_LVL_ID" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRD_STYLE_IND1" nullable="true" originalDbColumnName="PRD_STYLE_IND" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="PRC_EFFECTIVE_DAY1" nullable="true" originalDbColumnName="PRC_EFFECTIVE_DAY" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="PRC_STATUS1" nullable="true" originalDbColumnName="PRC_STATUS" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="PRC_BUY_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="PRC_GET_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="11" name="PRC_GET_VALUE" nullable="true" originalLength="-1" pattern="" precision="3" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRC_GET_TYPE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_QTY_BRK_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="PRC_HDR_NAME" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="1" name="ESTADO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="12" name="PRC_UOM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_MAX_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="12" name="PRC_FCST_QTY" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="23" name="LASTUPDATE1" nullable="true" originalDbColumnName="LASTUPDATE" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="10" name="PRE_ARTICULO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="PRE_SUCURSAL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRE_NIVEL" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="7" name="PRE_PRECIO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="REAL" type="id_Float" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="10" name="PRE_FECHA" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="15" name="PRE_MARGEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="PRE_VIGENTE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="PRE_TIPO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="15" name="PRE_PRECNORM" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="XXX_ORIGEN" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="0" key="false" length="5" name="XXX_REMOTO" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_UnCSMP_bEeiey-BXzUKrog-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out1" name="out1">
+      <column comment="" key="false" length="-1" name="PRODUCT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_PRICE_REG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_EFFECTIVE_DAY" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE_RBJ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE_OUT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRE_ARTICULO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.PRODUCT_NUMBER" name="PRODUCT_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.ORG_LVL_NUMBER" name="ORG_LVL_NUMBER" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.PRC_PRICE1 " name="PRC_PRICE_REG" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.PRC_EFFECTIVE_DAY" name="PRC_EFFECTIVE_DAY" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.PRC_TYPE" name="PRC_TYPE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.PRC_PRICE" name="PRC_PRICE" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="row1.PRC_TYPE1 == null ? row1.PRC_TYPE : row1.PRC_TYPE1 " name="PRC_TYPE_RBJ" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.PRC_TYPE " name="PRC_TYPE_OUT" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row1.PRE_ARTICULO" name="PRE_ARTICULO" nullable="true" type="id_Integer"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ORG_LVL_CHILD" type="id_Integer"/>
+        <mapperTableEntries name="PRD_LVL_CHILD" type="id_Integer"/>
+        <mapperTableEntries name="PRD_UPC" type="id_Integer"/>
+        <mapperTableEntries name="PRC_BOOK_NUMBER" type="id_Integer"/>
+        <mapperTableEntries name="PRODUCT_NUMBER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORG_LVL_NUMBER" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_KEY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_PREVIOUS_KEY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_FROM_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_TO_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_CURR_CODE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_PRICE" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_FIRST_PRICE" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_PREVIOUS_PRICE" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_PRICE_MULT" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_TYPE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_PROMO_LEVEL" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_HDR_NUMBER" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_LEVEL" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="LAST_EXE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRD_LVL_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRD_STYLE_IND" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_EFFECTIVE_DAY" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_STATUS" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="LASTUPDATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRD_LVL_CHILD1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="ORG_LVL_CHILD1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRD_UPC1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_BOOK_NUMBER1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRODUCT_NUMBER1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ORG_LVL_NUMBER1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_KEY1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_PREVIOUS_KEY1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_FROM_DATE1" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_TO_DATE1" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_CURR_CODE1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_PRICE1" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_PREVIOUS_PRICE1" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_PRICE_MULT1" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRC_TYPE1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_PROMO_LEVEL1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_HDR_NUMBER1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_LEVEL1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRD_IS_DEAL_GROUP" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LAST_EXE_DATE1" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRD_LVL_ID1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRD_STYLE_IND1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_EFFECTIVE_DAY1" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRC_STATUS1" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_BUY_QTY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_GET_QTY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_GET_VALUE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_GET_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_QTY_BRK_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_HDR_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ESTADO" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_UOM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRC_MAX_QTY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRC_FCST_QTY" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="LASTUPDATE1" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="PRE_ARTICULO" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRE_SUCURSAL" nullable="true" type="id_Short"/>
+        <mapperTableEntries name="PRE_NIVEL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRE_PRECIO" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="PRE_FECHA" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRE_MARGEN" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="PRE_VIGENTE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PRE_TIPO" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="PRE_PRECNORM" nullable="true" type="id_Double"/>
+        <mapperTableEntries name="XXX_ORIGEN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="XXX_REMOTO" nullable="true" type="id_Integer"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRODUCT_NUMBER"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_LVL_NUMBER"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE_REG"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_EFFECTIVE_DAY"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TYPE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_PRICE"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TYPE_RBJ"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRC_TYPE_OUT"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PRE_ARTICULO"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out1" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="PRODUCT_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ORG_LVL_NUMBER" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_PRICE_REG" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_EFFECTIVE_DAY" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_PRICE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE_RBJ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRC_TYPE_OUT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="PRE_ARTICULO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7762347-0761-421c-91f0-45f4c505c819"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KqOKv83ziEXa+++5SnH5WJMnGYCkmKHkH2jAUMeDLF8PWxJi59sOokrf0YnsuDd6/jWCsmU8hnaO
+1l7TCl2K2g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0f05d554-6566-443f-bd34-895d78223007"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6/90TyRpDURGzUINfCXvdPJzwSwQKGZPuN78fsbmznEgO82hZzQ8E2F9kQGLsO9nLjZZPJFB3kY6
+2UtdkX2OYQ==</DigestValue></Reference></SignedInfo><SignatureValue>sytEFNe1mrQro2nsQ1PQccjH3ivwehfljQ0pvEdti7svXkrgeLMSUK4H4Y4rPjvAVs9cYRgW0z/f
+FqeA0zR49LjMn3i/VR5MhGab5oqLZXTLUP4tVVyrXczNdWQSY//I4yNPmW92/AOXWu1x/unffvnZ
+pS2KVz8PU/H8T4CaglzxqwTAA3uLQqOBeD3PTVClpGCHxocR8CC4F/X05TyX8rw7/k33EXa0OWsO
+8kXGZMJBjeRrJHwyCw68Ot9nRtIA5FlB9MChW943hIt4cjGptMeYGGJ0llp+UQ0drtpvFYCXD9BE
+sZW0s7Rq2JsdkGAkhGDTJyyf3tvp8Tn5GGIMKg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0f05d554-6566-443f-bd34-895d78223007" Target="#_e7762347-0761-421c-91f0-45f4c505c819"><Timestamp>2019-02-06 03:04:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
