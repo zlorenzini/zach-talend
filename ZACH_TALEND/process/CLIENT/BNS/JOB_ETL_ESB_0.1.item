@@ -618,6 +618,24 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out1" name="out4">
+      <column comment="" defaultValue="" key="false" length="10" name="provider_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="imported_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="category_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="100" name="provider_job_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="employment_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="job_post_url" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="job_post_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_company" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_title" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20000" name="job_description" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="how_to_apply" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_qualifications" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_minimum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_maximum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row7">
         <nodes name="statusCode" type="id_Integer" xpath="row7/statusCode"/>
@@ -629,13 +647,13 @@
               <children name="SearchResultCount" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultCount"/>
               <children name="SearchResultCountAll" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultCountAll"/>
               <children expression="" loop="true" main="true" name="SearchResultItems" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems">
-                <children name="MatchedObjectId" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectId"/>
+                <children name="MatchedObjectId" outgoingConnections="//@node.13/@nodeData/@connections.0" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectId"/>
                 <children expression="" name="MatchedObjectDescriptor" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor">
                   <children name="PositionID" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionID"/>
                   <children name="PositionTitle" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionTitle"/>
-                  <children name="PositionURI" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionURI"/>
-                  <children name="ApplyURI" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplyURI"/>
-                  <children name="PositionLocationDisplay" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocationDisplay"/>
+                  <children name="PositionURI" outgoingConnections="//@node.13/@nodeData/@connections.2" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionURI"/>
+                  <children name="ApplyURI" outgoingConnections="//@node.13/@nodeData/@connections.6" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplyURI"/>
+                  <children name="PositionLocationDisplay" outgoingConnections="//@node.13/@nodeData/@connections.4" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocationDisplay"/>
                   <children expression="" name="PositionLocation" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation">
                     <children name="LocationName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/LocationName"/>
                     <children name="CountryCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/CountryCode"/>
@@ -644,33 +662,33 @@
                     <children name="Longitude" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/Longitude"/>
                     <children name="Latitude" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/Latitude"/>
                   </children>
-                  <children name="OrganizationName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/OrganizationName"/>
+                  <children name="OrganizationName" outgoingConnections="//@node.13/@nodeData/@connections.8" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/OrganizationName"/>
                   <children name="DepartmentName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/DepartmentName"/>
                   <children name="SubAgency" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/SubAgency"/>
                   <children expression="" name="JobCategory" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory">
-                    <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Name"/>
+                    <children name="Name" outgoingConnections="//@node.13/@nodeData/@connections.5" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Name"/>
                     <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Code"/>
                   </children>
                   <children expression="" name="JobGrade" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobGrade">
                     <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobGrade/Code"/>
                   </children>
                   <children expression="" name="PositionSchedule" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule">
-                    <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Name"/>
+                    <children name="Name" outgoingConnections="//@node.13/@nodeData/@connections.1" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Name"/>
                     <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Code"/>
                   </children>
                   <children expression="" name="PositionOfferingType" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType">
                     <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType/Name"/>
                     <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType/Code"/>
                   </children>
-                  <children name="QualificationSummary" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/QualificationSummary"/>
+                  <children name="QualificationSummary" outgoingConnections="//@node.13/@nodeData/@connections.9" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/QualificationSummary"/>
                   <children expression="" name="PositionRemuneration" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration">
-                    <children name="MinimumRange" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MinimumRange"/>
-                    <children name="MaximumRange" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MaximumRange"/>
+                    <children name="MinimumRange" outgoingConnections="//@node.13/@nodeData/@connections.10" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MinimumRange"/>
+                    <children name="MaximumRange" outgoingConnections="//@node.13/@nodeData/@connections.11" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MaximumRange"/>
                     <children name="RateIntervalCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/RateIntervalCode"/>
                   </children>
                   <children name="PositionStartDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionStartDate"/>
                   <children name="PositionEndDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionEndDate"/>
-                  <children name="PublicationStartDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PublicationStartDate"/>
+                  <children name="PublicationStartDate" outgoingConnections="//@node.13/@nodeData/@connections.3" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PublicationStartDate"/>
                   <children name="ApplicationCloseDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplicationCloseDate"/>
                   <children expression="" name="PositionFormattedDescription" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionFormattedDescription">
                     <children name="Label" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionFormattedDescription/Label"/>
@@ -678,7 +696,7 @@
                   </children>
                   <children expression="" name="UserArea" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea">
                     <children expression="" name="Details" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details">
-                      <children name="JobSummary" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/JobSummary"/>
+                      <children name="JobSummary" outgoingConnections="//@node.13/@nodeData/@connections.7" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/JobSummary"/>
                       <children expression="" name="WhoMayApply" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply">
                         <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply/Name"/>
                         <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply/Code"/>
@@ -701,8 +719,243 @@
         </nodes>
         <nodes name="string" type="id_String" xpath="row7/string"/>
       </inputTrees>
+      <outputTrees name="out4">
+        <nodes expression="2" name="provider_id" nullable="false" type="id_Integer" xpath="out4/provider_id"/>
+        <nodes expression="TalendDate.getCurrentDate() " name="imported_date" type="id_Date" xpath="out4/imported_date"/>
+        <nodes expression="0" name="category_id" type="id_Integer" xpath="out4/category_id"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectId]" incomingConnections="//@node.13/@nodeData/@connections.0" name="provider_job_id" type="id_String" xpath="out4/provider_job_id"/>
+        <nodes expression=" [row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Name]" incomingConnections="//@node.13/@nodeData/@connections.1" name="employment_type" type="id_String" xpath="out4/employment_type"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionURI]" incomingConnections="//@node.13/@nodeData/@connections.2" name="job_post_url" type="id_String" xpath="out4/job_post_url"/>
+        <nodes expression="new SimpleDateFormat(&quot;yyyy-MM-dd&quot;).parse([row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PublicationStartDate]) " incomingConnections="//@node.13/@nodeData/@connections.3" name="job_post_date" type="id_Date" xpath="out4/job_post_date"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/OrganizationName]" incomingConnections="//@node.13/@nodeData/@connections.8" name="job_company" pattern="" type="id_String" xpath="out4/job_company"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocationDisplay]" incomingConnections="//@node.13/@nodeData/@connections.4" name="job_location" type="id_String" xpath="out4/job_location"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Name]" incomingConnections="//@node.13/@nodeData/@connections.5" name="job_title" type="id_String" xpath="out4/job_title"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/JobSummary]" incomingConnections="//@node.13/@nodeData/@connections.7" name="job_description" type="id_String" xpath="out4/job_description"/>
+        <nodes expression="[row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplyURI]" incomingConnections="//@node.13/@nodeData/@connections.6" name="how_to_apply" type="id_String" xpath="out4/how_to_apply"/>
+        <nodes expression=" [row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/QualificationSummary]" incomingConnections="//@node.13/@nodeData/@connections.9" name="job_qualifications" pattern="" type="id_String" xpath="out4/job_qualifications"/>
+        <nodes expression="Double.parseDouble([row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MinimumRange]) " incomingConnections="//@node.13/@nodeData/@connections.10" name="pay_minimum" pattern="" type="id_Double" xpath="out4/pay_minimum"/>
+        <nodes expression="Double.parseDouble([row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MaximumRange])" incomingConnections="//@node.13/@nodeData/@connections.11" name="pay_maximum" pattern="" type="id_Double" xpath="out4/pay_maximum"/>
+      </outputTrees>
       <varTables minimized="true" name="Var"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.11/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.2" target="//@node.13/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.17" target="//@node.13/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.4" target="//@node.13/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.9/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.3" target="//@node.13/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.20/@children.0/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.6" target="//@node.13/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.13" target="//@node.13/@nodeData/@outputTrees.0/@nodes.12" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.14/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.13" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.1/@children.0/@children.2/@children.2/@children.1/@children.14/@children.1" target="//@node.13/@nodeData/@outputTrees.0/@nodes.14" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Qv48AGfaEem3sMIeX0BIsQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;ajdb.co0gze0arje1.us-east-1.rds.amazonaws.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;appjob_data&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;admin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="vwSm44ORV15EPhV9O/jpnA=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;jobs&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" show="false" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="(Not compatible with reject links)"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" show="false" value="100"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="provider_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="imported_date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="category_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="provider_job_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="employment_type"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_post_url"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_post_date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_company"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_location"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_title"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_description"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="how_to_apply"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="job_qualifications"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pay_minimum"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pay_maximum"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" show="false" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out1" name="tDBOutput_2">
+      <column comment="" defaultValue="" key="false" length="10" name="provider_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="imported_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="category_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="100" name="provider_job_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="employment_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="job_post_url" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="job_post_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_company" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_title" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20000" name="job_description" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="how_to_apply" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_qualifications" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_minimum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_maximum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+    <metadata connector="REJECT" label="out1" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="10" name="provider_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="imported_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="category_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="100" name="provider_job_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="employment_type" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="job_post_url" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="job_post_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_company" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_location" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="job_title" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20000" name="job_description" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="2000" name="how_to_apply" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="job_qualifications" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_minimum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pay_maximum" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out5">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row8">
+        <nodes name="provider_id" nullable="false" type="id_Integer" xpath="row8/provider_id"/>
+        <nodes name="imported_date" type="id_Date" xpath="row8/imported_date"/>
+        <nodes name="category_id" type="id_Integer" xpath="row8/category_id"/>
+        <nodes name="provider_job_id" outgoingConnections="//@node.15/@nodeData/@connections.0" type="id_String" xpath="row8/provider_job_id"/>
+        <nodes name="employment_type" type="id_String" xpath="row8/employment_type"/>
+        <nodes name="job_post_url" type="id_String" xpath="row8/job_post_url"/>
+        <nodes name="job_post_date" type="id_Date" xpath="row8/job_post_date"/>
+        <nodes name="job_company" type="id_String" xpath="row8/job_company"/>
+        <nodes name="job_location" type="id_String" xpath="row8/job_location"/>
+        <nodes name="job_title" type="id_String" xpath="row8/job_title"/>
+        <nodes name="job_description" type="id_String" xpath="row8/job_description"/>
+        <nodes name="how_to_apply" type="id_String" xpath="row8/how_to_apply"/>
+        <nodes name="job_qualifications" type="id_String" xpath="row8/job_qualifications"/>
+        <nodes name="pay_minimum" type="id_Double" xpath="row8/pay_minimum"/>
+        <nodes name="pay_maximum" type="id_Double" xpath="row8/pay_maximum"/>
+      </inputTrees>
+      <outputTrees activateCondensedTool="true" allInOne="true" name="out5">
+        <nodes expression="" name="body" type="id_Document" xpath="out5/body">
+          <children expression="" loop="true" main="true" name="root" type="id_String" xpath="out5.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children expression="row8.provider_job_id" incomingConnections="//@node.15/@nodeData/@connections.0" name="provider_job_id" type="id_String" xpath="out5.body:/root/provider_job_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+      <connections source="//@node.15/@nodeData/@inputTrees.0/@nodes.3" target="//@node.15/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
+    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_Document"/>
+    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
+    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
+    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRESTResponse_3">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="github" lineStyle="0" metaname="github" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTRequest_1" target="tJava_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -758,18 +1011,30 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
+  <connection connectorName="FLOW" label="out4" lineStyle="0" metaname="out4" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_3" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tDBOutput_2" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_2" target="tXMLMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="out5" lineStyle="0" metaname="out5" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_4" target="tRESTResponse_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out5"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1fdd9a46-4ff4-402e-bb8b-2a58b23d803a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GBkk6kl4JZ3NEIzEHopYQt0gsUS+v9mC4QBURTBzmYlw9IDjQOQOGVCjxAqXyVfhTp/vPV1k0LpK
-Sm8/uh3lCQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_878ae343-c9b6-49cf-85ff-28d0a64481fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vYDMYEaiag6kNEcpTufwHfmDXfW3t3e+DPOPusa1VUB22CdL66EvF1uS8wTxwLeClw7NQNzMHa/9
-Y8ytr8Abcg==</DigestValue></Reference></SignedInfo><SignatureValue>qkBHSu2C+HxmBGhITjsTeVWF06JIDh88V/3SXIAwoKgJzTUFAL5NlfylRO2RPJT7nlM69mxZ6XPx
-COGW8tWKL1V07F9BtU1jiBEdREex+oe116ALtE1Iu09qjNAtk4sHaP1TDB5e7Fuh8DpSmR69xNW4
-sNTxLkcITrPKv5AvBcYfyxpey4F+/2bs6/QEux0ZYd3Wf/Vxw17ln+2MT0qkB+6WToeCws1I7W3x
-suEZd1Yga1FoC90fz0O2+wbF/jtCys88Yviu1Mk+w49CBa7A4W1VZ5Z+czFP+R6Y/wh0mPKrKXxj
-A6h2A+yHM3Jkic934cdQn6Fs+gzTjiiCyzMcJw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_72647c1a-633e-44ae-b955-a1c37bf9e86c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7damyUCahkqPr2xDYkTJXqNT7zy3olMP8FlfuQwvJhOD8fk3rIZfEbdnQJ10JU5P7UEUOe1uTqj4
+HQkHul1sfA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3f978615-9d92-42ed-910e-fad797ab9e69"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>puLW2zQavxpFx0JGogu/k9jauoELdHyBx6XpoPupspCf0RiQo2vuYN+d0gXZ1+QvYl0MSElRkL35
+pgUj8nXMIQ==</DigestValue></Reference></SignedInfo><SignatureValue>OThhBcziuWHUfAoACYFDSGhhtRc81m1zmIdMW7okOwrrImxAliu00riKFHfYnQOc0Ct/o9OKpj4j
+MZ9rWLw0Vn7J+tr4z09BuenGcJF6pckK5fx6vjpFWnwLQ1P7hLV8/LpyzmD4BQ3KPQ7OHZgtTqso
+hI7W6rgE84P+JwuvVuV/PSS3cZODGT8VlwtYD7SM0I8RJO6q3VBcnQdeDPC7PAZgN7oVZoSlSuwi
+Ztb0hure6NdxhA6H+jbg7kBuNcLeSxoaRwuEN93OEXpClkbKTYwvO8FZG0yp0pU2q766NqXgYqbk
+OQlfxb2s9ToaaVavK7FQhRayeaPsDyudi326cw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -793,4 +1058,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_878ae343-c9b6-49cf-85ff-28d0a64481fc" Target="#_1fdd9a46-4ff4-402e-bb8b-2a58b23d803a"><Timestamp>2019-04-26 05:46:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3f978615-9d92-42ed-910e-fad797ab9e69" Target="#_72647c1a-633e-44ae-b955-a1c37bf9e86c"><Timestamp>2019-04-26 05:57:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
