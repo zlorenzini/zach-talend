@@ -612,35 +612,97 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="statusCode"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row7">
+        <nodes name="statusCode" type="id_Integer" xpath="row7/statusCode"/>
+        <nodes expression="" name="body" type="id_Document" xpath="row7/body">
+          <children expression="" main="true" name="root" type="id_String" xpath="row7.body:/root">
+            <children name="LanguageCode" type="id_String" xpath="row7.body:/root/LanguageCode"/>
+            <children name="SearchParameters" type="id_String" xpath="row7.body:/root/SearchParameters"/>
+            <children expression="" main="true" name="SearchResult" type="id_String" xpath="row7.body:/root/SearchResult">
+              <children name="SearchResultCount" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultCount"/>
+              <children name="SearchResultCountAll" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultCountAll"/>
+              <children expression="" loop="true" main="true" name="SearchResultItems" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems">
+                <children name="MatchedObjectId" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectId"/>
+                <children expression="" name="MatchedObjectDescriptor" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor">
+                  <children name="PositionID" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionID"/>
+                  <children name="PositionTitle" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionTitle"/>
+                  <children name="PositionURI" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionURI"/>
+                  <children name="ApplyURI" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplyURI"/>
+                  <children name="PositionLocationDisplay" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocationDisplay"/>
+                  <children expression="" name="PositionLocation" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation">
+                    <children name="LocationName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/LocationName"/>
+                    <children name="CountryCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/CountryCode"/>
+                    <children name="CountrySubDivisionCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/CountrySubDivisionCode"/>
+                    <children name="CityName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/CityName"/>
+                    <children name="Longitude" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/Longitude"/>
+                    <children name="Latitude" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionLocation/Latitude"/>
+                  </children>
+                  <children name="OrganizationName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/OrganizationName"/>
+                  <children name="DepartmentName" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/DepartmentName"/>
+                  <children name="SubAgency" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/SubAgency"/>
+                  <children expression="" name="JobCategory" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory">
+                    <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Name"/>
+                    <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobCategory/Code"/>
+                  </children>
+                  <children expression="" name="JobGrade" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobGrade">
+                    <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/JobGrade/Code"/>
+                  </children>
+                  <children expression="" name="PositionSchedule" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule">
+                    <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Name"/>
+                    <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionSchedule/Code"/>
+                  </children>
+                  <children expression="" name="PositionOfferingType" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType">
+                    <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType/Name"/>
+                    <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionOfferingType/Code"/>
+                  </children>
+                  <children name="QualificationSummary" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/QualificationSummary"/>
+                  <children expression="" name="PositionRemuneration" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration">
+                    <children name="MinimumRange" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MinimumRange"/>
+                    <children name="MaximumRange" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/MaximumRange"/>
+                    <children name="RateIntervalCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionRemuneration/RateIntervalCode"/>
+                  </children>
+                  <children name="PositionStartDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionStartDate"/>
+                  <children name="PositionEndDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionEndDate"/>
+                  <children name="PublicationStartDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PublicationStartDate"/>
+                  <children name="ApplicationCloseDate" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/ApplicationCloseDate"/>
+                  <children expression="" name="PositionFormattedDescription" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionFormattedDescription">
+                    <children name="Label" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionFormattedDescription/Label"/>
+                    <children name="LabelDescription" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/PositionFormattedDescription/LabelDescription"/>
+                  </children>
+                  <children expression="" name="UserArea" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea">
+                    <children expression="" name="Details" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details">
+                      <children name="JobSummary" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/JobSummary"/>
+                      <children expression="" name="WhoMayApply" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply">
+                        <children name="Name" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply/Name"/>
+                        <children name="Code" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/WhoMayApply/Code"/>
+                      </children>
+                      <children name="LowGrade" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/LowGrade"/>
+                      <children name="HighGrade" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/HighGrade"/>
+                      <children name="PromotionPotential" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/PromotionPotential"/>
+                      <children name="HiringPath" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/HiringPath"/>
+                      <children name="TotalOpenings" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/TotalOpenings"/>
+                      <children name="AgencyMarketingStatement" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/AgencyMarketingStatement"/>
+                      <children name="TravelCode" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/Details/TravelCode"/>
+                    </children>
+                    <children name="IsRadialSearch" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/MatchedObjectDescriptor/UserArea/IsRadialSearch"/>
+                  </children>
+                </children>
+                <children name="RelevanceRank" type="id_String" xpath="row7.body:/root/SearchResult/SearchResultItems/RelevanceRank"/>
+              </children>
+            </children>
+          </children>
+        </nodes>
+        <nodes name="string" type="id_String" xpath="row7/string"/>
+      </inputTrees>
+      <varTables minimized="true" name="Var"/>
+    </nodeData>
   </node>
   <connection connectorName="FLOW" label="github" lineStyle="0" metaname="github" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTRequest_1" target="tJava_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -692,7 +754,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
-  <connection connectorName="RESPONSE" label="row7" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tLogRow_1">
+  <connection connectorName="RESPONSE" label="row7" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_2" target="tXMLMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
@@ -701,13 +763,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_865247bc-c928-4560-aae2-4a9135badbaf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OA2Xq3/p6hiRZ+RnVeMFdq5hbdXW9cMvdVMi+7oUpFxXmG3+yMPuzwu42B8MKWtF1VUowkUEt0EM
-UwCn4xQiIw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4c7381c1-752d-40d4-949b-4facfb55b766"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SXlpJ6vgBZ8FToO88H3oKNoNfnDsR2pM1fAgnbHs5ZAq9pDIiQOkJseQQk/uqVs47NdRHXeDHxes
-P4jVD56Szw==</DigestValue></Reference></SignedInfo><SignatureValue>auAuLdENKWXwj0lWTPfXM30MVBUFwK62RMsGK8UeEbWiAV8TJUVAhOjB+wv7wCA5U2D1e91/WmYM
-LPdK6tglNsQfMLp1gTQtkI7GYfOWIpnBgWsD/kogqRmdup94dWYjYtiFe5JOolW/ra1b1nhT6v9n
-PkJTN6Iu1lZ/28P0PJN3HFeFsm+aYU4LdjvEX8++QGdc5g7Jm/lyFvh2yG/CA3PJgxR7E6BPg1hT
-ZDZ6aCs/NywxS0evglgaYFoaw3cwkUZIPKd8VGvdzG2AjqyUUPeFRt/sKxiLFw97Ck4C7nTOJCUG
-MhwoZL62RyJU88GtCUcgGqJqdGylFcFAYra5cQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1fdd9a46-4ff4-402e-bb8b-2a58b23d803a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GBkk6kl4JZ3NEIzEHopYQt0gsUS+v9mC4QBURTBzmYlw9IDjQOQOGVCjxAqXyVfhTp/vPV1k0LpK
+Sm8/uh3lCQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_878ae343-c9b6-49cf-85ff-28d0a64481fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vYDMYEaiag6kNEcpTufwHfmDXfW3t3e+DPOPusa1VUB22CdL66EvF1uS8wTxwLeClw7NQNzMHa/9
+Y8ytr8Abcg==</DigestValue></Reference></SignedInfo><SignatureValue>qkBHSu2C+HxmBGhITjsTeVWF06JIDh88V/3SXIAwoKgJzTUFAL5NlfylRO2RPJT7nlM69mxZ6XPx
+COGW8tWKL1V07F9BtU1jiBEdREex+oe116ALtE1Iu09qjNAtk4sHaP1TDB5e7Fuh8DpSmR69xNW4
+sNTxLkcITrPKv5AvBcYfyxpey4F+/2bs6/QEux0ZYd3Wf/Vxw17ln+2MT0qkB+6WToeCws1I7W3x
+suEZd1Yga1FoC90fz0O2+wbF/jtCys88Yviu1Mk+w49CBa7A4W1VZ5Z+czFP+R6Y/wh0mPKrKXxj
+A6h2A+yHM3Jkic934cdQn6Fs+gzTjiiCyzMcJw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -731,4 +793,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4c7381c1-752d-40d4-949b-4facfb55b766" Target="#_865247bc-c928-4560-aae2-4a9135badbaf"><Timestamp>2019-04-26 05:16:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_878ae343-c9b6-49cf-85ff-28d0a64481fc" Target="#_1fdd9a46-4ff4-402e-bb8b-2a58b23d803a"><Timestamp>2019-04-26 05:46:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
